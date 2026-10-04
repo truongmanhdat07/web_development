@@ -161,7 +161,7 @@ BTL
 - Dữ liệu sách và danh sách bạn đọc được viết trực tiếp trong HTML, phản ánh thông tin của 5 sinh viên nhóm:
   - Trương Mạnh Đạt (Mã SV: `251230841` - Email: `dat251230841@lms.utc.edu.vn`)
   - Nguyễn Phương Hải (Mã SV: `251210853` - Email: `hai251210853@lms.utc.edu.vn`)
-  - Nguyễn Quốc Khánh (Mã SV: `251230003` - Email: `khanh251230003@lms.utc.edu.vn`)
+  - Nguyễn Quốc Khánh (Mã SV: `251230887` - Email: `khanh251230887@lms.utc.edu.vn`)
   - Trần Xuân Đô (Mã SV: `251230004` - Email: `do251230004@lms.utc.edu.vn`)
   - Đinh Văn Phan Dũng (Mã SV: `251230826` - Email: `dung251230826@lms.utc.edu.vn`)
 
@@ -205,7 +205,7 @@ $$\text{TB} = \frac{d1 + \frac{d2 + d3}{2}}{2}$$
 | :--------------------- | :-------------: | :----------------: | :--: | :--: | :--: | :------: | :--: | :--: | :------: | :--: | :--: | :--: | :------: | :------------: |
 | **Trương Mạnh Đạt**    |  **251230841**  | `index`<br>`.html` | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
 | **Nguyễn Phương Hải**  |  **251210853**  | `books`<br>`.html` | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
-| **Nguyễn Quốc Khánh**  |  **251230003**  | `borrow`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
+| **Nguyễn Quốc Khánh**  |  **251230887**  | `borrow`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
 | **Trần Xuân Đô**       |  **251230004**  | `readers`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
 | **Đinh Văn Phan Dũng** |  **251230826**  | `contact`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
 
@@ -215,7 +215,7 @@ $$\text{TB} = \frac{d1 + \frac{d2 + d3}{2}}{2}$$
 | :--------------------- | :----------: | :-------------------------------------------------------------------- | :------------------------------------------ | :------------------: |
 | **Trương Mạnh Đạt**    |  251230841   | Trưởng nhóm, thiết kế trang chủ, tích hợp logo UTC và quản lý tiến độ | Tinh thần trách nhiệm cao, dẫn dắt nhóm tốt |       **...**        |
 | **Nguyễn Phương Hải**  |  251210853   | Hoàn thành trang Sách CNTT & IELTS, viết hàm tìm kiếm/lọc JS          | Code cẩn thận, giao diện đẹp, đúng tiến độ  |       **...**        |
-| **Nguyễn Quốc Khánh**  |  251230003   | Hoàn thành trang Mượn - Trả sách, kiểm tra logic mượn                 | Nhiệt tình, hoàn thành tốt bảng phiếu mượn  |       **...**        |
+| **Nguyễn Quốc Khánh**  |  251230887   | Hoàn thành trang Mượn - Trả sách, kiểm tra logic mượn                 | Nhiệt tình, hoàn thành tốt bảng phiếu mượn  |       **...**        |
 | **Trần Xuân Đô**       |  251230004   | Hoàn thành trang Độc giả, kiểm tra email LMS và SĐT                   | Chăm chỉ, phối hợp ăn ý với nhóm trưởng     |       **...**        |
 | **Đinh Văn Phan Dũng** |  251230826   | Hoàn thành trang Nội quy UTC                                          | Hoàn thành tốt nhiệm vụ                     |       **...**        |
 
