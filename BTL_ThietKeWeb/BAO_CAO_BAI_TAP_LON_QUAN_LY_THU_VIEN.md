@@ -22,7 +22,7 @@
 |  2  | **Nguyễn Phương Hải**                  | **251210853** | `hai251210853@lms.utc.edu.vn`   | `books.html`<br>(Kho sách)     | .                          |
 |  3  | **Nguyễn Quốc Khánh**                  | **251230887** | `khanh251230887@lms.utc.edu.vn` | `borrow.html`<br>(Mượn - Trả)  | .                          |
 |  4  | **Trần Xuân Đô**                       | **251230004** | `do251230004@lms.utc.edu.vn`    | `readers.html`<br>(Độc giả)    | .                          |
-|  5  | **Đinh Văn Phan Dũng**                 | **251230826** | `dung251230005@lms.utc.edu.vn`  | `contact.html`<br>(Nội quy)    | .                          |
+|  5  | **Đinh Văn Phan Dũng**                 | **251230826** | `dung251230826@lms.utc.edu.vn`  | `contact.html`<br>(Nội quy)    | .                          |
 
 ---
 
