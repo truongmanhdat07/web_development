@@ -22,7 +22,7 @@
 |  2  | **Nguyễn Phương Hải**                  | **251210853** | `hai251210853@lms.utc.edu.vn`   | `books.html`<br>(Kho sách)     | .                          |
 |  3  | **Nguyễn Quốc Khánh**                  | **251230003** | `khanh251230003@lms.utc.edu.vn` | `borrow.html`<br>(Mượn - Trả)  | .                          |
 |  4  | **Trần Xuân Đô**                       | **251230004** | `do251230004@lms.utc.edu.vn`    | `readers.html`<br>(Độc giả)    | .                          |
-|  5  | **Đinh Văn Phan Dũng**                 | **251230005** | `dung251230005@lms.utc.edu.vn`  | `contact.html`<br>(Nội quy)    | .                          |
+|  5  | **Đinh Văn Phan Dũng**                 | **251230826** | `dung251230005@lms.utc.edu.vn`  | `contact.html`<br>(Nội quy)    | .                          |
 
 ---
 
@@ -163,7 +163,7 @@ BTL
   - Nguyễn Phương Hải (Mã SV: `251210853` - Email: `hai251210853@lms.utc.edu.vn`)
   - Nguyễn Quốc Khánh (Mã SV: `251230003` - Email: `khanh251230003@lms.utc.edu.vn`)
   - Trần Xuân Đô (Mã SV: `251230004` - Email: `do251230004@lms.utc.edu.vn`)
-  - Đinh Văn Phan Dũng (Mã SV: `251230005` - Email: `dung251230005@lms.utc.edu.vn`)
+  - Đinh Văn Phan Dũng (Mã SV: `251230826` - Email: `dung251230826@lms.utc.edu.vn`)
 
 #### b. Mã nguồn CSS3 & Bootstrap 5:
 
@@ -207,7 +207,7 @@ $$\text{TB} = \frac{d1 + \frac{d2 + d3}{2}}{2}$$
 | **Nguyễn Phương Hải**  |  **251210853**  | `books`<br>`.html` | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
 | **Nguyễn Quốc Khánh**  |  **251230003**  | `borrow`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
 | **Trần Xuân Đô**       |  **251230004**  | `readers`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
-| **Đinh Văn Phan Dũng** |  **251230005**  | `contact`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
+| **Đinh Văn Phan Dũng** |  **251230826**  | `contact`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
 
 ### 3. Bảng điểm nhóm đánh giá cho từng cá nhân
 
@@ -217,7 +217,7 @@ $$\text{TB} = \frac{d1 + \frac{d2 + d3}{2}}{2}$$
 | **Nguyễn Phương Hải**  |  251210853   | Hoàn thành trang Sách CNTT & IELTS, viết hàm tìm kiếm/lọc JS          | Code cẩn thận, giao diện đẹp, đúng tiến độ  |       **...**        |
 | **Nguyễn Quốc Khánh**  |  251230003   | Hoàn thành trang Mượn - Trả sách, kiểm tra logic mượn                 | Nhiệt tình, hoàn thành tốt bảng phiếu mượn  |       **...**        |
 | **Trần Xuân Đô**       |  251230004   | Hoàn thành trang Độc giả, kiểm tra email LMS và SĐT                   | Chăm chỉ, phối hợp ăn ý với nhóm trưởng     |       **...**        |
-| **Đinh Văn Phan Dũng** |  251230005   | Hoàn thành trang Nội quy UTC                                          | Hoàn thành tốt nhiệm vụ                     |       **...**        |
+| **Đinh Văn Phan Dũng** |  251230826   | Hoàn thành trang Nội quy UTC                                          | Hoàn thành tốt nhiệm vụ                     |       **...**        |
 
 ---
 
