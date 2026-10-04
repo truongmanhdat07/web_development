@@ -20,7 +20,7 @@
 | :-: | :------------------------------------- | :-----------: | :------------------------------ | :----------------------------- | :------------------------- |
 |  1  | **Trương Mạnh Đạt**<br>_(Nhóm trưởng)_ | **251230841** | `dat251230841@lms.utc.edu.vn`   | `index.html`<br>(Trang chủ)    | .                          |
 |  2  | **Nguyễn Phương Hải**                  | **251210853** | `hai251210853@lms.utc.edu.vn`   | `books.html`<br>(Kho sách)     | .                          |
-|  3  | **Nguyễn Quốc Khánh**                  | **251230003** | `khanh251230003@lms.utc.edu.vn` | `borrow.html`<br>(Mượn - Trả)  | .                          |
+|  3  | **Nguyễn Quốc Khánh**                  | **251230887** | `khanh251230887@lms.utc.edu.vn` | `borrow.html`<br>(Mượn - Trả)  | .                          |
 |  4  | **Trần Xuân Đô**                       | **251230004** | `do251230004@lms.utc.edu.vn`    | `readers.html`<br>(Độc giả)    | .                          |
 |  5  | **Đinh Văn Phan Dũng**                 | **251230005** | `dung251230005@lms.utc.edu.vn`  | `contact.html`<br>(Nội quy)    | .                          |
 
