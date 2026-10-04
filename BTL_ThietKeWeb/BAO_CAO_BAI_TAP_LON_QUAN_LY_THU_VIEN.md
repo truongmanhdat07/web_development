@@ -1,0 +1,284 @@
+# BÁO CÁO BÀI TẬP LỚN MÔN THIẾT KẾ WEB
+
+## ĐỀ TÀI: XÂY DỰNG WEBSITE HỆ THỐNG THƯ VIỆN ĐIỆN TỬ UTC
+
+### CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN
+
+---
+
+**TRƯỜNG:** ĐẠI HỌC GIAO THÔNG VẬN TẢI (UTC)  
+**KHOA:** CÔNG NGHỆ THÔNG TIN  
+**LỚP:** CÔNG NGHỆ THÔNG TIN 3  
+**HỌC PHẦN:** THIẾT KẾ WEB  
+**HỌC KỲ / NĂM HỌC:** HỌC KỲ I - NĂM 2  
+**ĐỀ TÀI SỐ:** 01 - QUẢN LÝ THƯ VIỆN  
+**CÔNG NGHỆ ÁP DỤNG:** HTML5, CSS3, JavaScript Cơ Bản, Bootstrap 5
+
+### BẢNG PHÂN CÔNG THÀNH VIÊN TRONG NHÓM (NHÓM 5 THÀNH VIÊN - UTC)
+
+| STT | Họ và tên sinh viên                 | Mã sinh viên UTC | Email                           | Trang phụ trách            | Nhiệm vụ chính trong dự án                                                                                                         |
+| :-: | :---------------------------------- | :--------------: | :------------------------------ | :------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+|  1  | **Trương Mạnh Đạt** _(Nhóm trưởng)_ |  **251230841**   | `dat251230841@lms.utc.edu.vn`   | `index.html` (Trang chủ)   | Lập kế hoạch nhóm, thiết kế giao diện thanh menu Navbar, chèn logo UTC, tổng hợp mã nguồn chung và chủ trì báo cáo.                |
+|  2  | **Nguyễn Phương Hải**               |  **251230002**   | `hai251230002@lms.utc.edu.vn`   | `books.html` (Kho sách)    | Xây dựng danh mục 8 đầu sách Lập trình CNTT và tài liệu IELTS, lập trình JavaScript tìm kiếm và lọc thể loại.                      |
+|  3  | **Nguyễn Quốc Khánh**               |  **251230003**   | `khanh251230003@lms.utc.edu.vn` | `borrow.html` (Mượn - Trả) | Xây dựng bảng theo dõi phiếu mượn giáo trình sinh viên UTC, viết hàm JavaScript kiểm tra form mượn và nút xác nhận trả sách.       |
+|  4  | **Trần Xuân Đô**                    |  **251230004**   | `do251230004@lms.utc.edu.vn`    | `readers.html` (Độc giả)   | Xây dựng bảng quản lý thẻ sinh viên UTC, lập trình kiểm tra định dạng email , SĐT 10 số và chức năng Khóa/Mở thẻ.                  |
+|  5  | **Đinh Văn Phan Dũng**              |  **251230005**   | `dung251230005@lms.utc.edu.vn`  | `contact.html` (Nội quy)   | Xây dựng bảng thời gian phục vụ, nội quy thư viện UTC, form đề xuất giáo trình mới và thiết kế Slide PowerPoint.                   |
+
+---
+
+# MỤC LỤC BÁO CÁO
+
+- [I. ĐỀ TÀI](#i-đề-tài)
+  - [1. Sơ lược về hệ thống](#1-sơ-lược-về-hệ-thống)
+  - [2. Nghiệp vụ của hệ thống (Giới thiệu bài toán)](#2-nghiệp-vụ-của-hệ-thống-giới-thiệu-bài-toán)
+  - [3. Mục đích và yêu cầu](#3-mục-đích-và-yêu-cầu)
+- [II. KHẢO SÁT & PHÂN TÍCH](#ii-khảo-sát--phân-tích)
+  - [1. Tìm hiểu các website đã có cùng chủ đề](#1-tìm-hiểu-các-website-đã-có-cùng-chủ-đề)
+  - [2. Trình bày các đối tượng sử dụng](#2-trình-bày-các-đối-tượng-sử-dụng)
+  - [3. Trình bày các chức năng cơ bản cho từng đối tượng](#3-trình-bày-các-chức-năng-cơ-bản-cho-từng-đối-tượng)
+- [III. THIẾT KẾ HỆ THỐNG](#iii-thiết-kế-hệ-thống)
+  - [1. Sơ đồ Use-Case (Use-case Diagram)](#1-sơ-đồ-use-case-use-case-diagram)
+  - [2. Sơ đồ cấu trúc trang (Sitemap)](#2-sơ-đồ-cấu-trúc-trang-sitemap)
+  - [3. Thiết kế Wireframe bố cục các trang](#3-thiết-kế-wireframe-bố-cục-các-trang)
+- [IV. TRIỂN KHAI XÂY DỰNG WEBSITE](#iv-triển-khai-xây-dựng-website)
+  - [1. Cấu trúc thư mục dự án](#1-cấu-trúc-thư-mục-dự-án)
+  - [2. Giải thích giao diện và phương pháp hiện thực (HTML, CSS, JS)](#2-giải-thích-giao-diện-và-phương-pháp-hiện-thực-html-css-js)
+- [V. KIỂM THỬ HỆ THỐNG (TESTING)](#v-kiểm-thử-hệ-thống-testing)
+  - [1. Mục tiêu kiểm thử](#1-mục-tiêu-kiểm-thử)
+  - [2. Xây dựng các Test Cases (Link, Effect, Data Validation)](#2-xây-dựng-các-test-cases-link-effect-data-validation)
+- [VI. TỰ ĐÁNH GIÁ & KẾT LUẬN](#vi-tự-đánh-giá--kết-luận)
+  - [1. Đánh giá nhóm](#1-đánh-giá-nhóm)
+  - [2. Bảng điểm tự đánh giá cá nhân](#2-bảng-điểm-tự-đánh-giá-cá-nhân)
+  - [3. Bảng điểm nhóm đánh giá từng cá nhân](#3-bảng-điểm-nhóm-đánh-giá-từng-cá-nhân)
+
+---
+
+# I. ĐỀ TÀI
+
+### 1. Sơ lược về hệ thống
+
+Hệ thống **"Thư Viện Điện Tử UTC"** được xây dựng nhằm phục vụ nhu cầu học tập, nghiên cứu của sinh viên Trường Đại học Giao thông Vận tải, đặc biệt là sinh viên chuyên ngành Công nghệ thông tin. Kho tài liệu tập trung vào hai mảng chính:
+
+- **Giáo trình Lập trình & CNTT:** Lập trình Web (HTML/CSS/JS), Cấu trúc dữ liệu và giải thuật (C/C++), Lập trình C# và .NET Core, Lập trình Game Unity & C#, Cơ sở dữ liệu SQL Server.
+- **Tài liệu Ngoại ngữ:** Bộ luyện thi Cambridge IELTS (IELTS 18, Official Cambridge Guide) và Tiếng Anh chuyên ngành CNTT (Oxford).
+
+### 2. Nghiệp vụ của hệ thống (Giới thiệu bài toán)
+
+- **Quản lý danh mục sách:** Cho phép tra cứu nhanh, phân loại theo chuyên ngành hẹp và kiểm soát số lượng còn lại trong kho.
+- **Quản lý thẻ sinh viên:** Độc giả sử dụng Mã sinh viên cùng tài khoản email định danh.
+- **Quy trình Mượn - Trả:** Mỗi sinh viên được mượn tối đa 3 cuốn sách trong thời hạn 14 ngày, có thể gia hạn trực tuyến thêm 7 ngày.
+
+### 3. Mục đích và yêu cầu
+
+- **Mục đích:** Vận dụng toàn diện kiến thức nền tảng của học phần Thiết kế Web để xây dựng một website thực tế, gắn liền với môi trường học tập tại Đại học Giao thông Vận tải.
+- **Yêu cầu kỹ thuật:** Bố cục rõ ràng, chuẩn Responsive trên màn hình máy tính và điện thoại thông minh, không dùng backend phức tạp, mã nguồn JavaScript thuần tường minh, cấu trúc mạch lạc và tuân thủ chuẩn lập trình phía Client (Front-end).
+
+---
+
+# II. KHẢO SÁT & PHÂN TÍCH
+
+### 1. Tìm hiểu các website đã có cùng chủ đề
+
+- **Thư viện Trường ĐH Giao thông Vận tải (lib.utc.edu.vn):** Cung cấp hệ thống tra cứu OPAC cho hàng nghìn sinh viên các khoa, tuy nhiên giao diện còn mang tính truyền thống, chưa tối ưu tốt cho trải nghiệm người dùng trẻ trên di động.
+- **Giải pháp của nhóm:** Thiết kế giao diện hiện đại với Bootstrap 5, sử dụng hình ảnh trực quan cho từng cuốn sách, tích hợp thanh tìm kiếm tức thời bằng JavaScript thuần không cần tải lại trang.
+
+### 2. Trình bày các đối tượng sử dụng
+
+1. **Sinh viên UTC:** Tra cứu sách Lập trình & tài liệu IELTS, xem quy định mượn sách, gửi đề xuất bổ sung giáo trình mới.
+2. **Thủ thư UTC:** Quản lý kho giáo trình, lập phiếu mượn, xác nhận thu hồi sách khi sinh viên trả, quản lý và tạm khóa thẻ khi sinh viên trễ hạn.
+
+### 3. Trình bày các chức năng cơ bản cho từng đối tượng
+
+| Đối tượng         | Tên chức năng             | Mô tả chi tiết                                                                          |
+| :---------------- | :------------------------ | :-------------------------------------------------------------------------------------- |
+| **Sinh viên UTC** | Tra cứu giáo trình        | Nhập từ khóa tên sách (Web, C++, Java, IELTS...), lọc theo từng thể loại ngành.         |
+|                   | Xem quy định & Giờ mở cửa | Nắm rõ thời gian mở cửa tại Nhà Thư viện, mức phạt quá hạn 2,000đ/ngày.                 |
+|                   | Đề xuất mua sách mới      | Gửi biểu mẫu yêu cầu thư viện mua thêm giáo trình công nghệ mới qua email LMS UTC.      |
+| **Thủ thư UTC**   | Thêm giáo trình mới       | Nhập mã sách, tên sách, tác giả, số lượng nhập kho (kiểm tra hợp lệ bằng JS).           |
+|                   | Lập phiếu mượn tài liệu   | Nhập mã sinh viên, chọn sách, hẹn ngày trả (kiểm tra ngày trả sau ngày mượn).          |
+|                   | Xác nhận thu hồi sách     | Bấm nút "Trả sách" để chuyển trạng thái sang "Đã trả".                                  |
+|                   | Quản lý thẻ sinh viên     | Cấp thẻ mới và bấm nút Khóa/Mở khóa thẻ khi sinh viên quá hạn trả sách.                 |
+
+---
+
+# III. THIẾT KẾ HỆ THỐNG
+
+### 1. Sơ đồ Use-Case (Use-case Diagram)
+
+```mermaid
+flowchart TD
+  subgraph HeThongThuVienUTC["Hệ Thống Thư Viện Điện Tử UTC"]
+    UC1(Xem trang chủ & Thống kê thư viện)
+    UC2(Tra cứu sách Lập trình & IELTS)
+    UC3(Thêm giáo trình mới vào kho)
+    UC4(Lập phiếu mượn sách bằng Mã SV UTC)
+    UC5(Xác nhận trả sách & Thu hồi)
+    UC6(Cấp thẻ & Khóa/Mở thẻ sinh viên)
+    UC7(Xem nội quy & Gửi đề xuất giáo trình)
+  end
+
+  SinhVien[Sinh Viên UTC]
+  ThuThu[Thủ Thư UTC]
+
+  SinhVien --> UC1
+  SinhVien --> UC2
+  SinhVien --> UC7
+
+  ThuThu --> UC1
+  ThuThu --> UC2
+  ThuThu --> UC3
+  ThuThu --> UC4
+  ThuThu --> UC5
+  ThuThu --> UC6
+```
+
+### 2. Sơ đồ cấu trúc trang (Sitemap)
+
+```mermaid
+graph TD
+  Home["index.html<br>(Trang chủ)"]
+
+  Books["books.html<br>(Kho sách)"]
+  Borrow["borrow.html<br>(Mượn - Trả)"]
+  Readers["readers.html<br>(Hồ sơ thẻ sinh viên UTC)"]
+  Contact["contact.html<br>(Nội quy Thư viện)"]
+
+  Home --> Books
+  Home --> Borrow
+  Home --> Readers
+  Home --> Contact
+```
+
+### 3. Thiết kế Wireframe bố cục các trang
+
+- **Header:** Thanh Navbar nền xanh , logo chính thức trường ĐH Giao thông Vận tải.
+- **Footer:** Địa chỉ chính thức của Trường:, thông tin nhóm sinh viên thực hiện.
+
+---
+
+# IV. TRIỂN KHAI XÂY DỰNG WEBSITE
+
+### 1. Cấu trúc thư mục dự án
+
+```
+BTL
+│
+├── index.html                    # Trang 1: Trang chủ Thư viện UTC
+├── books.html                    # Trang 2: Kho sách CNTT & IELTS (Hải)
+├── borrow.html                   # Trang 3: Quản lý Mượn - Trả sách (Khánh)
+├── readers.html                  # Trang 4: Quản lý Thẻ sinh viên UTC (Đô)
+├── contact.html                  # Trang 5: Nội quy & Đề xuất mua sách (Dũng)
+│
+├── images/                       # Thư mục chứa hình ảnh cục bộ của hệ thống
+│   ├── logo_utc.png              # File logo chính thức của Trường ĐH Giao thông Vận tải
+│   ├── book1_web.jpg             # Bìa sách Lập trình Web với HTML5, CSS3 & JavaScript
+│   ├── book2_dsa.jpg             # Bìa sách Cấu trúc dữ liệu và giải thuật bằng C/C++
+│   ├── book3_cs.jpg              # Bìa sách Lập trình C# và nền tảng .NET Core
+│   ├── book4_ielts18.png         # Bìa sách Cambridge IELTS 18 Academic With Answers
+│   ├── book5_unity.jpg           # Bìa sách Lập trình Game với Unity & C#
+│   ├── book6_english_it.jpg      # Bìa sách English for Information Technology (Oxford)
+│   ├── book7_sql.jpg             # Bìa sách Giáo trình Cơ sở dữ liệu & Hệ quản trị SQL
+│   └── book8_cambridge_guide.jpg # Bìa sách The Official Cambridge Guide to IELTS
+│
+├── css/
+│   └── style.css                 # File CSS tùy chỉnh giao diện (kết hợp Bootstrap 5 CDN)
+│
+├── js/
+│   └── script.js                 # File JavaScript cơ bản (kiểm tra form, tìm kiếm, lọc, mượn trả)
+│
+├── README.md                     # Tài liệu hướng dẫn sử dụng và phân công nhóm
+└── BAO_CAO_BAI_TAP_LON_QUAN_LY_THU_VIEN.md # Bản báo cáo hoàn chỉnh bài tập lớn
+```
+
+### 2. Giải thích giao diện và phương pháp hiện thực (HTML, CSS, JS)
+
+#### a. Mã nguồn HTML5:
+
+- Dữ liệu sách và danh sách bạn đọc được viết trực tiếp trong HTML, phản ánh thông tin của 5 sinh viên nhóm:
+  - Trương Mạnh Đạt (Mã SV: `251230841` - Email: `dat251230841@lms.utc.edu.vn`)
+  - Nguyễn Phương Hải (Mã SV: `251230002` - Email: `hai251230002@lms.utc.edu.vn`)
+  - Nguyễn Quốc Khánh (Mã SV: `251230003` - Email: `khanh251230003@lms.utc.edu.vn`)
+  - Trần Xuân Đô (Mã SV: `251230004` - Email: `do251230004@lms.utc.edu.vn`)
+  - Đinh Văn Phan Dũng (Mã SV: `251230005` - Email: `dung251230005@lms.utc.edu.vn`)
+
+#### b. Mã nguồn CSS3 & Bootstrap 5:
+
+- Sử dụng Bootstrap 5 CDN kết hợp `images/logo_utc.png` bo tròn trên Navbar.
+- Thẻ sách `.book-title` được căn chỉnh `min-height: 3.1rem; line-height: 1.45;` đảm bảo tên sách không bao giờ bị cắt chữ.
+
+#### c. Mã nguồn JavaScript (`js/script.js`):
+
+- **Kiểm tra mã sinh viên:**
+  ```javascript
+  if (maDocGia == "") {
+    alert("Vui lòng nhập mã sinh viên!");
+    return false;
+  }
+  ```
+- **Kiểm tra email LMS UTC:** Kiểm tra có chứa dấu `@` và `.`.
+- **Tìm kiếm sách:** Duyệt mảng bằng vòng lặp `for`, tìm kiếm tên sách CNTT/IELTS bằng hàm `indexOf()`.
+
+---
+
+# V. KIỂM THỬ HỆ THỐNG (TESTING)
+
+### 1. Mục tiêu kiểm thử
+
+- Đảm bảo toàn bộ liên kết điều hướng 5 trang hoạt động thông suốt.
+- Kiểm tra tính năng tìm kiếm sách chuyên ngành và các ràng buộc dữ liệu mã sinh viên, email LMS.
+
+### 2. Xây dựng các Test Cases (Link, Effect, Data Validation)
+
+|   STT    | Phân loại     | Trường hợp kiểm thử (Test Case)  | Các bước thực hiện                                                                          | Kết quả kỳ vọng                                                                    | Kết quả thực tế            | Trạng thái |
+| :------: | :------------ | :------------------------------- | :------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------- | :------------------------- | :--------: |
+| **TC01** | _Link_        | Kiểm tra Menu điều hướng 5 trang | Nhấp lần lượt vào: Trang chủ, Danh mục sách, Mượn - Trả, Quản lý độc giả, Nội quy & Liên hệ | Trang mở chính xác, hiển thị logo UTC trên thanh menu                              | Chuyển trang mượt mà       |  **ĐẠT**   |
+| **TC02** | _Search (JS)_ | Tìm kiếm sách Lập trình          | Vào `books.html`, gõ từ khóa "C#"                                                           | Chỉ cuốn "Lập Trình C# Và Nền Tảng .NET Core" hiển thị                             | Lọc tức thì trên giao diện |  **ĐẠT**   |
+| **TC03** | _Filter (JS)_ | Lọc sách IELTS                   | Chọn mục "Luyện thi Cambridge IELTS" trên dropdown                                          | Chỉ 2 cuốn sách IELTS (IELTS 18 và Cambridge Guide) hiển thị                       | Lọc chính xác              |  **ĐẠT**   |
+| **TC04** | _Validation_  | Lập phiếu mượn sai ngày          | Nhập ngày mượn `20/09/2026`, ngày hẹn trả `15/09/2026`                                      | Hiện cảnh báo `alert("Lỗi: Ngày hẹn trả sách phải sau ngày mượn ít nhất 1 ngày!")` | Chặn tạo phiếu sai         |  **ĐẠT**   |
+| **TC05** | _Validation_  | Để trống mã sinh viên            | Cấp thẻ mới, không nhập mã sinh viên                                                         | Hệ thống cảnh báo: "Vui lòng nhập mã sinh viên!"                                    | Kiểm tra dữ liệu bắt buộc  |  **ĐẠT**   |
+| **TC06** | _Validation_  | Nhập số điện thoại sai           | Nhập số điện thoại `098123` (thiếu số)                                                      | Hiện thông báo: "Số điện thoại phải là dãy số gồm 10 chữ số!"                      | Kiểm tra hợp lệ chính xác  |  **ĐẠT**   |
+| **TC07** | _DOM / Event_ | Bấm nút "Trả sách"               | Bấm nút "Trả sách" tại dòng phiếu PM001 (Đạt mượn sách Web)                                 | Hiện popup `confirm()`, bấm OK thì nhãn chuyển sang "Đã trả" màu xanh              | Đổi giao diện thành công   |  **ĐẠT**   |
+| **TC08** | _DOM / Event_ | Bấm nút "Mở khóa thẻ"            | Bấm nút "Mở khóa" tại dòng của sinh viên Đinh Văn Phan Dũng                                 | Trạng thái chuyển từ "Đã khóa" sang "Hoạt động", nút đổi sang "Khóa thẻ"           | Hoạt động trơn tru         |  **ĐẠT**   |
+
+---
+
+# VI. TỰ ĐÁNH GIÁ & KẾT LUẬN
+
+### 1. Đánh giá nhóm
+
+- **Ưu điểm:**
+  - Trang web được cá nhân hóa 100% theo bản sắc của Trường Đại học Giao thông Vận tải (UTC) từ logo, địa chỉ, mã sinh viên đến email LMS.
+  - Kho sách sát thực tế với các giáo trình ngành Công nghệ thông tin và chứng chỉ Tiếng Anh chuẩn đầu ra (IELTS).
+  - Cả 5 thành viên đều hiểu rõ code của trang mình phụ trách, sẵn sàng trả lời tự tin mọi câu hỏi vấn đáp.
+- **Tự chấm điểm nhóm:** **9.8 / 10.0**
+
+### 2. Bảng điểm tự đánh giá cá nhân
+
+_Công thức tính điểm trung bình môn học:_
+$$\text{TB} = \frac{d1 + \frac{d2 + d3}{2}}{2}$$
+
+#### Bảng điểm tự đánh giá
+
+| Họ tên sinh viên       | Mã sinh viên  | Trang phụ trách | d1.1 | d1.2 | d1.3 |   d1.4   | d2.1 | d2.2 |   d2.3   | d3.1 | d3.2 | d3.3 |   d3.4   | **ĐIỂM TB** |
+| :--------------------- | :-----------: | :-------------- | :--: | :--: | :--: | :------: | :--: | :--: | :------: | :--: | :--: | :--: | :------: | ----------- |
+| **Trương Mạnh Đạt**    | **251230841** | `index.html`    | 9.5  | 9.5  | 9.5  | **9.50** | 9.5  | 10.0 | **9.75** | 9.5  | 10.0 | 9.0  | **9.50** | **9.56**    |
+| **Nguyễn Phương Hải**  | **251230002** | `books.html`    | 9.5  | 9.5  | 9.5  | **9.50** | 9.5  | 9.5  | **9.50** | 9.5  | 9.5  | 9.0  | **9.33** | **9.46**    |
+| **Nguyễn Quốc Khánh**  | **251230003** | `borrow.html`   | 9.5  | 9.5  | 9.5  | **9.50** | 9.5  | 9.5  | **9.50** | 9.0  | 9.5  | 9.0  | **9.17** | **9.42**    |
+| **Trần Xuân Đô**       | **251230004** | `readers.html`  | 9.5  | 9.5  | 9.5  | **9.50** | 9.5  | 9.5  | **9.50** | 9.0  | 9.5  | 9.0  | **9.17** | **9.42**    |
+| **Đinh Văn Phan Dũng** | **251230005** | `contact.html`  | 9.5  | 9.5  | 9.0  | **9.33** | 10.0 | 9.5  | **9.75** | 9.5  | 9.5  | 9.0  | **9.33** | **9.44**    |
+
+### 3. Bảng điểm nhóm đánh giá cho từng cá nhân
+
+| Họ tên sinh viên       | Mã sinh viên | Nhiệm vụ hoàn thành                                                   | Đánh giá của tập thể nhóm                     | Điểm Nhóm Thống Nhất |
+| :--------------------- | :----------: | :-------------------------------------------------------------------- | :-------------------------------------------- | :------------------: |
+| **Trương Mạnh Đạt**    |  251230841   | Trưởng nhóm, thiết kế trang chủ, tích hợp logo UTC và quản lý tiến độ | Tinh thần trách nhiệm cao, dẫn dắt nhóm tốt   |       **9.6**        |
+| **Nguyễn Phương Hải**  |  251230002   | Hoàn thành trang Sách CNTT & IELTS, viết hàm tìm kiếm/lọc JS          | Code cẩn thận, giao diện đẹp, đúng tiến độ    |       **9.5**        |
+| **Nguyễn Quốc Khánh**  |  251230003   | Hoàn thành trang Mượn - Trả sách, kiểm tra logic mượn                 | Nhiệt tình, hoàn thành tốt bảng phiếu mượn    |       **9.5**        |
+| **Trần Xuân Đô**       |  251230004   | Hoàn thành trang Độc giả, kiểm tra email LMS và SĐT                   | Chăm chỉ, phối hợp ăn ý với nhóm trưởng       |       **9.5**        |
+| **Đinh Văn Phan Dũng** |  251230005   | Hoàn thành trang Nội quy UTC và thiết kế Slide PowerPoint             | Hoàn thành tốt nhiệm vụ, slide đẹp và rõ ràng |       **9.5**        |
+
+---
+
+_Hà Nội, Năm 2026_  
+**Xác nhận của Nhóm trưởng:** Trương Mạnh Đạt
+
