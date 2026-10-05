@@ -15,15 +15,15 @@
 **ĐỀ TÀI SỐ:** 01 - QUẢN LÝ THƯ VIỆN  
 **CÔNG NGHỆ ÁP DỤNG:** HTML5, CSS3, JavaScript Cơ Bản, Bootstrap 5
 
-### BẢNG PHÂN CÔNG THÀNH VIÊN TRONG NHÓM (NHÓM 5 THÀNH VIÊN - UTC)
+### BẢNG PHÂN CÔNG THÀNH VIÊN TRONG NHÓM (NHÓM 5 THÀNH VIÊN)
 
-| STT | Họ và tên sinh viên                    | Mã sinh viên  | Email                           | Trang phụ trách                | Nhiệm vụ chính trong dự án |
-| :-: | :------------------------------------- | :-----------: | :------------------------------ | :----------------------------- | :------------------------- |
-|  1  | **Trương Mạnh Đạt**<br>_(Nhóm trưởng)_ | **251230841** | `dat251230841@lms.utc.edu.vn`   | `index.html`<br>(Trang chủ)    | .                          |
-|  2  | **Nguyễn Phương Hải**                  | **251210853** | `hai251210853@lms.utc.edu.vn`   | `books.html`<br>(Kho sách)     | .                          |
-|  3  | **Nguyễn Quốc Khánh**                  | **251230887** | `khanh251230887@lms.utc.edu.vn` | `borrow.html`<br>(Mượn - Trả)  | .                          |
-|  4  | **Trần Xuân Đô**                       | **251230843** | `do251230843@lms.utc.edu.vn`    | `readers.html`<br>(Độc giả)    | .                          |
-|  5  | **Đinh Văn Phan Dũng**                 | **251230826** | `dung251230826@lms.utc.edu.vn`  | `contact.html`<br>(Nội quy)    | .                          |
+| STT | Họ và tên sinh viên                    | Mã sinh viên  | Email                           | Trang phụ trách               | Nhiệm vụ chính trong dự án |
+| :-: | :------------------------------------- | :-----------: | :------------------------------ | :---------------------------- | :------------------------- |
+|  1  | **Trương Mạnh Đạt**<br>_(Nhóm trưởng)_ | **251230841** | `dat251230841@lms.utc.edu.vn`   | `index.html`<br>(Trang chủ)   | .                          |
+|  2  | **Nguyễn Phương Hải**                  | **251210853** | `hai251210853@lms.utc.edu.vn`   | `books.html`<br>(Kho sách)    | .                          |
+|  3  | **Nguyễn Quốc Khánh**                  | **251230887** | `khanh251230887@lms.utc.edu.vn` | `borrow.html`<br>(Mượn - Trả) | .                          |
+|  4  | **Trần Xuân Đô**                       | **251230843** | `do251230843@lms.utc.edu.vn`    | `readers.html`<br>(Độc giả)   | .                          |
+|  5  | **Đinh Văn Phan Dũng**                 | **251230826** | `dung251230826@lms.utc.edu.vn`  | `contact.html`<br>(Nội quy)   | .                          |
 
 ---
 
@@ -114,8 +114,40 @@ Hệ thống **"Thư Viện Điện Tử UTC"** được xây dựng nhằm ph�
 
 ### 3. Thiết kế Wireframe bố cục các trang
 
-- **Header:** Thanh Navbar nền xanh , logo chính thức trường ĐH Giao thông Vận tải.
-- **Footer:** Địa chỉ chính thức của Trường:, thông tin nhóm sinh viên thực hiện.
+Hệ thống được thiết kế Wireframe chi tiết cho toàn bộ 5 trang chức năng, đảm bảo tính nhất quán về bố cục thanh điều hướng (Header/Navbar), nội dung chính (Main) và chân trang (Footer):
+
+- **Header (Dùng chung):** Thanh Navbar nền xanh nhận diện UTC (`#0d62b9`), logo trường ĐH Giao thông Vận tải, menu điều hướng 5 trang.
+- **Footer (Dùng chung):** Địa chỉ, liên kết nhanh, danh sách nhóm sinh viên thực hiện.
+
+#### a. Wireframe Trang chủ (`index.html`)
+
+Bố cục gồm: Hero Banner giới thiệu giáo trình CNTT & IELTS, 4 khối thống kê số liệu thư viện, lưới giáo trình tiêu biểu và khối quy trình 3 bước mượn trả sách.
+
+![Wireframe Trang chủ - index.html](wireFrame/wireframe_index.png)
+
+#### b. Wireframe Kho giáo trình & tài liệu (`books.html`)
+
+Bố cục gồm: Thanh tìm kiếm từ khóa, bộ lọc danh mục/thể loại, các loại giáo trình.
+
+![Wireframe Kho sách - books.html](wireFrame/wireframe_books.png)
+
+#### c. Wireframe Quản lý mượn - trả sách (`borrow.html`)
+
+Bố cục gồm: Thanh tác vụ, lập phiếu mượn mới và Bảng dữ liệu theo dõi trạng thái phiếu mượn theo thời gian thực (Đang mượn, Đã trả, Quá hạn) kèm nút thao tác xác nhận trả sách.
+
+![Wireframe Mượn - Trả sách - borrow.html](wireFrame/wireframe_borrow.png)
+
+#### d. Wireframe Quản lý hồ sơ độc giả (`readers.html`)
+
+Bố cục gồm: Ô tìm kiếm bạn đọc theo Mã SV/Họ tên, nút làm mới danh sách và Bảng danh sách thẻ thư viện sinh viên &giảng viên kèm nút thao tác Khóa/Mở khóa thẻ.
+
+![Wireframe Quản lý độc giả - readers.html](wireFrame/wireframe_readers.png)
+
+#### e. Wireframe Nội quy & Liên hệ (`contact.html`)
+
+Bố cục chia 2 cột gồm: Cột trái hiển thị thông tin thời gian mở cửa phòng đọc và nội quy thư viện; Cột phải là Biểu mẫu gửi ý kiến đóng góp & đề xuất mua thêm giáo trình mới.
+
+![Wireframe Nội quy & Liên hệ - contact.html](wireFrame/wireframe_contact.png)
 
 ---
 
@@ -132,24 +164,32 @@ BTL_ThietKeWeb
 ├── readers.html                  # Trang 4: Quản lý Thẻ sinh viên UTC (Đô)
 ├── contact.html                  # Trang 5: Nội quy & Đề xuất mua sách (Dũng)
 │
+│
+├── wireFrame/                    # Thư mục chứa bản vẽ Wireframe thiết kế
+│   ├── wireframe_index.png       # Wireframe Trang chủ
+│   ├── wireframe_books.png       # Wireframe Kho sách
+│   ├── wireframe_borrow.png      # Wireframe Mượn - Trả sách
+│   ├── wireframe_readers.png     # Wireframe Quản lý độc giả
+│   └── wireframe_contact.png     # Wireframe Nội quy & Liên hệ
+│
 ├── images/                       # Thư mục chứa hình ảnh cục bộ của hệ thống
 │   ├── logo_utc.png              # File logo chính thức của Trường ĐH Giao thông Vận tải
 │   ├── use_case.png              # Sơ đồ Use-Case hệ thống Thư viện UTC
 │   ├── site_map.png              # Sơ đồ cấu trúc điều hướng trang (Sitemap)
-│   ├── book1_web.jpg             # Bìa sách Lập trình Web với HTML5, CSS3 & JavaScript
-│   ├── book2_dsa.jpg             # Bìa sách Cấu trúc dữ liệu và giải thuật bằng C/C++
-│   ├── book3_cs.jpg              # Bìa sách Lập trình C# và nền tảng .NET Core
-│   ├── book4_ielts18.png         # Bìa sách Cambridge IELTS 18 Academic With Answers
-│   ├── book5_unity.jpg           # Bìa sách Lập trình Game với Unity & C#
-│   ├── book6_english_it.jpg      # Bìa sách English for Information Technology (Oxford)
-│   ├── book7_sql.jpg             # Bìa sách Giáo trình Cơ sở dữ liệu & Hệ quản trị SQL
-│   └── book8_cambridge_guide.jpg # Bìa sách The Official Cambridge Guide to IELTS
+│   ├── book1_web.jpg
+│   ├── book2_dsa.jpg
+│   ├── book3_cs.jpg
+│   ├── book4_ielts18.png
+│   ├── book5_unity.jpg
+│   ├── book6_english_it.jpg
+│   ├── book7_sql.jpg
+│   └── book8_cambridge_guide.jpg
 │
 ├── css/
-│   └── style.css                 # File CSS tùy chỉnh giao diện (kết hợp Bootstrap 5 CDN)
+│   └── style.css                 # File CSS tùy chỉnh giao diện (kết hợp Bootstrap 5)
 │
 ├── js/
-│   └── script.js                 # File JavaScript cơ bản (kiểm tra form, tìm kiếm, lọc, mượn trả)
+│   └── script.js                 # File JavaScript cơ bản
 │
 ├── README.md                     # Tài liệu hướng dẫn sử dụng và phân công nhóm
 └── BAO_CAO_BAI_TAP_LON_QUAN_LY_THU_VIEN.md # Bản báo cáo hoàn chỉnh bài tập lớn
@@ -202,13 +242,13 @@ $$\text{TB} = \frac{d1 + \frac{d2 + d3}{2}}{2}$$
 
 #### Bảng điểm tự đánh giá
 
-| Họ tên sinh viên       | Mã sinh<br>viên | Trang<br>phụ trách | d1.1 | d1.2 | d1.3 |   d1.4   | d2.1 | d2.2 |   d2.3   | d3.1 | d3.2 | d3.3 |   d3.4   | **Điểm<br>TB** |
-| :--------------------- | :-------------: | :----------------: | :--: | :--: | :--: | :------: | :--: | :--: | :------: | :--: | :--: | :--: | :------: | :------------: |
-| **Trương Mạnh Đạt**    |  **251230841**  | `index`<br>`.html` | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
-| **Nguyễn Phương Hải**  |  **251210853**  | `books`<br>`.html` | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
-| **Nguyễn Quốc Khánh**  |  **251230887**  | `borrow`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
-| **Trần Xuân Đô**       |  **251230843**  | `readers`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
-| **Đinh Văn Phan Dũng** |  **251230826**  | `contact`<br>`.html`| ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
+| Họ tên sinh viên       | Mã sinh<br>viên |  Trang<br>phụ trách  | d1.1 | d1.2 | d1.3 |   d1.4   | d2.1 | d2.2 |   d2.3   | d3.1 | d3.2 | d3.3 |   d3.4   | **Điểm<br>TB** |
+| :--------------------- | :-------------: | :------------------: | :--: | :--: | :--: | :------: | :--: | :--: | :------: | :--: | :--: | :--: | :------: | :------------: |
+| **Trương Mạnh Đạt**    |  **251230841**  |  `index`<br>`.html`  | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
+| **Nguyễn Phương Hải**  |  **251210853**  |  `books`<br>`.html`  | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
+| **Nguyễn Quốc Khánh**  |  **251230887**  | `borrow`<br>`.html`  | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
+| **Trần Xuân Đô**       |  **251230843**  | `readers`<br>`.html` | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
+| **Đinh Văn Phan Dũng** |  **251230826**  | `contact`<br>`.html` | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
 
 ### 3. Bảng điểm nhóm đánh giá cho từng cá nhân
 
