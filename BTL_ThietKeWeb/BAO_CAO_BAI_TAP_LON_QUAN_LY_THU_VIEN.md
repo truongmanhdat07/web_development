@@ -8,7 +8,8 @@
 
 **TRƯỜNG:** ĐẠI HỌC GIAO THÔNG VẬN TẢI (UTC)  
 **KHOA:** CÔNG NGHỆ THÔNG TIN  
-**LỚP:** CÔNG NGHỆ THÔNG TIN 3  
+**LỚP:** CÔNG NGHỆ THÔNG TIN 3 (CNTT3)  
+**GIẢNG VIÊN HƯỚNG DẪN:** ThS. HOÀNG VĂN CƯỜNG (MÃ: GV001)  
 **HỌC PHẦN:** THIẾT KẾ WEB  
 **HỌC KỲ / NĂM HỌC:** HỌC KỲ I - NĂM 2  
 **ĐỀ TÀI SỐ:** 01 - QUẢN LÝ THƯ VIỆN  
@@ -123,9 +124,9 @@ Hệ thống **"Thư Viện Điện Tử UTC"** được xây dựng nhằm ph�
 ### 1. Cấu trúc thư mục dự án
 
 ```
-BTL
+BTL_ThietKeWeb
 │
-├── index.html                    # Trang 1: Trang chủ Thư viện UTC
+├── index.html                    # Trang 1: Trang chủ Thư viện UTC (Đạt)
 ├── books.html                    # Trang 2: Kho sách CNTT & IELTS (Hải)
 ├── borrow.html                   # Trang 3: Quản lý Mượn - Trả sách (Khánh)
 ├── readers.html                  # Trang 4: Quản lý Thẻ sinh viên UTC (Đô)

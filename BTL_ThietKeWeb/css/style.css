@@ -1,0 +1,140 @@
+/* ==========================================================================
+   BÀI TẬP LỚN MÔN THIẾT KẾ WEB - TRƯỜNG ĐH GIAO THÔNG VẬN TẢI (UTC)
+   [KHUNG SƯỜN DỰ ÁN CHO 5 THÀNH VIÊN LỚP CNTT3 TỰ PHÁT TRIỂN]
+   Đề tài: Quản lý Thư viện Điện tử UTC (Front-End)
+   File: css/style.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. BẢNG MÀU CHUẨN NHẬN DIỆN THƯ VIỆN UTC & BIẾN DÙNG CHUNG
+   -------------------------------------------------------------------------- */
+:root {
+  --utc-blue: #0d62b9;         /* Xanh tươi sáng chuẩn nhận diện */
+  --utc-blue-dark: #093769;    /* Xanh đậm chân trang */
+  --utc-gold: #ffc107;         /* Vàng nổi bật (active menu, nút hành động) */
+  --utc-bg-light: #f0f4f9;     /* Nền xám sáng / xanh băng dịu mắt */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--utc-bg-light);
+  color: #2d3748;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   1. KHUNG THANH ĐIỀU HƯỚNG DÙNG CHUNG (NAVBAR UTC)
+   -------------------------------------------------------------------------- */
+.navbar-custom {
+  background-color: var(--utc-blue);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-logo-utc {
+  height: 42px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.navbar-brand span {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  padding: 8px 16px !important;
+  border-radius: 6px;
+  transition: all 0.25s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Tab đang chọn có nền vàng nổi bật */
+.navbar-nav .nav-link.active {
+  background-color: var(--utc-gold) !important;
+  color: #1a202c !important;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   2. KHUNG CHÂN TRANG DÙNG CHUNG (FOOTER UTC)
+   -------------------------------------------------------------------------- */
+footer {
+  background-color: var(--utc-blue-dark);
+  color: #e2e8f0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+}
+
+footer h5 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--utc-gold);
+  padding-bottom: 6px;
+  display: inline-block;
+}
+
+footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--utc-gold);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 28px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+
+/* ==========================================================================
+   4. KHU VỰC CSS RIÊNG CỦA TỪNG THÀNH VIÊN (TỰ CODE THÊM BÊN DƯỚI)
+   Gợi ý: Tham khảo file demo/css/style.css để xem mẫu chuẩn!
+   ========================================================================== */
+
+/* --- 4.1. TRANG CHỦ (index.html) - Trương Mạnh Đạt (MSV: 251230841) --- */
+/* Viết class: .banner-home, .stat-card, .quy-trinh-card... tại đây */
+
+
+/* --- 4.2. DANH MỤC SÁCH (books.html) - Nguyễn Phương Hải (MSV: 251210853) --- */
+/* Viết class: .the-sach, .anh-bia-sach, .modal-custom... tại đây */
+
+
+/* --- 4.3. MƯỢN TRẢ SÁCH (borrow.html) - Nguyễn Quốc Khánh (MSV: 251230887) --- */
+/* Viết class: .table-muon-tra, .badge-status... tại đây */
+
+
+/* --- 4.4. QUẢN LÝ ĐỘC GIẢ (readers.html) - Trần Xuân Đô (MSV: 251230843) --- */
+/* Viết class: .table-doc-gia, .btn-lock-the... tại đây */
+
+
+/* --- 4.5. NỘI QUY & LIÊN HỆ (contact.html) - Đinh Văn Phan Dũng (MSV: 251230826) --- */
+/* Viết class: .contact-info-card, .form-gop-y... tại đây */

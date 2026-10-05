@@ -1,0 +1,294 @@
+/* ==========================================================================
+   BÀI TẬP LỚN MÔN THIẾT KẾ WEB - TRƯỜNG ĐH GIAO THÔNG VẬN TẢI (UTC)
+   [BẢN DEMO HOÀN CHỈNH - THAM KHẢO GIAO DIỆN & CHỨC NĂNG]
+   Đề tài: Quản lý Thư viện Điện tử UTC (Front-End)
+   File: demo/css/style.css
+   ========================================================================== */
+
+:root {
+  --utc-blue: #0d62b9;         /* Xanh tươi sáng chuẩn nhận diện */
+  --utc-blue-dark: #093769;    /* Xanh đậm chân trang */
+  --utc-gold: #ffc107;         /* Vàng nổi bật */
+  --utc-bg-light: #f0f4f9;     /* Nền xám sáng / xanh băng dịu mắt */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--utc-bg-light);
+  color: #2d3748;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ================= 1. THANH ĐIỀU HƯỚNG (NAVBAR) ================= */
+.navbar-custom {
+  background-color: var(--utc-blue);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-logo-utc {
+  height: 42px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.navbar-brand span {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.navbar-custom .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 6px 14px !important;
+  border-radius: 4px;
+  margin: 0 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.navbar-custom .nav-link.active {
+  background-color: var(--utc-gold) !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* ================= 2. HERO BANNER TRANG CHỦ ================= */
+.banner-home {
+  background: var(--utc-blue);
+  color: #ffffff;
+  padding: 48px 30px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 18px rgba(13, 98, 185, 0.18);
+  text-align: center;
+}
+
+.banner-home h1 {
+  font-size: 2.15rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.banner-home p {
+  font-size: 1.05rem;
+  max-width: 780px;
+  margin: 0 auto 26px auto;
+  color: #e4f0fc;
+  line-height: 1.6;
+}
+
+.banner-btn-search {
+  background-color: var(--utc-gold) !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border: none !important;
+  padding: 10px 24px !important;
+  border-radius: 6px !important;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.banner-btn-search:hover {
+  background-color: #e0a800 !important;
+  transform: translateY(-1px);
+}
+
+.banner-btn-borrow {
+  border: 1.5px solid rgba(255, 255, 255, 0.7) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  padding: 10px 24px !important;
+  border-radius: 6px !important;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.banner-btn-borrow:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+/* ================= 3. KHỐI THỐNG KÊ (STAT BOXES) ================= */
+.stat-box {
+  background: #ffffff;
+  padding: 24px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.stat-box .number {
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.stat-box .label {
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* ================= 4. THẺ HIỂN THỊ SÁCH (BOOK CARDS) ================= */
+.book-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-color: #f1f5f9;
+}
+
+.book-card .card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.book-card .book-code {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--utc-blue);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.book-card .book-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1e293b;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.book-card .book-author {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+/* ================= 5. BẢNG DỮ LIỆU & CARD ================= */
+.card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.table-container {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+.table thead.table-primary th {
+  background-color: var(--utc-blue);
+  color: #ffffff;
+  font-weight: 600;
+  border-color: #0b549f;
+}
+
+.text-primary {
+  color: var(--utc-blue) !important;
+}
+
+.btn-primary {
+  background-color: var(--utc-blue);
+  border-color: var(--utc-blue);
+}
+
+.btn-primary:hover {
+  background-color: #0b549f;
+  border-color: #0b549f;
+}
+
+/* ================= 6. CHÂN TRANG (FOOTER UTC) ================= */
+footer {
+  background-color: var(--utc-blue-dark);
+  color: #e2e8f0;
+  padding-top: 40px;
+  margin-top: 50px;
+}
+
+footer h5 {
+  color: var(--utc-gold);
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--utc-gold);
+  padding-left: 3px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 16px 0;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
