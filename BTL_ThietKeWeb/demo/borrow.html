@@ -1,0 +1,430 @@
+﻿<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mượn - Trả Sách - Thư Viện UTC</title>
+    <!-- Nhúng thư viện Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ================= 1. THANH ĐIỀU HƯỚNG (NAVBAR UTC) ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="../images/logo_utc.png"
+            alt="Logo UTC"
+            class="navbar-logo-utc"
+          />
+          <span>Thư Viện UTC</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuChinh"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuChinh">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="books.html">Danh mục sách</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="borrow.html">Mượn - Trả sách</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="readers.html">Quản lý độc giả</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Nội quy & Liên hệ</a>
+            </li>
+          </ul>
+          <span class="navbar-text text-white">
+            <i class="bi bi-person-circle me-1"></i> Thủ thư:
+            <strong>Angespur</strong>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= 2. NỘI DUNG CHÍNH (MAIN) ================= -->
+    <main class="py-4">
+      <div class="container">
+        <!-- Tiêu đề trang và Nút bấm -->
+        <div
+          class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2"
+        >
+          <div>
+            <h2 class="fw-bold text-primary mb-1">
+              <i class="bi bi-arrow-left-right me-2"></i>QUẢN LÝ MƯỢN - TRẢ SÁCH
+              (UTC)
+            </h2>
+            <p class="text-muted m-0">
+              Ghi nhận phiếu mượn giáo trình CNTT & sách tiếng Anh, theo dõi hạn
+              trả sinh viên
+            </p>
+          </div>
+          <button
+            class="btn btn-primary fw-bold"
+            data-bs-toggle="modal"
+            data-bs-target="#modalLapPhieu"
+          >
+            <i class="bi bi-plus-circle me-1"></i> Lập Phiếu Mượn Mới
+          </button>
+        </div>
+
+        <!-- Bảng danh sách phiếu mượn (HTML Table chuẩn) -->
+        <div class="table-container">
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover align-middle mb-0">
+              <thead class="table-primary text-center">
+                <tr>
+                  <th style="width: 50px">STT</th>
+                  <th style="width: 100px">Mã phiếu</th>
+                  <th>Sinh viên mượn</th>
+                  <th>Giáo trình mượn</th>
+                  <th>Ngày mượn</th>
+                  <th>Hạn phải trả</th>
+                  <th>Trạng thái</th>
+                  <th style="width: 150px">Xử lý</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Dòng phiếu 1: Đạt -->
+                <tr id="dong-PM001">
+                  <td class="text-center fw-bold">1</td>
+                  <td class="text-center font-monospace fw-bold text-primary">
+                    PM001
+                  </td>
+                  <td>
+                    <strong>Trương Mạnh Đạt</strong>
+                    <div class="small text-muted">
+                      Mã SV: <strong>251230841</strong> (K66-CNTT3)
+                    </div>
+                  </td>
+                  <td>Lập Trình Web Với HTML5, CSS3 & JavaScript</td>
+                  <td class="text-center">08/10/2026</td>
+                  <td class="text-center">22/10/2026</td>
+                  <td class="text-center cot-trangthai">
+                    <span class="badge bg-warning text-dark">Đang mượn</span>
+                  </td>
+                  <td class="text-center cot-thaotac">
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="xacNhanTraSach('PM001', 'Trương Mạnh Đạt')"
+                    >
+                      <i class="bi bi-box-arrow-in-down-left me-1"></i>Trả sách
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Dòng phiếu 2: Hải (Quá hạn) -->
+                <tr id="dong-PM002" class="table-danger">
+                  <td class="text-center fw-bold">2</td>
+                  <td class="text-center font-monospace fw-bold text-danger">
+                    PM002
+                  </td>
+                  <td>
+                    <strong>Nguyễn Phương Hải</strong>
+                    <div class="small text-muted">
+                      Mã SV: <strong>251210853</strong> (K66-CNTT3)
+                    </div>
+                  </td>
+                  <td>Cambridge IELTS 18 Academic With Answers</td>
+                  <td class="text-center">25/09/2026</td>
+                  <td class="text-center text-danger fw-bold">09/10/2026</td>
+                  <td class="text-center cot-trangthai">
+                    <span class="badge bg-danger">Quá hạn</span>
+                  </td>
+                  <td class="text-center cot-thaotac">
+                    <button
+                      class="btn btn-sm btn-danger"
+                      onclick="xacNhanTraSach('PM002', 'Nguyễn Phương Hải')"
+                    >
+                      <i class="bi bi-box-arrow-in-down-left me-1"></i>Thu hồi
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Dòng phiếu 3: Giảng viên UTC -->
+                <tr id="dong-PM003">
+                  <td class="text-center fw-bold">3</td>
+                  <td class="text-center font-monospace fw-bold text-primary">
+                    PM003
+                  </td>
+                  <td>
+                    <strong>ThS. Hoàng Văn Cường</strong>
+                    <div class="small text-muted">
+                      Mã GV: <strong>GV001</strong> (Khoa CNTT - UTC)
+                    </div>
+                  </td>
+                  <td>Lập Trình Game Với Unity & C#</td>
+                  <td class="text-center">01/10/2026</td>
+                  <td class="text-center">15/10/2026</td>
+                  <td class="text-center cot-trangthai">
+                    <span class="badge bg-success">Đã trả</span>
+                  </td>
+                  <td class="text-center cot-thaotac">
+                    <span class="text-success small fw-bold">✓ Hoàn tất</span>
+                  </td>
+                </tr>
+
+                <!-- Dòng phiếu 4: Dũng -->
+                <tr id="dong-PM004">
+                  <td class="text-center fw-bold">4</td>
+                  <td class="text-center font-monospace fw-bold text-primary">
+                    PM004
+                  </td>
+                  <td>
+                    <strong>Đinh Văn Phan Dũng</strong>
+                    <div class="small text-muted">
+                      Mã SV: <strong>251230826</strong> (K66-CNTT3)
+                    </div>
+                  </td>
+                  <td>Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++</td>
+                  <td class="text-center">11/10/2026</td>
+                  <td class="text-center">25/10/2026</td>
+                  <td class="text-center cot-trangthai">
+                    <span class="badge bg-warning text-dark">Đang mượn</span>
+                  </td>
+                  <td class="text-center cot-thaotac">
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="xacNhanTraSach('PM004', 'Đinh Văn Phan Dũng')"
+                    >
+                      <i class="bi bi-box-arrow-in-down-left me-1"></i>Trả sách
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Dòng phiếu 5: Đô -->
+                <tr id="dong-PM005">
+                  <td class="text-center fw-bold">5</td>
+                  <td class="text-center font-monospace fw-bold text-primary">
+                    PM005
+                  </td>
+                  <td>
+                    <strong>Trần Xuân Đô</strong>
+                    <div class="small text-muted">
+                      Mã SV: <strong>251230843</strong> (K66-CNTT3)
+                    </div>
+                  </td>
+                  <td>The Official Cambridge Guide to IELTS</td>
+                  <td class="text-center">13/10/2026</td>
+                  <td class="text-center">27/10/2026</td>
+                  <td class="text-center cot-trangthai">
+                    <span class="badge bg-warning text-dark">Đang mượn</span>
+                  </td>
+                  <td class="text-center cot-thaotac">
+                    <button
+                      class="btn btn-sm btn-success"
+                      onclick="xacNhanTraSach('PM005', 'Trần Xuân Đô')"
+                    >
+                      <i class="bi bi-box-arrow-in-down-left me-1"></i>Trả sách
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= MODAL LẬP PHIẾU MƯỢN MỚI ================= -->
+      <div class="modal fade" id="modalLapPhieu" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form onsubmit="return kiemTraMuonSach();">
+              <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                  <i class="bi bi-pencil-square me-2"></i>Lập Phiếu Mượn Giáo
+                  Trình UTC
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="maSinhVien" class="form-label fw-bold"
+                    >Mã sinh viên UTC (*)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="maSinhVien"
+                    placeholder="Ví dụ: 251230841"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="tenSinhVien" class="form-label fw-bold"
+                    >Họ và tên người mượn (*)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="tenSinhVien"
+                    placeholder="Ví dụ: Nguyễn Văn A"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="sachMuon" class="form-label fw-bold"
+                    >Chọn tài liệu cần mượn (*)</label
+                  >
+                  <select class="form-select" id="sachMuon">
+                    <option value="">
+                      -- Nhấp để chọn giáo trình CNTT & IELTS --
+                    </option>
+                    <option value="UTC001">
+                      UTC001 - Lập Trình Web Với HTML5, CSS3 & JavaScript
+                    </option>
+                    <option value="UTC002">
+                      UTC002 - Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++
+                    </option>
+                    <option value="UTC003">
+                      UTC003 - Lập Trình C# Và Nền Tảng .NET Core
+                    </option>
+                    <option value="UTC004">
+                      UTC004 - Cambridge IELTS 18 Academic With Answers
+                    </option>
+                    <option value="UTC005">
+                      UTC005 - Lập Trình Game Với Unity & C#
+                    </option>
+                    <option value="UTC006">
+                      UTC006 - English for Information Technology (Oxford)
+                    </option>
+                    <option value="UTC007">
+                      UTC007 - Giáo Trình Cơ Sở Dữ Liệu & Hệ Quản Trị SQL
+                    </option>
+                    <option value="UTC008">
+                      UTC008 - The Official Cambridge Guide to IELTS
+                    </option>
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="ngayMuon" class="form-label fw-bold"
+                      >Ngày mượn (*)</label
+                    >
+                    <input type="date" class="form-control" id="ngayMuon" />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="ngayHenTra" class="form-label fw-bold"
+                      >Hạn trả sách (*)</label
+                    >
+                    <input type="date" class="form-control" id="ngayHenTra" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="ghiChu" class="form-label">Ghi chú môn học</label>
+                  <textarea
+                    class="form-control"
+                    id="ghiChu"
+                    rows="2"
+                    placeholder="Ví dụ: Mượn làm BTL Thiết kế Web Khoa CNTT - UTC..."
+                  ></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Hủy
+                </button>
+                <button type="submit" class="btn btn-primary fw-bold">
+                  Xác Nhận Lập Phiếu
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ================= 3. CHÂN TRANG (FOOTER UTC) ================= -->
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <img
+                src="../images/logo_utc.png"
+                alt="Logo UTC"
+                style="
+                  height: 38px;
+                  background: white;
+                  border-radius: 50%;
+                  padding: 2px;
+                "
+              />
+              <h5 class="m-0 text-white fw-bold">Thư Viện ĐH GTVT</h5>
+            </div>
+            <p class="small text-light-50">
+              Trường Đại học Giao thông Vận tải (UTC)<br />Địa chỉ: Số 3 phố Cầu
+              Giấy, Láng Thượng, Đống Đa, Hà Nội.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Liên Kết Nhanh</h5>
+            <ul class="list-unstyled small">
+              <li><a href="index.html">&raquo; Trang chủ</a></li>
+              <li>
+                <a href="books.html">&raquo; Danh mục sách CNTT & IELTS</a>
+              </li>
+              <li><a href="borrow.html">&raquo; Mượn - Trả sách</a></li>
+              <li><a href="readers.html">&raquo; Quản lý độc giả UTC</a></li>
+              <li><a href="contact.html">&raquo; Nội quy & Liên hệ</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Nhóm Sinh Viên Thực Hiện</h5>
+            <p class="small mb-1">Môn học: <strong>Thiết Kế Web</strong></p>
+            <p class="small mb-1">
+              Trường: <strong>Đại học Giao thông Vận tải (UTC)</strong>
+            </p>
+            <p class="small mb-1">Lớp: <strong>CNTT3</strong></p>
+            <p class="small mb-1">
+              Nhóm trưởng: <strong>Trương Mạnh Đạt</strong>
+            </p>
+            <p class="small">
+              Thành viên:
+              <strong
+                >Nguyễn Phương Hải, Trần Xuân Đô, Nguyễn Quốc Khánh, Đinh Văn
+                Phan Dũng</strong
+              >
+              (Khoa CNTT - UTC)
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="m-0">
+            &copy; 2026 Thư Viện Trường Đại Học Giao Thông Vận Tải (UTC). Bài
+            Tập Lớn Môn Thiết Kế Web.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,454 @@
+﻿<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Độc Giả - Thư Viện UTC</title>
+    <!-- Nhúng thư viện Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ================= 1. THANH ĐIỀU HƯỚNG (NAVBAR UTC) ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="../images/logo_utc.png"
+            alt="Logo UTC"
+            class="navbar-logo-utc"
+          />
+          <span>Thư Viện UTC</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuChinh"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuChinh">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="books.html">Danh mục sách</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="borrow.html">Mượn - Trả sách</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="readers.html">Quản lý độc giả</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Nội quy & Liên hệ</a>
+            </li>
+          </ul>
+          <span class="navbar-text text-white">
+            <i class="bi bi-person-circle me-1"></i> Thủ thư:
+            <strong>Angespur</strong>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= 2. NỘI DUNG CHÍNH (MAIN) ================= -->
+    <main class="py-4">
+      <div class="container">
+        <!-- Tiêu đề trang và nút Cấp thẻ -->
+        <div
+          class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2"
+        >
+          <div>
+            <h2 class="fw-bold text-primary mb-1">
+              <i class="bi bi-people me-2"></i>HỒ SƠ THẺ ĐỘC GIẢ SINH VIÊN UTC
+            </h2>
+            <p class="text-muted m-0">
+              Danh sách tài khoản thư viện sinh viên Khoa Công nghệ thông tin -
+              ĐH Giao thông Vận tải
+            </p>
+          </div>
+          <button
+            class="btn btn-primary fw-bold"
+            data-bs-toggle="modal"
+            data-bs-target="#modalCapThe"
+          >
+            <i class="bi bi-person-plus-fill me-1"></i> Cấp Thẻ Độc Giả Mới
+          </button>
+        </div>
+
+        <!-- Bảng danh sách độc giả UTC (Thẻ table HTML) -->
+        <div class="table-container">
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover align-middle mb-0">
+              <thead class="table-primary text-center">
+                <tr>
+                  <th style="width: 50px">STT</th>
+                  <th style="width: 120px">Mã SV / Thẻ</th>
+                  <th>Họ và tên</th>
+                  <th>Đối tượng</th>
+                  <th>Khoa / Lớp</th>
+                  <th>Email LMS UTC</th>
+                  <th>Số điện thoại</th>
+                  <th>Trạng thái</th>
+                  <th style="width: 130px">Hành động</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- 1: Đạt -->
+                <tr id="docgia-251230841">
+                  <td class="text-center fw-bold">1</td>
+                  <td class="text-center font-monospace fw-bold text-primary">
+                    251230841
+                  </td>
+                  <td class="fw-bold">Trương Mạnh Đạt</td>
+                  <td class="text-center">
+                    <span class="badge bg-light text-dark border"
+                      >Sinh viên</span
+                    >
+                  </td>
+                  <td>K66-CNTT3</td>
+                  <td>dat251230841@lms.utc.edu.vn</td>
+                  <td>0981234567</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge bg-success">Hoạt động</span>
+                  </td>
+                  <td class="text-center">
+                    <button
+                      class="btn btn-sm btn-warning nut-khoa-the"
+                      onclick="doiTrangThaiThe('251230841', 'Trương Mạnh Đạt')"
+                    >
+                      Khóa thẻ
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- 2: Hải -->
+                <tr id="docgia-251210853">
+                  <td class="text-center fw-bold">2</td>
+                  <td class="text-center font-monospace fw-bold text-primary">
+                    251210853
+                  </td>
+                  <td class="fw-bold">Nguyễn Phương Hải</td>
+                  <td class="text-center">
+                    <span class="badge bg-light text-dark border"
+                      >Sinh viên</span
+                    >
+                  </td>
+                  <td>K66-CNTT3</td>
+                  <td>hai251210853@lms.utc.edu.vn</td>
+                  <td>0972345678</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge bg-success">Hoạt động</span>
+                  </td>
+                  <td class="text-center">
+                    <button
+                      class="btn btn-sm btn-warning nut-khoa-the"
+                      onclick="doiTrangThaiThe('251210853', 'Nguyễn Phương Hải')"
+                    >
+                      Khóa thẻ
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- 3: Khánh -->
+                <tr id="docgia-251230887">
+                  <td class="text-center fw-bold">3</td>
+                  <td class="text-center font-monospace fw-bold text-primary">
+                    251230887
+                  </td>
+                  <td class="fw-bold">Nguyễn Quốc Khánh</td>
+                  <td class="text-center">
+                    <span class="badge bg-light text-dark border"
+                      >Sinh viên</span
+                    >
+                  </td>
+                  <td>K66-CNTT3</td>
+                  <td>khanh251230887@lms.utc.edu.vn</td>
+                  <td>0963456789</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge bg-success">Hoạt động</span>
+                  </td>
+                  <td class="text-center">
+                    <button
+                      class="btn btn-sm btn-warning nut-khoa-the"
+                      onclick="doiTrangThaiThe('251230887', 'Nguyễn Quốc Khánh')"
+                    >
+                      Khóa thẻ
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- 4: Đô -->
+                <tr id="docgia-251230843">
+                  <td class="text-center fw-bold">4</td>
+                  <td class="text-center font-monospace fw-bold text-primary">
+                    251230843
+                  </td>
+                  <td class="fw-bold">Trần Xuân Đô</td>
+                  <td class="text-center">
+                    <span class="badge bg-light text-dark border"
+                      >Sinh viên</span
+                    >
+                  </td>
+                  <td>K66-CNTT3</td>
+                  <td>do251230843@lms.utc.edu.vn</td>
+                  <td>0914567890</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge bg-success">Hoạt động</span>
+                  </td>
+                  <td class="text-center">
+                    <button
+                      class="btn btn-sm btn-warning nut-khoa-the"
+                      onclick="doiTrangThaiThe('251230843', 'Trần Xuân Đô')"
+                    >
+                      Khóa thẻ
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- 5: Dũng (Đang khóa để demo mở khóa) -->
+                <tr id="docgia-251230826">
+                  <td class="text-center fw-bold">5</td>
+                  <td class="text-center font-monospace fw-bold text-primary">
+                    251230826
+                  </td>
+                  <td class="fw-bold">Đinh Văn Phan Dũng</td>
+                  <td class="text-center">
+                    <span class="badge bg-light text-dark border"
+                      >Sinh viên</span
+                    >
+                  </td>
+                  <td>K66-CNTT3</td>
+                  <td>dung251230826@lms.utc.edu.vn</td>
+                  <td>0935678901</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge bg-secondary">Đã khóa</span>
+                  </td>
+                  <td class="text-center">
+                    <button
+                      class="btn btn-sm btn-success nut-khoa-the"
+                      onclick="doiTrangThaiThe('251230826', 'Đinh Văn Phan Dũng')"
+                    >
+                      Mở khóa
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- 6: Giảng viên UTC -->
+                <tr id="docgia-GV001">
+                  <td class="text-center fw-bold">6</td>
+                  <td class="text-center font-monospace fw-bold text-primary">
+                    GV001
+                  </td>
+                  <td class="fw-bold">ThS. Hoàng Văn Cường</td>
+                  <td class="text-center">
+                    <span class="badge bg-primary">Giảng viên</span>
+                  </td>
+                  <td>Khoa CNTT - UTC</td>
+                  <td>giangvien@utc.edu.vn</td>
+                  <td>0912345678</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge bg-success">Hoạt động</span>
+                  </td>
+                  <td class="text-center">
+                    <button
+                      class="btn btn-sm btn-warning nut-khoa-the"
+                      onclick="doiTrangThaiThe('GV001', 'ThS. Hoàng Văn Cường')"
+                    >
+                      Khóa thẻ
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= MODAL CẤP THẺ ĐỘC GIẢ ================= -->
+      <div class="modal fade" id="modalCapThe" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form onsubmit="return kiemTraDangKyDocGia();">
+              <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                  <i class="bi bi-person-badge me-2"></i>Cấp Thẻ Độc Giả Sinh
+                  Viên UTC
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="maDocGia" class="form-label fw-bold"
+                    >Mã sinh viên UTC (*)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control font-monospace"
+                    id="maDocGia"
+                    placeholder="Ví dụ: 251230841"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="hoTen" class="form-label fw-bold"
+                    >Họ và tên sinh viên (*)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="hoTen"
+                    placeholder="Ví dụ: Nguyễn Văn A"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="doiTuong" class="form-label fw-bold"
+                    >Đối tượng</label
+                  >
+                  <select class="form-select" id="doiTuong">
+                    <option value="Sinh viên">
+                      Sinh viên (Hệ chính quy UTC)
+                    </option>
+                    <option value="Giảng viên">Cán bộ / Giảng viên UTC</option>
+                    <option value="Học viên">Học viên cao học UTC</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="khoa" class="form-label fw-bold"
+                    >Khoa / Lớp chuyên ngành</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="khoa"
+                    value="K66-CNTT3"
+                    placeholder="Ví dụ: K66-CNTT3"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label fw-bold"
+                    >Địa chỉ Email sinh viên (*)</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Ví dụ: sinhvien@lms.utc.edu.vn"
+                  />
+                  <div class="form-text">
+                    Bắt buộc sử dụng email đuôi trường @lms.utc.edu.vn để mượn
+                    giáo trình.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="sdt" class="form-label fw-bold"
+                    >Số điện thoại liên hệ (*)</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="sdt"
+                    placeholder="Nhập 10 chữ số (Ví dụ: 0987654321)"
+                  />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Hủy
+                </button>
+                <button type="submit" class="btn btn-primary fw-bold">
+                  Tạo Thẻ Thư Viện
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ================= 3. CHÂN TRANG (FOOTER UTC) ================= -->
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <img
+                src="../images/logo_utc.png"
+                alt="Logo UTC"
+                style="
+                  height: 38px;
+                  background: white;
+                  border-radius: 50%;
+                  padding: 2px;
+                "
+              />
+              <h5 class="m-0 text-white fw-bold">Thư Viện ĐH GTVT</h5>
+            </div>
+            <p class="small text-light-50">
+              Trường Đại học Giao thông Vận tải (UTC)<br />Địa chỉ: Số 3 phố Cầu
+              Giấy, Láng Thượng, Đống Đa, Hà Nội.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Liên Kết Nhanh</h5>
+            <ul class="list-unstyled small">
+              <li><a href="index.html">&raquo; Trang chủ</a></li>
+              <li>
+                <a href="books.html">&raquo; Danh mục sách CNTT & IELTS</a>
+              </li>
+              <li><a href="borrow.html">&raquo; Mượn - Trả sách</a></li>
+              <li><a href="readers.html">&raquo; Quản lý độc giả UTC</a></li>
+              <li><a href="contact.html">&raquo; Nội quy & Liên hệ</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Nhóm Sinh Viên Thực Hiện</h5>
+            <p class="small mb-1">Môn học: <strong>Thiết Kế Web</strong></p>
+            <p class="small mb-1">
+              Trường: <strong>Đại học Giao thông Vận tải (UTC)</strong>
+            </p>
+            <p class="small mb-1">Lớp: <strong>CNTT3</strong></p>
+            <p class="small mb-1">
+              Nhóm trưởng: <strong>Trương Mạnh Đạt</strong>
+            </p>
+            <p class="small">
+              Thành viên:
+              <strong
+                >Nguyễn Phương Hải, Trần Xuân Đô, Nguyễn Quốc Khánh, Đinh Văn
+                Phan Dũng</strong
+              >
+              (Khoa CNTT - UTC)
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="m-0">
+            &copy; 2026 Thư Viện Trường Đại Học Giao Thông Vận Tải (UTC). Bài
+            Tập Lớn Môn Thiết Kế Web.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
