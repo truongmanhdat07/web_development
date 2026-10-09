@@ -1,32 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nội Quy & Liên Hệ - Thư Viện UTC</title>
-    <!-- Thư viện Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Thư viện Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <!-- File CSS tùy chỉnh của nhóm -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <nav></nav>
 
-    <main class="py-4">
-      <div class="container"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nội quy & Liên hệ - Thư viện UTC</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo_utc.png" alt="Logo UTC">
+                <span>Thư Viện UTC</span>
+            </div>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="books.html">Danh mục sách</a></li>
+                    <li><a href="borrow.html">Mượn - Trả sách</a></li>
+                    <li><a href="readers.html">Quản lý độc giả</a></li>
+                    <li><a href="contact.html" class="active">Nội quy & Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="librarian">
+                <i class="bi bi-person-circle me-1"></i>
+                Thủ thư: <strong>Angespur</strong>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1><i class="bi bi-info-circle"></i> NỘI QUY THƯ VIỆN & LIÊN HỆ GÓP Ý (UTC)</h1>
+            <p>Quy định phục vụ bạn đọc trường Đại học Giao thông Vận tải và kênh đề xuất sách CNTT, IELTS mới</p>
+        </section>
+
+        <div class="content">
+            <div class="left-column">
+                <section class="card">
+                    <h2><i class="bi bi-clock-history"></i> Thời Gian Phục Vụ Bạn Đọc UTC</h2>
+
+                    <table class="schedule">
+                        <tr>
+                            <th>Thứ Hai - Thứ Sáu</th>
+                            <td>Sáng: 07h30 - 11h30 | Chiều: 13h00 - 17h00</td>
+                        </tr>
+                        <tr>
+                            <th>Thứ Bảy</th>
+                            <td>Sáng: 08h00 - 11h30 (Phòng đọc tự học)</td>
+                        </tr>
+                        <tr>
+                            <th>Chủ Nhật & Ngày Lễ</th>
+                            <td class="holiday">Nghỉ theo lịch của Trường ĐH Giao thông Vận tải</td>
+                        </tr>
+                        <tr>
+                            <th>Địa chỉ phục vụ</th>
+                            <td>Nhà Thư viện Trung tâm - Số 3 Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="card rules">
+                    <h2><i class="bi bi-shield-check"></i> Nội Quy Mượn Giáo Trình Dành Cho Sinh Viên</h2>
+
+                    <div class="rule">
+                        <span class="icon check"><i class="bi bi-check-circle-fill"></i></span>
+                        <p>Xuất trình thẻ sinh viên UTC hoặc quét mã thẻ trên ứng dụng / cổng LMS Thư viện.</p>
+                    </div>
+
+                    <div class="rule">
+                        <span class="icon check"><i class="bi bi-check-circle-fill"></i></span>
+                        <p>Mỗi sinh viên được mượn tối đa <strong>3 cuốn giáo trình / sách IELTS</strong> cùng một thời điểm.</p>
+                    </div>
+
+                    <div class="rule">
+                        <span class="icon check"><i class="bi bi-check-circle-fill"></i></span>
+                        <p>Thời hạn mượn tiêu chuẩn: <strong>14 ngày</strong>. Có thể gia hạn thêm 1 lần (7 ngày) qua website.</p>
+                    </div>
+
+                    <div class="rule">
+                        <span class="icon warning"><i class="bi bi-exclamation-triangle-fill"></i></span>
+                        <p>Quá hạn trả sách: <strong>Phạt 2,000 VNĐ / cuốn / ngày</strong> nộp muộn.</p>
+                    </div>
+
+                    <div class="rule">
+                        <span class="icon lock"><i class="bi bi-lock-fill"></i></span>
+                        <p>Quá hạn trên 15 ngày: Thẻ thư viện sẽ bị <strong>tự động tạm khóa</strong> và gửi báo cáo về Khoa CNTT.</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="card suggestion">
+                    <h2><i class="bi bi-envelope-paper"></i> Đề Xuất Mua Giáo Trình / Góp Ý Cho Thư Viện</h2>
+
+                    <p class="description">Sinh viên UTC có thể gửi yêu cầu thư viện bổ sung các đầu sách code mới (React, AI, Cloud...) hoặc tài liệu luyện thi IELTS tại đây.</p>
+
+                    <form id="formGopY">
+                        <div class="form-group">
+                            <label for="hoten">Họ và tên sinh viên (*)</label>
+                            <input type="text" id="hoten" name="hoten" placeholder="Ví dụ: Nguyễn Văn A" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email sinh viên UTC (*)</label>
+                            <input type="email" id="email" name="email" placeholder="Ví dụ: sinhvien@lms.utc.edu.vn" required>
+                            <small>Dùng email sinh viên @lms.utc.edu.vn để nhận phản hồi từ thư viện.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chude">Chủ đề đề xuất</label>
+                            <select id="chude" name="chude">
+                                <option>Đề xuất mua thêm giáo trình Lập trình mới</option>
+                                <option>Đề xuất sách CNTT</option>
+                                <option>Đề xuất tài liệu IELTS</option>
+                                <option>Góp ý về thư viện</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="noidung">Nội dung chi tiết (*)</label>
+                            <textarea id="noidung" name="noidung" placeholder="Nhập tên giáo trình muốn mua hoặc nội dung bạn cần góp ý..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="bi bi-send"></i> Gửi Đề Xuất Đến Thư Viện UTC
+                        </button>
+
+                        <p id="thongbao" role="status" aria-live="polite"></p>
+                    </form>
+                </section>
+            </div>
+        </div>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>
+                    <img src="images/logo_utc.png" alt="Logo UTC" class="footer-logo">
+                    Thư Viện ĐH GTVT
+                </h3>
+                <p>Trường Đại học Giao thông Vận tải (UTC)</p>
+                <p>Địa chỉ: Số 3 phố Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội.</p>
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+            <div class="footer-column">
+                <h3>Liên Kết Nhanh</h3>
+                <a href="index.html">» Trang chủ</a>
+                <a href="books.html">» Danh mục sách CNTT & IELTS</a>
+                <a href="borrow.html">» Mượn - Trả sách</a>
+                <a href="readers.html">» Quản lý độc giả UTC</a>
+                <a href="contact.html">» Nội quy & Liên hệ</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Nhóm Sinh Viên Thực Hiện</h3>
+                <p>Môn học: <strong>Thiết Kế Web</strong></p>
+                <p>Trường: <strong>Đại học Giao thông Vận tải (UTC)</strong></p>
+                <p>Nhóm trưởng: <strong>Trương Mạnh Đạt</strong></p>
+                <p>Thành viên: <strong>Nguyễn Phương Hải, Trần Xuân Đỗ, Nguyễn Quốc Khánh, Đinh Văn Phan Dũng</strong></p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2026 Thư Viện Trường Đại Học Giao Thông Vận Tải (UTC). Bài Tập Lớn Môn Thiết Kế Web.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="contact.js"></script>
+</body>
+
 </html>
