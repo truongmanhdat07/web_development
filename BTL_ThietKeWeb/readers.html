@@ -18,13 +18,10 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Thanh điều hướng -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
       <div class="container">
-        <!-- Logo & Tên thương hiệu -->
-        <a
-          class="navbar-brand d-flex align-items-center gap-2"
-          href="index.html"
-        >
+        <a class="brand-logo" href="index.html">
           <img
             src="./images/logo_utc.png"
             alt="Logo UTC"
@@ -32,8 +29,6 @@
           />
           <span>Thư Viện UTC</span>
         </a>
-
-        <!-- Nút 3 gạch mở menu trên điện thoại -->
         <button
           class="navbar-toggler"
           type="button"
@@ -43,8 +38,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!--responsive-->
-        <div class="collapse navbar-collapse" id="menuChinh">
+        <div class="collapse navbar-collapse nav-links-wrap" id="menuChinh">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Trang chủ</a>
@@ -62,12 +56,10 @@
               <a class="nav-link" href="contact.html">Nội quy & Liên hệ</a>
             </li>
           </ul>
-
-          <!-- Thông tin tài khoản người dùng -->
-          <div class="user-info text-white">
-            <i class="bi bi-person-circle me-1"></i>Thủ thư:
+          <span class="librarian-badge">
+            <i class="bi bi-person-circle"></i> Thủ thư:
             <strong>Angespur</strong>
-          </div>
+          </span>
         </div>
       </div>
     </nav>
@@ -312,90 +304,53 @@
       </div>
     </main>
 
-    <!-- CHÂN TRANG -->
-    <footer class="bg-dark text-white pt-5 pb-3">
+    <!-- Chân trang -->
+    <footer>
       <div class="container">
-        <div class="footer-top row g-4 mb-4">
-          <!-- Cột 1: Thông tin trường -->
-          <div class="col-12 col-md-4">
-            <div class="brand d-flex align-items-center gap-2 mb-2">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="d-flex align-items-center gap-2 mb-2">
               <img
                 src="./images/logo_utc.png"
                 alt="Logo UTC"
-                style="height: 35px"
+                style="height: 38px; background: white; border-radius: 50%; padding: 2px;"
                 onerror="this.style.display = 'none'"
               />
               <h5 class="m-0 text-white">Thư Viện ĐH GTVT</h5>
             </div>
-            <p class="small text-white-50">
+            <p class="small text-light-50">
               Trường Đại học Giao thông Vận tải (UTC)<br />
               Địa chỉ: Số 3 phố Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội.
             </p>
           </div>
-
-          <!-- Cột 2: Menu liên kết -->
-          <div class="col-12 col-md-4">
-            <h5 class="text-white mb-3">Liên Kết Nhanh</h5>
-            <ul class="list-unstyled small">
-              <li>
-                <a href="index.html" class="text-white-50 text-decoration-none"
-                  >&raquo; Trang chủ</a
-                >
-              </li>
-              <li>
-                <a href="books.html" class="text-white-50 text-decoration-none"
-                  >&raquo; Danh mục sách CNTT & IELTS</a
-                >
-              </li>
-              <li>
-                <a href="borrow.html" class="text-white-50 text-decoration-none"
-                  >&raquo; Mượn - Trả sách</a
-                >
-              </li>
-              <li>
-                <a
-                  href="readers.html"
-                  class="text-white-50 text-decoration-none"
-                  >&raquo; Quản lý độc giả UTC</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="text-white-50 text-decoration-none"
-                  >&raquo; Nội quy & Liên hệ</a
-                >
-              </li>
+          <div class="col-md-4">
+            <h5>Liên Kết Nhanh</h5>
+            <ul>
+              <li><a href="index.html">&raquo; Trang chủ</a></li>
+              <li><a href="books.html">&raquo; Danh mục sách CNTT & IELTS</a></li>
+              <li><a href="borrow.html">&raquo; Mượn - Trả sách</a></li>
+              <li><a href="readers.html">&raquo; Quản lý độc giả UTC</a></li>
+              <li><a href="contact.html">&raquo; Nội quy & Liên hệ</a></li>
             </ul>
           </div>
-
-          <!-- Cột 3: Thông tin nhóm thực hiện -->
-          <div class="col-12 col-md-4">
-            <h5 class="text-white mb-3">Nhóm Sinh Viên Thực Hiện</h5>
+          <div class="col-md-4">
+            <h5>Nhóm Sinh Viên Thực Hiện</h5>
             <p class="small mb-1">Môn học: <strong>Thiết Kế Web</strong></p>
-            <p class="small mb-1">
-              Trường: <strong>Đại học Giao thông Vận tải (UTC)</strong>
-            </p>
+            <p class="small mb-1">Trường: <strong>Đại học Giao thông Vận tải (UTC)</strong></p>
             <p class="small mb-1">Lớp: <strong>CNTT3</strong></p>
             <p class="small mb-1">
               Nhóm trưởng: <strong>Trương Mạnh Đạt</strong>
             </p>
-            <p class="small mb-1">
+            <p class="small">
               Thành viên:
-              <strong
-                >Nguyễn Phương Hải, Trần Xuân Đô, Nguyễn Quốc Khánh, Đinh Văn
-                Phan Dũng</strong
-              >
+              <strong>Nguyễn Phương Hải, Trần Xuân Đô, Nguyễn Quốc Khánh, Đinh Văn Phan Dũng</strong>
+              (Khoa CNTT - UTC)
             </p>
           </div>
         </div>
-
-        <hr class="border-secondary" />
-
-        <div class="footer-bottom text-center small text-white-50">
+        <div class="footer-bottom">
           <p class="m-0">
-            &copy; 2026 Thư Viện Trường Đại Học Giao Thông Vận Tải (UTC). Bài
-            Tập Lớn Thiết Kế Web - Nhóm Sinh Viên Lớp CNTT3.
+            &copy; 2026 Thư Viện Trường Đại Học Giao Thông Vận Tải (UTC). Bài Tập Lớn Thiết Kế Web - Nhóm Sinh Viên Lớp CNTT3.
           </p>
         </div>
       </div>
