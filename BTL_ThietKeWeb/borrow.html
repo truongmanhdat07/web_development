@@ -64,16 +64,18 @@
       </div>
     </nav>
 
-    <main class="py-4">
+  <main class="py-4">
       <div class="container">
         <!-- Tiêu đề trang + nút lập phiếu -->
-        <section class="page-header">
+        <section
+          class="page-header d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4"
+        >
           <div class="page-heading">
-            <h1>
-              <i class="bi bi-arrow-left-right"></i> Quản lý mượn - trả sách
+            <h1 class="h2 fw-bold text-primary text-uppercase mb-1">
+              <i class="bi bi-arrow-left-right me-2"></i>Quản lý mượn - trả sách
               (UTC)
             </h1>
-            <p>
+            <p class="text-secondary mb-0">
               Ghi nhận phiếu mượn giáo trình CNTT &amp; sách tiếng Anh, theo dõi
               hạn trả sinh viên
             </p>
@@ -82,140 +84,193 @@
           <div class="page-actions">
             <button
               type="button"
-              class="btn-add"
+              class="btn btn-primary btn-add fw-bold px-4 py-2"
               data-bs-toggle="modal"
               data-bs-target="#borrowModal"
             >
-              <i class="bi bi-plus-circle"></i> Lập Phiếu Mượn Mới
+              <i class="bi bi-plus-circle me-2"></i>Lập Phiếu Mượn Mới
             </button>
           </div>
         </section>
 
         <!-- Bảng phiếu mượn -->
-        <div class="table-container">
+        <div class="table-container bg-white rounded shadow-sm overflow-hidden">
           <div class="table-responsive">
-            <table class="table-bordered">
+            <table
+              class="table table-bordered table-hover align-middle text-center mb-0"
+            >
               <thead>
                 <tr>
-                  <th>STT</th>
-                  <th>Mã phiếu</th>
-                  <th>Sinh viên mượn</th>
-                  <th>Giáo trình mượn</th>
-                  <th>Ngày mượn</th>
-                  <th>Hạn phải trả</th>
-                  <th>Trạng thái</th>
-                  <th>Xử lý</th>
+                  <th class="bg-primary text-white py-3">STT</th>
+                  <th class="bg-primary text-white py-3">Mã phiếu</th>
+                  <th class="bg-primary text-white py-3">Sinh viên mượn</th>
+                  <th class="bg-primary text-white py-3">Giáo trình mượn</th>
+                  <th class="bg-primary text-white py-3">Ngày mượn</th>
+                  <th class="bg-primary text-white py-3">Hạn phải trả</th>
+                  <th class="bg-primary text-white py-3">Trạng thái</th>
+                  <th class="bg-primary text-white py-3">Xử lý</th>
                 </tr>
               </thead>
 
               <tbody>
                 <!-- Phiếu 1 -->
                 <tr>
-                  <td>1</td>
-                  <td class="code">PM001</td>
-                  <td>
+                  <td class="fw-bold">1</td>
+                  <td class="code text-primary fw-bold font-monospace">
+                    PM001
+                  </td>
+                  <td class="text-start">
                     <div class="student-name">
                       <strong>Trương Mạnh Đạt</strong>
                     </div>
-                    <div class="student-meta">
+                    <div class="student-meta text-secondary">
                       Mã SV: <strong>251230841</strong> (K66-CNTT3)
                     </div>
                   </td>
-                  <td>Lập Trình Web Với HTML5, CSS3 &amp; JavaScript</td>
+                  <td class="text-start">
+                    Lập Trình Web Với HTML5, CSS3 &amp; JavaScript
+                  </td>
                   <td>08/10/2026</td>
                   <td class="due">22/10/2026</td>
-                  <td><span class="status borrowing">Đang mượn</span></td>
                   <td>
-                    <button type="button" class="btn-return">
-                      <i class="bi bi-pencil-square"></i> Trả sách
+                    <span
+                      class="status borrowing badge rounded-pill bg-warning text-dark"
+                      >Đang mượn</span
+                    >
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success btn-sm btn-return"
+                    >
+                      <i class="bi bi-pencil-square me-1"></i>Trả sách
                     </button>
                   </td>
                 </tr>
 
                 <!-- Phiếu 2 (quá hạn) -->
-                <tr class="row-overdue">
-                  <td>2</td>
-                  <td class="code">PM002</td>
-                  <td>
+                <tr class="row-overdue table-danger">
+                  <td class="fw-bold">2</td>
+                  <td class="code text-danger fw-bold font-monospace">PM002</td>
+                  <td class="text-start">
                     <div class="student-name">
                       <strong>Nguyễn Phương Hải</strong>
                     </div>
-                    <div class="student-meta">
+                    <div class="student-meta text-secondary">
                       Mã SV: <strong>251210853</strong> (K66-CNTT3)
                     </div>
                   </td>
-                  <td>Cambridge IELTS 18 Academic With Answers</td>
+                  <td class="text-start">
+                    Cambridge IELTS 18 Academic With Answers
+                  </td>
                   <td>25/09/2026</td>
-                  <td class="due">09/10/2026</td>
-                  <td><span class="status overdue">Quá hạn</span></td>
+                  <td class="due text-danger fw-bold">09/10/2026</td>
                   <td>
-                    <button type="button" class="btn-collect">
-                      <i class="bi bi-pencil-square"></i> Thu hồi
+                    <span class="status overdue badge rounded-pill bg-danger"
+                      >Quá hạn</span
+                    >
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-danger btn-sm btn-collect"
+                    >
+                      <i class="bi bi-pencil-square me-1"></i>Thu hồi
                     </button>
                   </td>
                 </tr>
 
                 <!-- Phiếu 3 (đã trả) -->
                 <tr>
-                  <td>3</td>
-                  <td class="code">PM003</td>
-                  <td>
+                  <td class="fw-bold">3</td>
+                  <td class="code text-primary fw-bold font-monospace">
+                    PM003
+                  </td>
+                  <td class="text-start">
                     <div class="student-name">
                       <strong>ThS. Hoàng Văn Cường</strong>
                     </div>
-                    <div class="student-meta">
+                    <div class="student-meta text-secondary">
                       Mã GV: <strong>GV001</strong> (Khoa CNTT - UTC)
                     </div>
                   </td>
-                  <td>Lập Trình Game Với Unity &amp; C#</td>
+                  <td class="text-start">Lập Trình Game Với Unity &amp; C#</td>
                   <td>01/10/2026</td>
                   <td class="due">15/10/2026</td>
-                  <td><span class="status returned">Đã trả</span></td>
-                  <td class="done">✓ Hoàn tất</td>
+                  <td>
+                    <span class="status returned badge rounded-pill bg-success"
+                      >Đã trả</span
+                    >
+                  </td>
+                  <td class="done text-success fw-bold">✓ Hoàn tất</td>
                 </tr>
 
                 <!-- Phiếu 4 -->
                 <tr>
-                  <td>4</td>
-                  <td class="code">PM004</td>
-                  <td>
+                  <td class="fw-bold">4</td>
+                  <td class="code text-primary fw-bold font-monospace">
+                    PM004
+                  </td>
+                  <td class="text-start">
                     <div class="student-name">
                       <strong>Đinh Văn Phan Dũng</strong>
                     </div>
-                    <div class="student-meta">
+                    <div class="student-meta text-secondary">
                       Mã SV: <strong>251230826</strong> (K66-CNTT3)
                     </div>
                   </td>
-                  <td>Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++</td>
+                  <td class="text-start">
+                    Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++
+                  </td>
                   <td>11/10/2026</td>
                   <td class="due">25/10/2026</td>
-                  <td><span class="status borrowing">Đang mượn</span></td>
                   <td>
-                    <button type="button" class="btn-return">
-                      <i class="bi bi-pencil-square"></i> Trả sách
+                    <span
+                      class="status borrowing badge rounded-pill bg-warning text-dark"
+                      >Đang mượn</span
+                    >
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success btn-sm btn-return"
+                    >
+                      <i class="bi bi-pencil-square me-1"></i>Trả sách
                     </button>
                   </td>
                 </tr>
 
                 <!-- Phiếu 5 -->
                 <tr>
-                  <td>5</td>
-                  <td class="code">PM005</td>
-                  <td>
+                  <td class="fw-bold">5</td>
+                  <td class="code text-primary fw-bold font-monospace">
+                    PM005
+                  </td>
+                  <td class="text-start">
                     <div class="student-name">
                       <strong>Trần Xuân Đô</strong>
                     </div>
-                    <div class="student-meta">
+                    <div class="student-meta text-secondary">
                       Mã SV: <strong>251230843</strong> (K66-CNTT3)
                     </div>
                   </td>
-                  <td>The Official Cambridge Guide to IELTS</td>
+                  <td class="text-start">
+                    The Official Cambridge Guide to IELTS
+                  </td>
                   <td>13/10/2026</td>
                   <td class="due">27/10/2026</td>
-                  <td><span class="status borrowing">Đang mượn</span></td>
                   <td>
-                    <button type="button" class="btn-return">
-                      <i class="bi bi-pencil-square"></i> Trả sách
+                    <span
+                      class="status borrowing badge rounded-pill bg-warning text-dark"
+                      >Đang mượn</span
+                    >
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success btn-sm btn-return"
+                    >
+                      <i class="bi bi-pencil-square me-1"></i>Trả sách
                     </button>
                   </td>
                 </tr>
@@ -231,13 +286,14 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <!-- Tiêu đề modal -->
-          <div class="modal-header">
-            <h5 class="modal-title">
-              <i class="bi bi-pencil-square"></i> Lập Phiếu Mượn Giáo Trình UTC
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title fw-bold">
+              <i class="bi bi-pencil-square me-2"></i>Lập Phiếu Mượn Giáo Trình
+              UTC
             </h5>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-white"
               data-bs-dismiss="modal"
               aria-label="Đóng"
             ></button>
@@ -245,29 +301,37 @@
 
           <form id="borrowForm">
             <div class="modal-body">
-              <div class="form-group">
-                <label for="studentId">Mã sinh viên UTC (*)</label>
+              <div class="mb-3">
+                <label for="studentId" class="form-label fw-bold"
+                  >Mã sinh viên UTC (*)</label
+                >
                 <input
                   type="text"
+                  class="form-control"
                   id="studentId"
                   placeholder="Ví dụ: 251230841"
                   required
                 />
               </div>
 
-              <div class="form-group">
-                <label for="studentName">Họ và tên người mượn (*)</label>
+              <div class="mb-3">
+                <label for="studentName" class="form-label fw-bold"
+                  >Họ và tên người mượn (*)</label
+                >
                 <input
                   type="text"
+                  class="form-control"
                   id="studentName"
                   placeholder="Ví dụ: Nguyễn Văn A"
                   required
                 />
               </div>
 
-              <div class="form-group">
-                <label for="bookSelect">Chọn tài liệu cần mượn (*)</label>
-                <select id="bookSelect" required>
+              <div class="mb-3">
+                <label for="bookSelect" class="form-label fw-bold"
+                  >Chọn tài liệu cần mượn (*)</label
+                >
+                <select class="form-select" id="bookSelect" required>
                   <option value="" selected>
                     -- Nhấp để chọn giáo trình CNTT &amp; IELTS --
                   </option>
@@ -282,20 +346,35 @@
                 </select>
               </div>
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="borrowDate">Ngày mượn (*)</label>
-                  <input type="date" id="borrowDate" required />
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="borrowDate" class="form-label fw-bold"
+                    >Ngày mượn (*)</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="borrowDate"
+                    required
+                  />
                 </div>
-                <div class="form-group">
-                  <label for="dueDate">Hạn trả sách (*)</label>
-                  <input type="date" id="dueDate" required />
+                <div class="col-md-6">
+                  <label for="dueDate" class="form-label fw-bold"
+                    >Hạn trả sách (*)</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="dueDate"
+                    required
+                  />
                 </div>
               </div>
 
-              <div class="form-group">
-                <label for="note">Ghi chú môn học</label>
+              <div class="mb-3">
+                <label for="note" class="form-label">Ghi chú môn học</label>
                 <textarea
+                  class="form-control"
                   id="note"
                   rows="3"
                   placeholder="Ví dụ: Mượn làm BTL Thiết kế Web Khoa CNTT - UTC..."
@@ -305,8 +384,16 @@
 
             <!-- Nút thao tác -->
             <div class="modal-footer">
-              <button type="button" data-bs-dismiss="modal">Hủy</button>
-              <button type="submit">Xác Nhận Lập Phiếu</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Hủy
+              </button>
+              <button type="submit" class="btn btn-primary fw-bold">
+                Xác Nhận Lập Phiếu
+              </button>
             </div>
           </form>
         </div>
