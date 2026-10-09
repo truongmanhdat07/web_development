@@ -16,6 +16,7 @@
     />
     <!-- File CSS tùy chỉnh của nhóm -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/books.css">
   </head>
   <body>
     <!-- Thanh điều hướng -->
@@ -124,8 +125,7 @@
                         <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
                             <img src="./images/book1_web.jpg"
                                 class="card-img-top"
-                                alt="Giáo trình HTML và CSS"
-                                style="height: 260px; object-fit: cover;">
+                                alt="Giáo trình HTML và CSS">
 
                             <div class="card-body d-flex flex-column">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary align-self-start mb-3">
@@ -151,8 +151,7 @@
                         <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
                             <img src="./images/book2_dsa.jpg"
                                 class="card-img-top"
-                                alt="Giáo trình cấu trúc dữ liệu và giải thuật"
-                                style="height: 260px; object-fit: cover;">
+                                alt="Giáo trình cấu trúc dữ liệu và giải thuật">
 
                             <div class="card-body d-flex flex-column">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary align-self-start mb-3">
@@ -178,8 +177,7 @@
                         <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
                             <img src="./images/book3_cs.jpg"
                                 class="card-img-top"
-                                alt="Giáo trình lập trình C#"
-                                style="height: 260px; object-fit: cover;">
+                                alt="Giáo trình lập trình C#">
 
                             <div class="card-body d-flex flex-column">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary align-self-start mb-3">
@@ -205,8 +203,7 @@
                         <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
                             <img src="./images/book4_ielts18.png"
                                 class="card-img-top"
-                                alt="Cambridge IELTS 18"
-                                style="height: 260px; object-fit: cover;">
+                                alt="Cambridge IELTS 18">
 
                             <div class="card-body d-flex flex-column">
                                 <span class="badge rounded-pill bg-danger-subtle text-danger align-self-start mb-3">
@@ -232,8 +229,7 @@
                         <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
                             <img src="./images/book5_unity.jpg"
                                 class="card-img-top"
-                                alt="Giáo trình Unity"
-                                style="height: 260px; object-fit: cover;">
+                                alt="Giáo trình Unity">
 
                             <div class="card-body d-flex flex-column">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary align-self-start mb-3">
@@ -259,8 +255,7 @@
                         <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
                             <img src="./images/book6_english_it.jpg"
                                 class="card-img-top"
-                                alt="English for Information Technology"
-                                style="height: 260px; object-fit: cover;">
+                                alt="English for Information Technology">
 
                             <div class="card-body d-flex flex-column">
                                 <span class="badge rounded-pill bg-info-subtle text-info align-self-start mb-3">
@@ -286,8 +281,7 @@
                         <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
                             <img src="./images/book7_sql.jpg"
                                 class="card-img-top"
-                                alt="Giáo trình SQL"
-                                style="height: 260px; object-fit: cover;">
+                                alt="Giáo trình SQL">
 
                             <div class="card-body d-flex flex-column">
                                 <span class="badge rounded-pill bg-primary-subtle text-primary align-self-start mb-3">
@@ -313,8 +307,7 @@
                         <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
                             <img src="./images/book8_cambridge_guide.jpg"
                                 class="card-img-top"
-                                alt="Cambridge Guide to IELTS"
-                                style="height: 260px; object-fit: cover;">
+                                alt="Cambridge Guide to IELTS">
 
                             <div class="card-body d-flex flex-column">
                                 <span class="badge rounded-pill bg-danger-subtle text-danger align-self-start mb-3">
@@ -355,12 +348,13 @@
                                 <div class="mb-3">
                                     <label for="maSach" class="form-label">Mã sách</label>
                                     <input type="text" class="form-control" id="maSach"
-                                        placeholder="Ví dụ: UTC009" required>
+                                        placeholder="Ví dụ: UTC001" required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="tenSach" class="form-label">Tên giáo trình</label>
-                                    <input type="text" class="form-control" id="tenSach" required>
+                                    <input type="text" class="form-control" id="tenSach" 
+                                        placeholder="Ví dụ: Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++" required>
                                 </div>
 
                                 <div class="mb-3">
@@ -378,19 +372,22 @@
 
                                 <div class="mb-3">
                                     <label for="tacGia" class="form-label">Tác giả / Nhà xuất bản</label>
-                                    <input type="text" class="form-control" id="tacGia" required>
+                                    <input type="text" class="form-control" id="tacGia" 
+                                        placeholder="Ví dụ: NXB Giao Thông Vận Tải" required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="namXB" class="form-label">Năm xuất bản</label>
                                     <input type="number" class="form-control" id="namXB"
-                                        min="1900" max="2100" required>
+                                        min="1900" max="2100" 
+                                        placeholder="Ví dụ: 2022" required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="soLuong" class="form-label">Số lượng</label>
                                     <input type="number" class="form-control" id="soLuong"
-                                        min="1" required>
+                                        min="1" 
+                                        placeholder="Ví dụ: 1" required>
                                 </div>
                             </div>
 
