@@ -18,13 +18,333 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav></nav>
+    <header>
+      <nav>
+        <div class="container">
+          <a href="index.html" class="brand">
+            <img src="./images/logo_utc.png" alt="Logo UTC" />
+            <span>Thư Viện UTC</span>
+          </a>
+
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="books.html">Danh mục sách</a></li>
+            <li><a href="borrow.html" class="active">Mượn - Trả sách</a></li>
+            <li><a href="readers.html">Quản lý độc giả</a></li>
+            <li><a href="contact.html">Nội quy &amp; Liên hệ</a></li>
+          </ul>
+
+          <div class="user-info">
+            <i class="bi bi-person-circle"></i> Thủ thư:
+            <strong>Angespur</strong>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <main class="py-4">
-      <div class="container"></div>
+      <div class="container">
+        <!-- Tiêu đề trang + nút lập phiếu -->
+        <section class="page-header">
+          <div class="page-heading">
+            <h1>
+              <i class="bi bi-arrow-left-right"></i> Quản lý mượn - trả sách
+              (UTC)
+            </h1>
+            <p>
+              Ghi nhận phiếu mượn giáo trình CNTT &amp; sách tiếng Anh, theo dõi
+              hạn trả sinh viên
+            </p>
+          </div>
+
+          <div class="page-actions">
+            <button
+              type="button"
+              class="btn-add"
+              data-bs-toggle="modal"
+              data-bs-target="#borrowModal"
+            >
+              <i class="bi bi-plus-circle"></i> Lập Phiếu Mượn Mới
+            </button>
+          </div>
+        </section>
+
+        <!-- Bảng phiếu mượn -->
+        <div class="table-container">
+          <div class="table-responsive">
+            <table class="table-bordered">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Mã phiếu</th>
+                  <th>Sinh viên mượn</th>
+                  <th>Giáo trình mượn</th>
+                  <th>Ngày mượn</th>
+                  <th>Hạn phải trả</th>
+                  <th>Trạng thái</th>
+                  <th>Xử lý</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <!-- Phiếu 1 -->
+                <tr>
+                  <td>1</td>
+                  <td class="code">PM001</td>
+                  <td>
+                    <div class="student-name">
+                      <strong>Trương Mạnh Đạt</strong>
+                    </div>
+                    <div class="student-meta">
+                      Mã SV: <strong>251230841</strong> (K66-CNTT3)
+                    </div>
+                  </td>
+                  <td>Lập Trình Web Với HTML5, CSS3 &amp; JavaScript</td>
+                  <td>08/10/2026</td>
+                  <td class="due">22/10/2026</td>
+                  <td><span class="status borrowing">Đang mượn</span></td>
+                  <td>
+                    <button type="button" class="btn-return">
+                      <i class="bi bi-pencil-square"></i> Trả sách
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Phiếu 2 (quá hạn) -->
+                <tr class="row-overdue">
+                  <td>2</td>
+                  <td class="code">PM002</td>
+                  <td>
+                    <div class="student-name">
+                      <strong>Nguyễn Phương Hải</strong>
+                    </div>
+                    <div class="student-meta">
+                      Mã SV: <strong>251210853</strong> (K66-CNTT3)
+                    </div>
+                  </td>
+                  <td>Cambridge IELTS 18 Academic With Answers</td>
+                  <td>25/09/2026</td>
+                  <td class="due">09/10/2026</td>
+                  <td><span class="status overdue">Quá hạn</span></td>
+                  <td>
+                    <button type="button" class="btn-collect">
+                      <i class="bi bi-pencil-square"></i> Thu hồi
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Phiếu 3 (đã trả) -->
+                <tr>
+                  <td>3</td>
+                  <td class="code">PM003</td>
+                  <td>
+                    <div class="student-name">
+                      <strong>ThS. Hoàng Văn Cường</strong>
+                    </div>
+                    <div class="student-meta">
+                      Mã GV: <strong>GV001</strong> (Khoa CNTT - UTC)
+                    </div>
+                  </td>
+                  <td>Lập Trình Game Với Unity &amp; C#</td>
+                  <td>01/10/2026</td>
+                  <td class="due">15/10/2026</td>
+                  <td><span class="status returned">Đã trả</span></td>
+                  <td class="done">✓ Hoàn tất</td>
+                </tr>
+
+                <!-- Phiếu 4 -->
+                <tr>
+                  <td>4</td>
+                  <td class="code">PM004</td>
+                  <td>
+                    <div class="student-name">
+                      <strong>Đinh Văn Phan Dũng</strong>
+                    </div>
+                    <div class="student-meta">
+                      Mã SV: <strong>251230826</strong> (K66-CNTT3)
+                    </div>
+                  </td>
+                  <td>Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++</td>
+                  <td>11/10/2026</td>
+                  <td class="due">25/10/2026</td>
+                  <td><span class="status borrowing">Đang mượn</span></td>
+                  <td>
+                    <button type="button" class="btn-return">
+                      <i class="bi bi-pencil-square"></i> Trả sách
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Phiếu 5 -->
+                <tr>
+                  <td>5</td>
+                  <td class="code">PM005</td>
+                  <td>
+                    <div class="student-name">
+                      <strong>Trần Xuân Đô</strong>
+                    </div>
+                    <div class="student-meta">
+                      Mã SV: <strong>251230843</strong> (K66-CNTT3)
+                    </div>
+                  </td>
+                  <td>The Official Cambridge Guide to IELTS</td>
+                  <td>13/10/2026</td>
+                  <td class="due">27/10/2026</td>
+                  <td><span class="status borrowing">Đang mượn</span></td>
+                  <td>
+                    <button type="button" class="btn-return">
+                      <i class="bi bi-pencil-square"></i> Trả sách
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer></footer>
+    <!-- Modal lập phiếu mượn mới -->
+    <div class="modal fade" id="borrowModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Tiêu đề modal -->
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="bi bi-pencil-square"></i> Lập Phiếu Mượn Giáo Trình UTC
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Đóng"
+            ></button>
+          </div>
+
+          <form id="borrowForm">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="studentId">Mã sinh viên UTC (*)</label>
+                <input
+                  type="text"
+                  id="studentId"
+                  placeholder="Ví dụ: 251230841"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="studentName">Họ và tên người mượn (*)</label>
+                <input
+                  type="text"
+                  id="studentName"
+                  placeholder="Ví dụ: Nguyễn Văn A"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="bookSelect">Chọn tài liệu cần mượn (*)</label>
+                <select id="bookSelect" required>
+                  <option value="" selected>
+                    -- Nhấp để chọn giáo trình CNTT &amp; IELTS --
+                  </option>
+                  <option>
+                    Lập Trình Web Với HTML5, CSS3 &amp; JavaScript
+                  </option>
+                  <option>Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++</option>
+                  <option>Lập Trình C# Và Nền Tảng .NET Core</option>
+                  <option>Lập Trình Game Với Unity &amp; C#</option>
+                  <option>Cambridge IELTS 18 Academic With Answers</option>
+                  <option>The Official Cambridge Guide to IELTS</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="borrowDate">Ngày mượn (*)</label>
+                  <input type="date" id="borrowDate" required />
+                </div>
+                <div class="form-group">
+                  <label for="dueDate">Hạn trả sách (*)</label>
+                  <input type="date" id="dueDate" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="note">Ghi chú môn học</label>
+                <textarea
+                  id="note"
+                  rows="3"
+                  placeholder="Ví dụ: Mượn làm BTL Thiết kế Web Khoa CNTT - UTC..."
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Nút thao tác -->
+            <div class="modal-footer">
+              <button type="button" data-bs-dismiss="modal">Hủy</button>
+              <button type="submit">Xác Nhận Lập Phiếu</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <!-- Cột 1: Thông tin trường -->
+          <div>
+            <div class="brand">
+              <img src="./images/logo_utc.png" alt="Logo UTC" />
+              <h5>Thư Viện ĐH GTVT</h5>
+            </div>
+            <p>
+              Trường Đại học Giao thông Vận tải (UTC)<br />
+              Địa chỉ: Số 3 phố Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội.
+            </p>
+          </div>
+
+          <!-- Cột 2: Menu liên kết -->
+          <div>
+            <h5>Liên Kết Nhanh</h5>
+            <ul>
+              <li><a href="index.html">&raquo; Trang chủ</a></li>
+              <li>
+                <a href="books.html">&raquo; Danh mục sách CNTT &amp; IELTS</a>
+              </li>
+              <li><a href="borrow.html">&raquo; Mượn - Trả sách</a></li>
+              <li><a href="readers.html">&raquo; Quản lý độc giả UTC</a></li>
+              <li><a href="contact.html">&raquo; Nội quy &amp; Liên hệ</a></li>
+            </ul>
+          </div>
+
+          <!-- Cột 3: Thông tin nhóm -->
+          <div>
+            <h5>Nhóm Sinh Viên Thực Hiện</h5>
+            <p>Môn học: <strong>Thiết Kế Web</strong></p>
+            <p>Trường: <strong>Đại học Giao thông Vận tải (UTC)</strong></p>
+            <p>Lớp: <strong>CNTT3</strong></p>
+            <p>Nhóm trưởng: <strong>Trương Mạnh Đạt</strong></p>
+            <p>
+              Thành viên:
+              <strong
+                >Nguyễn Phương Hải, Trần Xuân Đô, Nguyễn Quốc Khánh, Đinh Văn
+                Phan Dũng</strong
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Thư Viện Trường Đại Học Giao Thông Vận Tải (UTC). Bài
+            Tập Lớn Thiết Kế Web - Nhóm Sinh Viên Lớp CNTT3.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
