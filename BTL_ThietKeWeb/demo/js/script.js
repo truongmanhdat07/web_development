@@ -1,21 +1,6 @@
-/**
- * ==========================================================================
- * BÀI TẬP LỚN MÔN THIẾT KẾ WEB - TRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI (UTC)
- * Đề tài: Hệ Thống Thư Viện Điện Tử UTC (100% Front-End)
- * Nhóm sinh viên Lớp CNTT3:
- *   1. Trương Mạnh Đạt (Nhóm trưởng) - MSV: 251230841 - index.html
- *   2. Nguyễn Phương Hải             - MSV: 251210853 - books.html
- *   3. Nguyễn Quốc Khánh             - MSV: 251230887 - borrow.html
- *   4. Trần Xuân Đô                  - MSV: 251230843 - readers.html
- *   5. Đinh Văn Phan Dũng            - MSV: 251230826 - contact.html
- * Giảng viên hướng dẫn: ThS. Hoàng Văn Cường (Mã: GV001)
- * File: js/script.js
- * ==========================================================================
- */
+// Xử lý chức năng Thư viện UTC
 
-// ==========================================================================
-// 1. TÌM KIẾM SÁCH THEO TỪ KHÓA (books.html)
-// ==========================================================================
+// 1. Tìm kiếm sách
 function timKiemSach() {
   let input = document.getElementById("oTimKiem");
   if (!input) return;
@@ -32,9 +17,7 @@ function timKiemSach() {
   }
 }
 
-// ==========================================================================
-// 2. LỌC SÁCH THEO THỂ LOẠI (books.html)
-// ==========================================================================
+// 2. Lọc sách theo thể loại
 function locTheLoai() {
   let select = document.getElementById("chonTheLoai");
   if (!select) return;
@@ -51,9 +34,7 @@ function locTheLoai() {
   }
 }
 
-// ==========================================================================
-// 3. KIỂM TRA FORM THÊM SÁCH MỚI (books.html)
-// ==========================================================================
+// 3. Kiểm tra form thêm sách mới
 function kiemTraThemSach() {
   let maSachEl = document.getElementById("maSach");
   let tenSachEl = document.getElementById("tenSach");
@@ -73,7 +54,6 @@ function kiemTraThemSach() {
     return false;
   }
 
-  // Ràng buộc tiền tố UTC (ví dụ UTC009)
   if (!maSach.startsWith("UTC")) {
     alert("Quy ước mã sách Thư viện UTC phải bắt đầu bằng 'UTC' (Ví dụ: UTC009)!");
     if (maSachEl) maSachEl.focus();
@@ -106,23 +86,19 @@ function kiemTraThemSach() {
 
   alert("Thêm giáo trình mới vào Thư viện UTC thành công!\n- Mã sách: " + maSach + "\n- Tên sách: " + tenSach + "\n- Thể loại: " + theLoai + "\n- Số lượng: " + soLuong + " cuốn.");
 
-  // Đóng modal bootstrap nếu có
   let modalElement = document.getElementById('modalThemSach');
   if (modalElement && typeof bootstrap !== 'undefined') {
     let modal = bootstrap.Modal.getInstance(modalElement);
     if (modal) modal.hide();
   }
 
-  // Reset form
   let form = modalElement ? modalElement.querySelector("form") : null;
   if (form) form.reset();
 
   return false;
 }
 
-// ==========================================================================
-// 4. KIỂM TRA FORM LẬP PHIẾU MƯỢN SÁCH (borrow.html)
-// ==========================================================================
+// 4. Kiểm tra form lập phiếu mượn sách
 function kiemTraMuonSach() {
   let maDocGiaEl = document.getElementById("maSinhVien") || document.getElementById("maDocGia");
   let hoTenEl = document.getElementById("tenSinhVien") || document.getElementById("hoTenNguoiMuon");
@@ -142,7 +118,6 @@ function kiemTraMuonSach() {
     return false;
   }
 
-  // Kiểm tra mã độc giả hợp lệ
   let isSinhVien = /^[0-9]{9}$/.test(maDocGia);
   let isGiangVien = (maDocGia === "GV001" || maDocGia.startsWith("GV"));
   if (!isSinhVien && !isGiangVien) {
@@ -196,36 +171,33 @@ function kiemTraMuonSach() {
 
   return false;
 }
-// Hỗ trợ alias tên hàm nếu trang dùng kiemTraLapPhieuMuon
+
 function kiemTraLapPhieuMuon() {
   return kiemTraMuonSach();
 }
 
-// ==========================================================================
-// 5. THAO TÁC XÁC NHẬN TRẢ SÁCH (borrow.html)
-// ==========================================================================
+// 5. Xác nhận trả sách
 function xacNhanTraSach(maPhieu, tenDocGia) {
   let xacNhan = confirm("Bạn có chắc chắn muốn xác nhận trả sách cho phiếu '" + maPhieu + "' của bạn đọc '" + tenDocGia + "'?");
   if (xacNhan) {
     let dongPhieu = document.getElementById("dong-" + maPhieu) || document.getElementById("row-" + maPhieu);
     if (dongPhieu) {
       dongPhieu.classList.remove("table-danger");
+      dongPhieu.classList.remove("row-danger");
       let cotTrangThai = dongPhieu.querySelector(".cot-trangthai");
       if (cotTrangThai) {
-        cotTrangThai.innerHTML = '<span class="badge bg-success">Đã trả</span>';
+        cotTrangThai.innerHTML = '<span class="badge badge-success">Đã trả</span>';
       }
       let cotThaoTac = dongPhieu.querySelector(".cot-thaotac");
       if (cotThaoTac) {
-        cotThaoTac.innerHTML = '<span class="text-success small fw-bold"><i class="bi bi-check-circle-fill me-1"></i>Hoàn tất</span>';
+        cotThaoTac.innerHTML = '<span class="status-done"><i class="bi bi-check-circle-fill me-1"></i>Hoàn tất</span>';
       }
     }
-    alert("Thủ thư đã xác nhận nhận lại sách thành công cho phiếu: " + maPhieu + "!\nTrạng thái: ĐÃ TRẢ (Hôm nay: 15/10/2026).");
+    alert("Thủ thư đã xác nhận nhận lại sách thành công cho phiếu: " + maPhieu + "!\nTrạng thái: ĐÃ TRẢ.");
   }
 }
 
-// ==========================================================================
-// 6. KIỂM TRA FORM CẤP THẺ ĐỘC GIẢ (readers.html)
-// ==========================================================================
+// 6. Kiểm tra form cấp thẻ độc giả
 function kiemTraDangKyDocGia() {
   let maDocGiaEl = document.getElementById("maDocGia") || document.getElementById("maTheMoi");
   let hoTenEl = document.getElementById("hoTen") || document.getElementById("hoTenDocGia");
@@ -273,7 +245,6 @@ function kiemTraDangKyDocGia() {
     return false;
   }
 
-  // Kiểm tra đuôi email LMS UTC hoặc UTC
   let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
     alert("Địa chỉ email không đúng định dạng!");
@@ -283,12 +254,12 @@ function kiemTraDangKyDocGia() {
 
   let phonePattern = /^0[0-9]{9}$/;
   if (!phonePattern.test(sdt)) {
-    alert("Số điện thoại không hợp lệ! Vui lòng nhập đúng 10 chữ số bắt đầu bằng số 0 (Ví dụ: 0981234567).");
+    alert("Số điện thoại không hợp lệ! Vui lòng nhập đúng 10 chữ số bắt đầu bằng số 0.");
     if (sdtEl) sdtEl.focus();
     return false;
   }
 
-  alert("Cấp thẻ Thư viện Điện tử UTC thành công!\n- Mã thẻ: " + maDocGia + "\n- Độc giả: " + hoTen + "\n- Lớp/Khoa: " + khoa + "\n- Email: " + email + "\n- Hiệu lực: 15/10/2026 đến 15/10/2027.");
+  alert("Cấp thẻ Thư viện Điện tử UTC thành công!\n- Mã thẻ: " + maDocGia + "\n- Độc giả: " + hoTen + "\n- Lớp/Khoa: " + khoa + "\n- Email: " + email);
 
   let modalElement = document.getElementById('modalCapThe');
   if (modalElement && typeof bootstrap !== 'undefined') {
@@ -301,14 +272,12 @@ function kiemTraDangKyDocGia() {
 
   return false;
 }
-// Hỗ trợ alias tên hàm nếu có
+
 function kiemTraCapThe() {
   return kiemTraDangKyDocGia();
 }
 
-// ==========================================================================
-// 7. KHÓA / MỞ KHÓA THẺ ĐỘC GIẢ (readers.html)
-// ==========================================================================
+// 7. Khóa / Mở khóa thẻ độc giả
 function doiTrangThaiThe(maDocGia, hoTen) {
   let dongDocGia = document.getElementById("docgia-" + maDocGia);
   if (!dongDocGia) return;
@@ -318,10 +287,10 @@ function doiTrangThaiThe(maDocGia, hoTen) {
   let dangHoatDong = cotTrangThai ? cotTrangThai.innerText.includes("Hoạt động") : true;
 
   if (dangHoatDong) {
-    let xacNhan = confirm("Bạn có chắc chắn muốn TẠM KHÓA thẻ thư viện của " + hoTen + " (Mã: " + maDocGia + ") do quá hạn hoặc vi phạm nội quy?");
+    let xacNhan = confirm("Bạn có chắc chắn muốn TẠM KHÓA thẻ thư viện của " + hoTen + " (Mã: " + maDocGia + ")?");
     if (xacNhan) {
       if (cotTrangThai) {
-        cotTrangThai.innerHTML = '<span class="badge bg-secondary">Đã khóa</span>';
+        cotTrangThai.innerHTML = '<span class="badge badge-secondary">Đã khóa</span>';
       }
       if (nutHanhDong) {
         nutHanhDong.className = "btn btn-sm btn-success nut-khoa-the";
@@ -330,10 +299,10 @@ function doiTrangThaiThe(maDocGia, hoTen) {
       alert("Đã tạm khóa thẻ của độc giả: " + hoTen + " (" + maDocGia + ").");
     }
   } else {
-    let xacNhan = confirm("Bạn có muốn KÍCH HOẠT LẠI (MỞ KHÓA) thẻ thư viện cho " + hoTen + " (Mã: " + maDocGia + ")?");
+    let xacNhan = confirm("Bạn có muốn MỞ KHÓA thẻ thư viện cho " + hoTen + " (Mã: " + maDocGia + ")?");
     if (xacNhan) {
       if (cotTrangThai) {
-        cotTrangThai.innerHTML = '<span class="badge bg-success">Hoạt động</span>';
+        cotTrangThai.innerHTML = '<span class="badge badge-success">Hoạt động</span>';
       }
       if (nutHanhDong) {
         nutHanhDong.className = "btn btn-sm btn-warning nut-khoa-the";
@@ -344,9 +313,7 @@ function doiTrangThaiThe(maDocGia, hoTen) {
   }
 }
 
-// ==========================================================================
-// 8. KIỂM TRA FORM GỬI LIÊN HỆ & ĐỀ XUẤT SÁCH (contact.html)
-// ==========================================================================
+// 8. Kiểm tra form liên hệ và góp ý
 function kiemTraLienHe() {
   let hoTenEl = document.getElementById("lhHoTen");
   let emailEl = document.getElementById("lhEmail");
@@ -383,7 +350,7 @@ function kiemTraLienHe() {
     return false;
   }
 
-  alert("Cảm ơn bạn (" + hoTen + ") đã gửi đề xuất / ý kiến đóng góp cho Thư viện UTC!\nBộ phận Thủ thư sẽ xem xét và phản hồi qua email " + email + " trong vòng 24h làm việc.");
+  alert("Cảm ơn bạn (" + hoTen + ") đã gửi đề xuất / ý kiến đóng góp cho Thư viện UTC!\nBộ phận Thủ thư sẽ phản hồi qua email " + email + ".");
 
   let form = hoTenEl ? hoTenEl.closest("form") : null;
   if (form) form.reset();

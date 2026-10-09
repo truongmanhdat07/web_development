@@ -1,10 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kho Sách Lập Trình & IELTS - Thư Viện UTC</title>
-    <!-- Nhúng thư viện Bootstrap 5 CSS -->
+    <title>Danh Mục Sách - Thư Viện UTC</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,14 +15,14 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- ================= 1. THANH ĐIỀU HƯỚNG (NAVBAR UTC) ================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+    <!-- Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="brand-logo" href="index.html">
           <img
             src="../images/logo_utc.png"
             alt="Logo UTC"
-            class="navbar-logo-utc"
+            onerror="this.style.display='none'"
           />
           <span>Thư Viện UTC</span>
         </a>
@@ -36,7 +35,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="menuChinh">
+        <div class="collapse navbar-collapse nav-links-wrap" id="menuChinh">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Trang chủ</a>
@@ -54,63 +53,50 @@
               <a class="nav-link" href="contact.html">Nội quy & Liên hệ</a>
             </li>
           </ul>
-          <span class="navbar-text text-white">
-            <i class="bi bi-person-circle me-1"></i> Thủ thư:
-            <strong>Angespur</strong>
+          <span class="librarian-badge">
+            <i class="bi bi-person-circle"></i> Thủ thư: <strong>Angespur</strong>
           </span>
         </div>
       </div>
     </nav>
 
-    <!-- ================= 2. NỘI DUNG CHÍNH (MAIN) ================= -->
-    <main class="py-4">
+    <!-- Nội dung chính -->
+    <main>
       <div class="container">
         <!-- Tiêu đề trang -->
-        <div
-          class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2"
-        >
+        <div class="page-header">
           <div>
-            <h2 class="fw-bold text-primary mb-1">
-              GIÁO TRÌNH LẬP TRÌNH & TIẾNG ANH
-            </h2>
-            <p class="text-muted m-0">
-              Tài liệu học tập chuyên ngành Công nghệ thông tin - Trường Đại học
-              Giao thông Vận tải (UTC)
-            </p>
+            <h2>GIÁO TRÌNH LẬP TRÌNH & TIẾNG ANH</h2>
+            <p>Tài liệu học tập chuyên ngành Công nghệ thông tin - Trường Đại học Giao thông Vận tải (UTC)</p>
           </div>
-          <!-- Nút mở hộp thoại thêm sách mới -->
           <button
-            class="btn btn-primary fw-bold"
+            class="btn-custom btn-custom-primary"
             data-bs-toggle="modal"
             data-bs-target="#modalThemSach"
           >
-            <i class="bi bi-plus-circle me-1"></i> Thêm Giáo Trình Mới
+            <i class="bi bi-plus-circle"></i> Thêm Giáo Trình Mới
           </button>
         </div>
 
-        <!-- Khối Tìm kiếm & Bộ lọc (Javascript onkeyup & onchange) -->
-        <div class="card p-3 mb-4 shadow-sm">
+        <!-- Bộ lọc tìm kiếm -->
+        <div class="filter-card">
           <div class="row g-3 align-items-center">
-            <!-- Ô nhập tìm kiếm -->
             <div class="col-md-7">
-              <div class="input-group">
-                <span class="input-group-text bg-white"
-                  ><i class="bi bi-search"></i
-                ></span>
+              <div class="search-box-wrap">
+                <i class="bi bi-search"></i>
                 <input
                   type="text"
                   id="oTimKiem"
-                  class="form-control"
+                  class="form-input-custom"
                   onkeyup="timKiemSach()"
-                  placeholder="Tìm kiếm theo tên sách..."
+                  placeholder="Tìm kiếm theo tên sách hoặc tác giả..."
                 />
               </div>
             </div>
-            <!-- Dropdown lọc thể loại -->
             <div class="col-md-5">
               <select
                 id="chonTheLoai"
-                class="form-select"
+                class="form-select-custom"
                 onchange="locTheLoai()"
               >
                 <option value="">-- Tất cả thể loại sách --</option>
@@ -119,222 +105,161 @@
                 <option value="CodeOOP">Lập trình C# .NET & Unity Game</option>
                 <option value="CSDL">Cơ sở dữ liệu & SQL</option>
                 <option value="IELTS">Luyện thi Cambridge IELTS</option>
-                <option value="TiengAnhCNTT">
-                  Tiếng Anh chuyên ngành CNTT
-                </option>
+                <option value="TiengAnhCNTT">Tiếng Anh chuyên ngành CNTT</option>
               </select>
             </div>
           </div>
         </div>
 
-        <!-- Danh sách 8 cuốn sách CNTT & IELTS của UTC -->
+        <!-- Danh sách sách -->
         <div class="row g-4" id="danhSachCacCuonSach">
-          <!-- Cuốn 1: Lập trình Web -->
+          <!-- Sách 1 -->
           <div class="col-sm-6 col-md-3 the-sach" data-theloai="CodeWeb">
             <div class="book-card">
-              <img
-                src="../images/book1_web.jpg"
-                alt="Lập trình web HTML CSS JS"
-              />
-              <div class="card-body">
-                <span class="badge bg-primary mb-1">Lập trình Web</span>
-                <div class="book-title">
-                  Lập Trình Web Với HTML5, CSS3 & JavaScript
-                </div>
-                <div class="book-author">
-                  <i class="bi bi-person me-1"></i>Khoa CNTT - UTC
-                </div>
-                <div class="small text-muted mb-2">
-                  Mã sách: <strong>UTC001</strong> | Năm: 2023
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge bg-success">Còn 12 cuốn</span>
-                  <a href="borrow.html" class="btn btn-sm btn-outline-primary"
-                    >Mượn sách</a
-                  >
+              <div class="card-thumb">
+                <img src="../images/book1_web.jpg" alt="Lập trình Web" onerror="this.src='https://via.placeholder.com/300x220?text=UTC001+-+Web'" />
+              </div>
+              <div class="card-content">
+                <span class="badge-custom badge-primary mb-2 align-self-start">Lập trình Web</span>
+                <div class="book-title">Lập Trình Web Với HTML5, CSS3 & JavaScript</div>
+                <div class="book-author"><i class="bi bi-person"></i> Khoa CNTT - UTC</div>
+                <div class="book-meta">Mã sách: <strong>UTC001</strong> | Năm: 2023</div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-success">Còn 12 cuốn</span>
+                  <a href="borrow.html" class="btn-custom btn-custom-outline py-1 px-2 small">Mượn sách</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Cuốn 2: Cấu trúc dữ liệu C/C++ -->
+          <!-- Sách 2 -->
           <div class="col-sm-6 col-md-3 the-sach" data-theloai="ThuatToan">
             <div class="book-card">
-              <img
-                src="../images/book2_dsa.jpg"
-                alt="Cấu trúc dữ liệu và giải thuật"
-              />
-              <div class="card-body">
-                <span class="badge bg-primary mb-1">Thuật toán</span>
-                <div class="book-title">
-                  Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++
-                </div>
-                <div class="book-author">
-                  <i class="bi bi-person me-1"></i>NXB Giao Thông Vận Tải
-                </div>
-                <div class="small text-muted mb-2">
-                  Mã sách: <strong>UTC002</strong> | Năm: 2022
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge bg-success">Còn 8 cuốn</span>
-                  <a href="borrow.html" class="btn btn-sm btn-outline-primary"
-                    >Mượn sách</a
-                  >
+              <div class="card-thumb">
+                <img src="../images/book2_dsa.jpg" alt="Cấu trúc dữ liệu và giải thuật" onerror="this.src='https://via.placeholder.com/300x220?text=UTC002+-+DSA'" />
+              </div>
+              <div class="card-content">
+                <span class="badge-custom badge-primary mb-2 align-self-start">Thuật toán</span>
+                <div class="book-title">Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++</div>
+                <div class="book-author"><i class="bi bi-person"></i> NXB Giao Thông Vận Tải</div>
+                <div class="book-meta">Mã sách: <strong>UTC002</strong> | Năm: 2022</div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-success">Còn 8 cuốn</span>
+                  <a href="borrow.html" class="btn-custom btn-custom-outline py-1 px-2 small">Mượn sách</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Cuốn 3: C# .NET -->
+          <!-- Sách 3 -->
           <div class="col-sm-6 col-md-3 the-sach" data-theloai="CodeOOP">
             <div class="book-card">
-              <img src="../images/book3_cs.jpg" alt="C# .NET Core" />
-              <div class="card-body">
-                <span class="badge bg-primary mb-1">C# .NET</span>
+              <div class="card-thumb">
+                <img src="../images/book3_cs.jpg" alt="C# .NET Core" onerror="this.src='https://via.placeholder.com/300x220?text=UTC003+-+CSharp'" />
+              </div>
+              <div class="card-content">
+                <span class="badge-custom badge-primary mb-2 align-self-start">C# .NET</span>
                 <div class="book-title">Lập Trình C# Và Nền Tảng .NET Core</div>
-                <div class="book-author">
-                  <i class="bi bi-person me-1"></i>Khoa CNTT - UTC
-                </div>
-                <div class="small text-muted mb-2">
-                  Mã sách: <strong>UTC003</strong> | Năm: 2023
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge bg-success">Còn 10 cuốn</span>
-                  <a href="borrow.html" class="btn btn-sm btn-outline-primary"
-                    >Mượn sách</a
-                  >
+                <div class="book-author"><i class="bi bi-person"></i> Khoa CNTT - UTC</div>
+                <div class="book-meta">Mã sách: <strong>UTC003</strong> | Năm: 2023</div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-success">Còn 10 cuốn</span>
+                  <a href="borrow.html" class="btn-custom btn-custom-outline py-1 px-2 small">Mượn sách</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Cuốn 4: Cambridge IELTS 18 -->
+          <!-- Sách 4 -->
           <div class="col-sm-6 col-md-3 the-sach" data-theloai="IELTS">
             <div class="book-card">
-              <img src="../images/book4_ielts18.png" alt="Cambridge IELTS 18" />
-              <div class="card-body">
-                <span class="badge bg-danger mb-1">IELTS</span>
-                <div class="book-title">
-                  Cambridge IELTS 18 Academic With Answers
-                </div>
-                <div class="book-author">
-                  <i class="bi bi-person me-1"></i>Cambridge University Press
-                </div>
-                <div class="small text-muted mb-2">
-                  Mã sách: <strong>UTC004</strong> | Năm: 2023
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge bg-success">Còn 15 cuốn</span>
-                  <a href="borrow.html" class="btn btn-sm btn-outline-primary"
-                    >Mượn sách</a
-                  >
+              <div class="card-thumb">
+                <img src="../images/book4_ielts18.png" alt="Cambridge IELTS 18" onerror="this.src='https://via.placeholder.com/300x220?text=UTC004+-+IELTS'" />
+              </div>
+              <div class="card-content">
+                <span class="badge-custom badge-danger mb-2 align-self-start">IELTS</span>
+                <div class="book-title">Cambridge IELTS 18 Academic With Answers</div>
+                <div class="book-author"><i class="bi bi-person"></i> Cambridge University Press</div>
+                <div class="book-meta">Mã sách: <strong>UTC004</strong> | Năm: 2023</div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-success">Còn 15 cuốn</span>
+                  <a href="borrow.html" class="btn-custom btn-custom-outline py-1 px-2 small">Mượn sách</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Cuốn 5: Unity Game -->
+          <!-- Sách 5 -->
           <div class="col-sm-6 col-md-3 the-sach" data-theloai="CodeOOP">
             <div class="book-card">
-              <img src="../images/book5_unity.jpg" alt="Lập trình Game Unity" />
-              <div class="card-body">
-                <span class="badge bg-primary mb-1">Unity Game</span>
+              <div class="card-thumb">
+                <img src="../images/book5_unity.jpg" alt="Lập trình Game Unity" onerror="this.src='https://via.placeholder.com/300x220?text=UTC005+-+Unity'" />
+              </div>
+              <div class="card-content">
+                <span class="badge-custom badge-primary mb-2 align-self-start">Unity Game</span>
                 <div class="book-title">Lập Trình Game Với Unity & C#</div>
-                <div class="book-author">
-                  <i class="bi bi-person me-1"></i>NXB Thông Tin & Truyền Thông
-                </div>
-                <div class="small text-muted mb-2">
-                  Mã sách: <strong>UTC005</strong> | Năm: 2024
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge bg-success">Còn 7 cuốn</span>
-                  <a href="borrow.html" class="btn btn-sm btn-outline-primary"
-                    >Mượn sách</a
-                  >
+                <div class="book-author"><i class="bi bi-person"></i> NXB Thông Tin & Truyền Thông</div>
+                <div class="book-meta">Mã sách: <strong>UTC005</strong> | Năm: 2024</div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-success">Còn 7 cuốn</span>
+                  <a href="borrow.html" class="btn-custom btn-custom-outline py-1 px-2 small">Mượn sách</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Cuốn 6: Tiếng Anh CNTT -->
+          <!-- Sách 6 -->
           <div class="col-sm-6 col-md-3 the-sach" data-theloai="TiengAnhCNTT">
             <div class="book-card">
-              <img
-                src="../images/book6_english_it.jpg"
-                alt="Oxford English for Information Technology"
-              />
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-1">Tiếng Anh CNTT</span>
-                <div class="book-title">
-                  English for Information Technology (Oxford)
-                </div>
-                <div class="book-author">
-                  <i class="bi bi-person me-1"></i>Maja Olejniczak (Oxford)
-                </div>
-                <div class="small text-muted mb-2">
-                  Mã sách: <strong>UTC006</strong> | Năm: 2022
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge bg-success">Còn 9 cuốn</span>
-                  <a href="borrow.html" class="btn btn-sm btn-outline-primary"
-                    >Mượn sách</a
-                  >
+              <div class="card-thumb">
+                <img src="../images/book6_english_it.jpg" alt="Tiếng Anh CNTT" onerror="this.src='https://via.placeholder.com/300x220?text=UTC006+-+English'" />
+              </div>
+              <div class="card-content">
+                <span class="badge-custom badge-info mb-2 align-self-start">Tiếng Anh IT</span>
+                <div class="book-title">English for Information Technology</div>
+                <div class="book-author"><i class="bi bi-person"></i> Maja Olejniczak (Oxford)</div>
+                <div class="book-meta">Mã sách: <strong>UTC006</strong> | Năm: 2021</div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-success">Còn 9 cuốn</span>
+                  <a href="borrow.html" class="btn-custom btn-custom-outline py-1 px-2 small">Mượn sách</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Cuốn 7: Cơ sở dữ liệu SQL -->
+          <!-- Sách 7 -->
           <div class="col-sm-6 col-md-3 the-sach" data-theloai="CSDL">
             <div class="book-card">
-              <img
-                src="../images/book7_sql.jpg"
-                alt="Cơ sở dữ liệu SQL Server"
-              />
-              <div class="card-body">
-                <span class="badge bg-primary mb-1">Cơ sở dữ liệu</span>
-                <div class="book-title">
-                  Giáo Trình Cơ Sở Dữ Liệu & Hệ Quản Trị SQL
-                </div>
-                <div class="book-author">
-                  <i class="bi bi-person me-1"></i>Khoa CNTT - UTC
-                </div>
-                <div class="small text-muted mb-2">
-                  Mã sách: <strong>UTC007</strong> | Năm: 2023
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge bg-success">Còn 6 cuốn</span>
-                  <a href="borrow.html" class="btn btn-sm btn-outline-primary"
-                    >Mượn sách</a
-                  >
+              <div class="card-thumb">
+                <img src="../images/book7_sql.jpg" alt="Cơ sở dữ liệu và SQL" onerror="this.src='https://via.placeholder.com/300x220?text=UTC007+-+SQL'" />
+              </div>
+              <div class="card-content">
+                <span class="badge-custom badge-primary mb-2 align-self-start">Cơ sở dữ liệu</span>
+                <div class="book-title">Giáo Trình Cơ Sở Dữ Liệu & Hệ Quản Trị SQL</div>
+                <div class="book-author"><i class="bi bi-person"></i> Khoa CNTT - UTC</div>
+                <div class="book-meta">Mã sách: <strong>UTC007</strong> | Năm: 2023</div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-success">Còn 6 cuốn</span>
+                  <a href="borrow.html" class="btn-custom btn-custom-outline py-1 px-2 small">Mượn sách</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Cuốn 8: Official Cambridge Guide to IELTS -->
+          <!-- Sách 8 -->
           <div class="col-sm-6 col-md-3 the-sach" data-theloai="IELTS">
             <div class="book-card">
-              <img
-                src="../images/book8_cambridge_guide.jpg"
-                alt="The Official Cambridge Guide to IELTS"
-              />
-              <div class="card-body">
-                <span class="badge bg-danger mb-1">IELTS</span>
-                <div class="book-title">
-                  The Official Cambridge Guide to IELTS
-                </div>
-                <div class="book-author">
-                  <i class="bi bi-person me-1"></i>Pauline Cullen (Cambridge)
-                </div>
-                <div class="small text-muted mb-2">
-                  Mã sách: <strong>UTC008</strong> | Năm: 2022
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <span class="badge bg-success">Còn 11 cuốn</span>
-                  <a href="borrow.html" class="btn btn-sm btn-outline-primary"
-                    >Mượn sách</a
-                  >
+              <div class="card-thumb">
+                <img src="../images/book8_cambridge_guide.jpg" alt="Cambridge Guide to IELTS" onerror="this.src='https://via.placeholder.com/300x220?text=UTC008+-+Guide'" />
+              </div>
+              <div class="card-content">
+                <span class="badge-custom badge-danger mb-2 align-self-start">IELTS</span>
+                <div class="book-title">The Official Cambridge Guide to IELTS</div>
+                <div class="book-author"><i class="bi bi-person"></i> Pauline Cullen (Cambridge)</div>
+                <div class="book-meta">Mã sách: <strong>UTC008</strong> | Năm: 2022</div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-success">Còn 11 cuốn</span>
+                  <a href="borrow.html" class="btn-custom btn-custom-outline py-1 px-2 small">Mượn sách</a>
                 </div>
               </div>
             </div>
@@ -342,97 +267,47 @@
         </div>
       </div>
 
-      <!-- ================= MODAL THÊM SÁCH MỚI ================= -->
+      <!-- Hộp thoại thêm sách mới -->
       <div class="modal fade" id="modalThemSach" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">
             <form onsubmit="return kiemTraThemSach();">
-              <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title">
-                  <i class="bi bi-journal-plus me-2"></i>Thêm Giáo Trình / Tài
-                  Liệu Mới
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close btn-close-white"
-                  data-bs-dismiss="modal"
-                ></button>
+              <div class="modal-header-custom">
+                <h5><i class="bi bi-journal-plus me-2"></i>Thêm Giáo Trình / Tài Liệu Mới</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
               </div>
-              <div class="modal-body">
-                <div class="mb-3">
-                  <label for="maSach" class="form-label fw-bold"
-                    >Mã tài liệu (*)</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="maSach"
-                    placeholder="Ví dụ: UTC009"
-                  />
+              <div class="modal-body p-4">
+                <div class="form-group">
+                  <label for="maSach">Mã tài liệu (*)</label>
+                  <input type="text" class="form-input-custom" id="maSach" placeholder="Ví dụ: UTC009" />
                 </div>
-                <div class="mb-3">
-                  <label for="tenSach" class="form-label fw-bold"
-                    >Tên giáo trình / Sách (*)</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="tenSach"
-                    placeholder="Ví dụ: ReactJS & Node.js Thực Chiến, IELTS Trainer 2..."
-                  />
+                <div class="form-group">
+                  <label for="tenSach">Tên giáo trình / Sách (*)</label>
+                  <input type="text" class="form-input-custom" id="tenSach" placeholder="Ví dụ: Lập trình Flutter & Dart, IELTS Trainer..." />
                 </div>
-                <div class="mb-3">
-                  <label for="tacGia" class="form-label fw-bold"
-                    >Tác giả / Nhà xuất bản (*)</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="tacGia"
-                    placeholder="Ví dụ: Khoa CNTT - UTC, Cambridge University Press..."
-                  />
+                <div class="form-group">
+                  <label for="tacGia">Tác giả / Nhà xuất bản (*)</label>
+                  <input type="text" class="form-input-custom" id="tacGia" placeholder="Ví dụ: Khoa CNTT - UTC, Cambridge University Press..." />
                 </div>
-                <div class="mb-3">
-                  <label for="theLoai" class="form-label fw-bold"
-                    >Thể loại chuyên ngành</label
-                  >
-                  <select class="form-select" id="theLoai">
+                <div class="form-group">
+                  <label for="theLoai">Thể loại chuyên ngành</label>
+                  <select class="form-select-custom" id="theLoai">
                     <option value="CodeWeb">Lập trình Web & Frontend</option>
-                    <option value="ThuatToan">
-                      Cấu trúc dữ liệu & Thuật toán
-                    </option>
-                    <option value="CodeOOP">Lập trình Java / Python</option>
+                    <option value="ThuatToan">Cấu trúc dữ liệu & Thuật toán</option>
+                    <option value="CodeOOP">Lập trình C# .NET & Java</option>
                     <option value="CSDL">Cơ sở dữ liệu & SQL</option>
                     <option value="IELTS">Tiếng Anh luyện thi IELTS</option>
-                    <option value="TiengAnhCNTT">
-                      Tiếng Anh chuyên ngành CNTT
-                    </option>
+                    <option value="TiengAnhCNTT">Tiếng Anh chuyên ngành CNTT</option>
                   </select>
                 </div>
-                <div class="mb-3">
-                  <label for="soLuong" class="form-label fw-bold"
-                    >Số lượng nhập kho (*)</label
-                  >
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="soLuong"
-                    value="5"
-                    min="1"
-                  />
+                <div class="form-group">
+                  <label for="soLuong">Số lượng nhập kho (*)</label>
+                  <input type="number" class="form-input-custom" id="soLuong" value="5" min="1" />
                 </div>
               </div>
               <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Hủy bỏ
-                </button>
-                <button type="submit" class="btn btn-primary fw-bold">
-                  Lưu Vào Kho Sách
-                </button>
+                <button type="button" class="btn-custom btn-custom-outline" data-bs-dismiss="modal">Hủy bỏ</button>
+                <button type="submit" class="btn-custom btn-custom-primary">Lưu Vào Kho Sách</button>
               </div>
             </form>
           </div>
@@ -440,7 +315,7 @@
       </div>
     </main>
 
-    <!-- ================= 3. CHÂN TRANG (FOOTER UTC) ================= -->
+    <!-- Chân trang -->
     <footer>
       <div class="container">
         <div class="row g-4">
@@ -449,56 +324,36 @@
               <img
                 src="../images/logo_utc.png"
                 alt="Logo UTC"
-                style="
-                  height: 38px;
-                  background: white;
-                  border-radius: 50%;
-                  padding: 2px;
-                "
+                style="height: 38px; background: white; border-radius: 50%; padding: 2px;"
+                onerror="this.style.display='none'"
               />
-              <h5 class="m-0 text-white fw-bold">Thư Viện ĐH GTVT</h5>
+              <h5 class="m-0 text-white">Thư Viện ĐH GTVT</h5>
             </div>
             <p class="small text-light-50">
-              Trường Đại học Giao thông Vận tải (UTC)<br />Địa chỉ: Số 3 phố Cầu
-              Giấy, Láng Thượng, Đống Đa, Hà Nội.
+              Trường Đại học Giao thông Vận tải (UTC)<br />
+              Địa chỉ: Số 3 phố Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội.
             </p>
           </div>
           <div class="col-md-4">
             <h5>Liên Kết Nhanh</h5>
-            <ul class="list-unstyled small">
+            <ul>
               <li><a href="index.html">&raquo; Trang chủ</a></li>
-              <li>
-                <a href="books.html">&raquo; Danh mục sách CNTT & IELTS</a>
-              </li>
+              <li><a href="books.html">&raquo; Danh mục sách CNTT & IELTS</a></li>
               <li><a href="borrow.html">&raquo; Mượn - Trả sách</a></li>
               <li><a href="readers.html">&raquo; Quản lý độc giả UTC</a></li>
               <li><a href="contact.html">&raquo; Nội quy & Liên hệ</a></li>
             </ul>
           </div>
           <div class="col-md-4">
-            <h5>Nhóm Sinh Viên Thực Hiện</h5>
-            <p class="small mb-1">Môn học: <strong>Thiết Kế Web</strong></p>
-            <p class="small mb-1">
-              Trường: <strong>Đại học Giao thông Vận tải (UTC)</strong>
-            </p>
-            <p class="small mb-1">Lớp: <strong>CNTT3</strong></p>
-            <p class="small mb-1">
-              Nhóm trưởng: <strong>Trương Mạnh Đạt</strong>
-            </p>
-            <p class="small">
-              Thành viên:
-              <strong
-                >Nguyễn Phương Hải, Trần Xuân Đô, Nguyễn Quốc Khánh, Đinh Văn
-                Phan Dũng</strong
-              >
-              (Khoa CNTT - UTC)
-            </p>
+            <h5>Thông Tin Hệ Thống</h5>
+            <p class="small mb-1">Khoa Công nghệ Thông tin - Trường ĐH Giao thông Vận tải</p>
+            <p class="small mb-1">Phục vụ giảng viên, sinh viên và học viên UTC</p>
+            <p class="small mb-1">Giờ mở cửa: Thứ Hai - Thứ Sáu (07h30 - 17h00)</p>
           </div>
         </div>
         <div class="footer-bottom">
           <p class="m-0">
-            &copy; 2026 Thư Viện Trường Đại Học Giao Thông Vận Tải (UTC). Bài
-            Tập Lớn Môn Thiết Kế Web.
+            &copy; 2026 Thư Viện Trường Đại Học Giao Thông Vận Tải (UTC).
           </p>
         </div>
       </div>
