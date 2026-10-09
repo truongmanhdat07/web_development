@@ -6,7 +6,7 @@
     <title>Quản Lý Độc Giả - Thư Viện UTC</title>
     <!-- Thư viện Bootstrap 5 CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <!-- Thư viện Bootstrap Icons -->
@@ -18,15 +18,390 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav></nav>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+      <div class="container">
+        <!-- Logo & Tên thương hiệu -->
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="index.html"
+        >
+          <img
+            src="./images/logo_utc.png"
+            alt="Logo UTC"
+            onerror="this.style.display = 'none'"
+          />
+          <span>Thư Viện UTC</span>
+        </a>
+
+        <!-- Nút 3 gạch mở menu trên điện thoại -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuChinh"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--responsive-->
+        <div class="collapse navbar-collapse" id="menuChinh">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="books.html">Danh mục sách</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="borrow.html">Mượn - Trả sách</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="readers.html">Quản lý độc giả</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Nội quy & Liên hệ</a>
+            </li>
+          </ul>
+
+          <!-- Thông tin tài khoản người dùng -->
+          <div class="user-info text-white">
+            <i class="bi bi-person-circle me-1"></i>Thủ thư:
+            <strong>Angespur</strong>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <main class="py-4">
-      <div class="container"></div>
+      <div class="container">
+        <header class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
+          <div>
+            <h2 class="text-primary fw-bold d-inline-block border-bottom border-warning border-3 pb-1">
+              <span class="bi bi-people me-2"></span>HỒ SƠ THẺ ĐỘC GIẢ SINH VIÊN UTC
+            </h2>
+            <p class="text-secondary mb-0">
+              Danh sách tài khoản thư viện sinh viên Khoa Công nghệ thông tin - ĐH Giao thông Vận tải
+            </p>
+          </div>
+          <button type="button" class="btn btn-primary"
+                  data-bs-toggle="modal" data-bs-target="#modalCapThe">
+            <span class="bi bi-person-plus-fill me-1"></span>Cấp Thẻ Độc Giả Mới
+          </button>
+        </header>
+        <section class="bg-white rounded-3 shadow-sm overflow-hidden">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+              <thead class="text-center" style="--bs-table-bg: #0d62bd; --bs-table-color: #fff">
+                <tr>
+                  <th scope="col">STT</th>
+                  <th scope="col">Mã SV / Thẻ</th>
+                  <th scope="col">Họ và tên</th>
+                  <th scope="col">Đối tượng</th>
+                  <th scope="col">Khoa / Lớp</th>
+                  <th scope="col">Email LMS UTC</th>
+                  <th scope="col">Số điện thoại</th>
+                  <th scope="col">Trạng thái</th>
+                  <th scope="col">Hành động</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <!-- Hàng 1 -->
+                <tr id="docgia-251230841">
+                  <td class="text-center font-monospace">1</td>
+                  <td class="text-center font-monospace text-primary fw-bold">251230841</td>
+                  <td><b>Trương Mạnh Đạt</b></td>
+                  <td class="text-center">
+                    <span class="badge rounded-pill text-bg-secondary">Sinh viên</span>
+                  </td>
+                  <td>K66-CNTT3</td>
+                  <td>dat251230841@lms.utc.edu.vn</td>
+                  <td class="text-center font-monospace">0981234567</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge rounded-pill text-bg-success">Hoạt động</span>
+                  </td>
+                  <td class="text-center">
+                    <button type="button" title="Khóa thẻ độc giả này"
+                            class="btn btn-warning btn-sm nut-khoa-the"
+                            onclick="doiTrangThaiThe('251230841', 'Trương Mạnh Đạt')">
+                      Khóa thẻ
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Hàng 2 -->
+                <tr id="docgia-251210853">
+                  <td class="text-center font-monospace">2</td>
+                  <td class="text-center font-monospace text-primary fw-bold">251210853</td>
+                  <td><b>Nguyễn Phương Hải</b></td>
+                  <td class="text-center">
+                    <span class="badge rounded-pill text-bg-secondary">Sinh viên</span>
+                  </td>
+                  <td>K66-CNTT3</td>
+                  <td>hai251210853@lms.utc.edu.vn</td>
+                  <td class="text-center font-monospace">0972345678</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge rounded-pill text-bg-success">Hoạt động</span>
+                  </td>
+                  <td class="text-center">
+                    <button type="button" title="Khóa thẻ độc giả này"
+                            class="btn btn-warning btn-sm nut-khoa-the"
+                            onclick="doiTrangThaiThe('251210853', 'Nguyễn Phương Hải')">
+                      Khóa thẻ
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Hàng 3 -->
+                <tr id="docgia-251230887">
+                  <td class="text-center font-monospace">3</td>
+                  <td class="text-center font-monospace text-primary fw-bold">251230887</td>
+                  <td><b>Nguyễn Quốc Khánh</b></td>
+                  <td class="text-center">
+                    <span class="badge rounded-pill text-bg-secondary">Sinh viên</span>
+                  </td>
+                  <td>K66-CNTT3</td>
+                  <td>khanh251230887@lms.utc.edu.vn</td>
+                  <td class="text-center font-monospace">0963456789</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge rounded-pill text-bg-success">Hoạt động</span>
+                  </td>
+                  <td class="text-center">
+                    <button type="button" title="Khóa thẻ độc giả này"
+                            class="btn btn-warning btn-sm nut-khoa-the"
+                            onclick="doiTrangThaiThe('251230887', 'Nguyễn Quốc Khánh')">
+                      Khóa thẻ
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Hàng 4 -->
+                <tr id="docgia-251230843">
+                  <td class="text-center font-monospace">4</td>
+                  <td class="text-center font-monospace text-primary fw-bold">251230843</td>
+                  <td><b>Trần Xuân Đô</b></td>
+                  <td class="text-center">
+                    <span class="badge rounded-pill text-bg-secondary">Sinh viên</span>
+                  </td>
+                  <td>K66-CNTT3</td>
+                  <td>do251230843@lms.utc.edu.vn</td>
+                  <td class="text-center font-monospace">0914567890</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge rounded-pill text-bg-success">Hoạt động</span>
+                  </td>
+                  <td class="text-center">
+                    <button type="button" title="Khóa thẻ độc giả này"
+                            class="btn btn-warning btn-sm nut-khoa-the"
+                            onclick="doiTrangThaiThe('251230843', 'Trần Xuân Đô')">
+                      Khóa thẻ
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Hàng 5: thẻ đã khóa -->
+                <tr id="docgia-251230826">
+                  <td class="text-center font-monospace">5</td>
+                  <td class="text-center font-monospace text-primary fw-bold">251230826</td>
+                  <td><b>Đinh Văn Phan Dũng</b></td>
+                  <td class="text-center">
+                    <span class="badge rounded-pill text-bg-secondary">Sinh viên</span>
+                  </td>
+                  <td>K66-CNTT3</td>
+                  <td>dung251230826@lms.utc.edu.vn</td>
+                  <td class="text-center font-monospace">0935678901</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge rounded-pill text-bg-light border text-secondary">Đã khóa</span>
+                  </td>
+                  <td class="text-center">
+                    <button type="button" title="Mở khóa thẻ độc giả này"
+                            class="btn btn-primary btn-sm nut-khoa-the"
+                            onclick="doiTrangThaiThe('251230826', 'Đinh Văn Phan Dũng')">
+                      Mở khóa
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Hàng 6: giảng viên -->
+                <tr id="docgia-GV001">
+                  <td class="text-center font-monospace">6</td>
+                  <td class="text-center font-monospace text-primary fw-bold">GV001</td>
+                  <td><b>ThS. Hoàng Văn Cường</b></td>
+                  <td class="text-center">
+                    <span class="badge rounded-pill text-bg-info">Giảng viên</span>
+                  </td>
+                  <td>Khoa CNTT - UTC</td>
+                  <td>giangvien@utc.edu.vn</td>
+                  <td class="text-center font-monospace">0912345678</td>
+                  <td class="text-center trang-thai-the">
+                    <span class="badge rounded-pill text-bg-success">Hoạt động</span>
+                  </td>
+                  <td class="text-center">
+                    <button type="button" title="Khóa thẻ độc giả này"
+                            class="btn btn-warning btn-sm nut-khoa-the"
+                            onclick="doiTrangThaiThe('GV001', 'ThS. Hoàng Văn Cường')">
+                      Khóa thẻ
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <div class="modal fade" id="modalCapThe" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form onsubmit="return kiemTraDangKyDocGia();">
+
+              <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                  <span class="bi bi-person-badge me-2"></span>Cấp Thẻ Độc Giả Sinh Viên UTC
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal" aria-label="Đóng"></button>
+              </div>
+
+              <div class="modal-body p-4">
+                <div class="mb-3">
+                  <label for="maDocGia" class="form-label fw-semibold">Mã sinh viên UTC (*)</label>
+                  <input type="text" class="form-control" id="maDocGia"
+                        autocomplete="off" placeholder="Ví dụ: 251230899" />
+                </div>
+                <div class="mb-3">
+                  <label for="tenDocGia" class="form-label fw-semibold">Họ và tên độc giả (*)</label>
+                  <input type="text" class="form-control" id="tenDocGia"
+                        autocomplete="off" placeholder="Ví dụ: Hoàng Minh Tuấn" />
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="doiTuong" class="form-label fw-semibold">Đối tượng</label>
+                    <select class="form-select" id="doiTuong">
+                      <option value="Sinh viên">Sinh viên UTC</option>
+                      <option value="Giảng viên">Giảng viên / Cán bộ</option>
+                      <option value="Học viên">Học viên Sau đại học</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="lopKhoa" class="form-label fw-semibold">Lớp / Bộ môn (*)</label>
+                    <input type="text" class="form-control" id="lopKhoa"
+                          placeholder="Ví dụ: K66-CNTT3" />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="emailDocGia" class="form-label fw-semibold">Email LMS UTC (*)</label>
+                  <input type="email" class="form-control" id="emailDocGia"
+                        placeholder="Ví dụ: tuan251230899@lms.utc.edu.vn" />
+                </div>
+                <div class="mb-3">
+                  <label for="sdtDocGia" class="form-label fw-semibold">Số điện thoại (*)</label>
+                  <input type="tel" class="form-control" id="sdtDocGia"
+                        placeholder="Ví dụ: 0988123456" />
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Hủy bỏ</button>
+                <button type="submit" class="btn btn-primary">Tạo Thẻ Độc Giả</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer></footer>
+    <!-- CHÂN TRANG -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container">
+        <div class="footer-top row g-4 mb-4">
+          <!-- Cột 1: Thông tin trường -->
+          <div class="col-12 col-md-4">
+            <div class="brand d-flex align-items-center gap-2 mb-2">
+              <img
+                src="./images/logo_utc.png"
+                alt="Logo UTC"
+                style="height: 35px"
+                onerror="this.style.display = 'none'"
+              />
+              <h5 class="m-0 text-white">Thư Viện ĐH GTVT</h5>
+            </div>
+            <p class="small text-white-50">
+              Trường Đại học Giao thông Vận tải (UTC)<br />
+              Địa chỉ: Số 3 phố Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội.
+            </p>
+          </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+          <!-- Cột 2: Menu liên kết -->
+          <div class="col-12 col-md-4">
+            <h5 class="text-white mb-3">Liên Kết Nhanh</h5>
+            <ul class="list-unstyled small">
+              <li>
+                <a href="index.html" class="text-white-50 text-decoration-none"
+                  >&raquo; Trang chủ</a
+                >
+              </li>
+              <li>
+                <a href="books.html" class="text-white-50 text-decoration-none"
+                  >&raquo; Danh mục sách CNTT & IELTS</a
+                >
+              </li>
+              <li>
+                <a href="borrow.html" class="text-white-50 text-decoration-none"
+                  >&raquo; Mượn - Trả sách</a
+                >
+              </li>
+              <li>
+                <a
+                  href="readers.html"
+                  class="text-white-50 text-decoration-none"
+                  >&raquo; Quản lý độc giả UTC</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-white-50 text-decoration-none"
+                  >&raquo; Nội quy & Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột 3: Thông tin nhóm thực hiện -->
+          <div class="col-12 col-md-4">
+            <h5 class="text-white mb-3">Nhóm Sinh Viên Thực Hiện</h5>
+            <p class="small mb-1">Môn học: <strong>Thiết Kế Web</strong></p>
+            <p class="small mb-1">
+              Trường: <strong>Đại học Giao thông Vận tải (UTC)</strong>
+            </p>
+            <p class="small mb-1">Lớp: <strong>CNTT3</strong></p>
+            <p class="small mb-1">
+              Nhóm trưởng: <strong>Trương Mạnh Đạt</strong>
+            </p>
+            <p class="small mb-1">
+              Thành viên:
+              <strong
+                >Nguyễn Phương Hải, Trần Xuân Đô, Nguyễn Quốc Khánh, Đinh Văn
+                Phan Dũng</strong
+              >
+            </p>
+          </div>
+        </div>
+
+        <hr class="border-secondary" />
+
+        <div class="footer-bottom text-center small text-white-50">
+          <p class="m-0">
+            &copy; 2026 Thư Viện Trường Đại Học Giao Thông Vận Tải (UTC). Bài
+            Tập Lớn Thiết Kế Web - Nhóm Sinh Viên Lớp CNTT3.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
