@@ -9,7 +9,7 @@
 **TRƯỜNG:** ĐẠI HỌC GIAO THÔNG VẬN TẢI (UTC)  
 **KHOA:** CÔNG NGHỆ THÔNG TIN  
 **LỚP:** CÔNG NGHỆ THÔNG TIN 3 (CNTT3)  
-**GIẢNG VIÊN HƯỚNG DẪN:** ThS. HOÀNG VĂN CƯỜNG (MÃ: GV001)  
+**GIẢNG VIÊN HƯỚNG DẪN:** ThS. Lại Mạnh Dũng (MÃ: GV001)  
 **HỌC PHẦN:** THIẾT KẾ WEB  
 **HỌC KỲ / NĂM HỌC:** HỌC KỲ I - NĂM 2  
 **ĐỀ TÀI SỐ:** 01 - QUẢN LÝ THƯ VIỆN  
@@ -19,7 +19,7 @@
 
 | STT | Họ và tên sinh viên                    | Mã sinh viên  | Email                           | Trang phụ trách               | Nhiệm vụ chính trong dự án |
 | :-: | :------------------------------------- | :-----------: | :------------------------------ | :---------------------------- | :------------------------- |
-|  1  | **Trương Mạnh Đạt**<br>_(Nhóm trưởng)_ | **251230841** | `dat251230841@lms.utc.edu.vn`   | `index.html`<br>(Trang chủ)   | .                          |
+|  1  | **Trương Mạnh Đạt**<br>_(Nhóm trưởng)_ | **251230841** | `dat251230841@lms.utc.edu.vn`   | `index.html`<br>(Trang chủ)   | - Điều phối dự án, quản lý Git repository.<br>- Thiết kế giao diện trang chủ `index.html`.<br>- Xây dựng hệ thống CSS dùng chung (`style.css`): Biến màu UTC, chuẩn hóa Header & Footer cho toàn bộ 5 trang, thiết lập style nền tảng cho nhóm. |
 |  2  | **Nguyễn Phương Hải**                  | **251210853** | `hai251210853@lms.utc.edu.vn`   | `books.html`<br>(Kho sách)    | .                          |
 |  3  | **Nguyễn Quốc Khánh**                  | **251230887** | `khanh251230887@lms.utc.edu.vn` | `borrow.html`<br>(Mượn - Trả) | .                          |
 |  4  | **Trần Xuân Đô**                       | **251230843** | `do251230843@lms.utc.edu.vn`    | `readers.html`<br>(Độc giả)   | .                          |
@@ -116,7 +116,7 @@ Hệ thống **"Thư Viện Điện Tử UTC"** được xây dựng nhằm ph�
 
 Hệ thống được thiết kế Wireframe chi tiết cho toàn bộ 5 trang chức năng, đảm bảo tính nhất quán về bố cục thanh điều hướng (Header/Navbar), nội dung chính (Main) và chân trang (Footer):
 
-- **Header (Dùng chung):** Thanh Navbar nền xanh nhận diện UTC (`#0d62b9`), logo trường ĐH Giao thông Vận tải, menu điều hướng 5 trang.
+- **Header (Dùng chung):** Thanh Navbar nền xanh nhận diện UTC, logo trường ĐH Giao thông Vận tải, menu điều hướng 5 trang.
 - **Footer (Dùng chung):** Địa chỉ, liên kết nhanh, danh sách nhóm sinh viên thực hiện.
 
 #### a. Wireframe Trang chủ (`index.html`)
