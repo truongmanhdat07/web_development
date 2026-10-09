@@ -16,13 +16,10 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Thanh điều hướng -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
       <div class="container">
-        <!-- Logo & Tên thương hiệu -->
-        <a
-          class="navbar-brand d-flex align-items-center gap-2"
-          href="index.html"
-        >
+        <a class="brand-logo" href="index.html">
           <img
             src="./images/logo_utc.png"
             alt="Logo UTC"
@@ -30,8 +27,6 @@
           />
           <span>Thư Viện UTC</span>
         </a>
-
-        <!-- Nút 3 gạch mở menu trên điện thoại -->
         <button
           class="navbar-toggler"
           type="button"
@@ -41,8 +36,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!--responsive-->
-        <div class="collapse navbar-collapse" id="menuChinh">
+        <div class="collapse navbar-collapse nav-links-wrap" id="menuChinh">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" href="index.html">Trang chủ</a>
@@ -60,200 +54,216 @@
               <a class="nav-link" href="contact.html">Nội quy & Liên hệ</a>
             </li>
           </ul>
-
-          <!-- Thông tin tài khoản người dùng -->
-          <div class="user-info text-white">
-            <i class="bi bi-person-circle me-1"></i>Thủ thư:
+          <span class="librarian-badge">
+            <i class="bi bi-person-circle"></i> Thủ thư:
             <strong>Angespur</strong>
-          </div>
+          </span>
         </div>
       </div>
     </nav>
 
     <!-- NỘI DUNG CHÍNH CỦA TRANG -->
     <main class="container my-4">
-      <!-- Banner giới thiệu -->
-      <section class="banner mb-4">
+      <!-- Banner chào mừng -->
+      <section class="home-banner mb-4">
         <h1>THƯ VIỆN ĐIỆN TỬ - ĐẠI HỌC GIAO THÔNG VẬN TẢI</h1>
         <p>
           Hệ thống tra cứu giáo trình Lập trình, Công nghệ phần mềm và tài liệu
           Luyện thi Tiếng Anh IELTS chuẩn mực dành cho sinh viên UTC.
         </p>
-        <div class="actions">
-          <a href="books.html" class="btn btn-warning fw-bold"
-            >Tra Cứu Kho Sách Code & IELTS</a
-          >
-          <a href="borrow.html" class="btn btn-outline-primary"
-            >Lập Phiếu Mượn Sách</a
-          >
+        <div class="banner-actions">
+          <a href="books.html" class="btn-custom btn-custom-warning">
+            <i class="bi bi-search"></i> Tra Cứu Kho Sách Code & IELTS
+          </a>
+          <a href="borrow.html" class="btn-custom btn-custom-outline-light">
+            <i class="bi bi-journal-plus"></i> Lập Phiếu Mượn Sách
+          </a>
         </div>
       </section>
 
-      <section class="stats row g-3 mb-5">
-        <div class="col-6 col-md-3">
-          <div class="p-3 border rounded text-center">
-            <span class="fs-2 fw-bold text-primary">1,500+</span>
-            <p class="m-0">Đầu sách CNTT & Ngoại ngữ</p>
+      <!-- Khối thống kê số liệu -->
+      <section class="mb-5">
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <div class="stat-number text-primary">1,500+</div>
+              <div class="stat-label">
+                <i class="bi bi-journal-code"></i> Đầu sách CNTT & Ngoại ngữ
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3 border rounded text-center">
-            <span class="fs-2 fw-bold text-success">650</span>
-            <p class="m-0">Thẻ sinh viên UTC</p>
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <div class="stat-number text-success">650</div>
+              <div class="stat-label">
+                <i class="bi bi-people"></i> Thẻ sinh viên UTC
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3 border rounded text-center">
-            <span class="fs-2 fw-bold text-warning">92</span>
-            <p class="m-0">Sách đang được mượn</p>
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <div class="stat-number text-warning">92</div>
+              <div class="stat-label">
+                <i class="bi bi-hourglass-split"></i> Sách đang được mượn
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3 border rounded text-center">
-            <span class="fs-2 fw-bold text-danger">8</span>
-            <p class="m-0">Sách quá hạn trả</p>
+          <div class="col-6 col-md-3">
+            <div class="stat-card">
+              <div class="stat-number text-danger">8</div>
+              <div class="stat-label">
+                <i class="bi bi-exclamation-circle"></i> Sách quá hạn trả
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- 4. DANH SÁCH SÁCH TIÊU BIỂU -->
-      <section class="book-list mb-5">
+      <section class="mb-5">
         <div
-          class="section-title d-flex justify-content-between align-items-center mb-3"
+          class="page-header d-flex justify-content-between align-items-center mb-3"
         >
-          <h3 class="m-0">Giáo Trình Tiêu Biểu Khoa CNTT</h3>
-          <a href="books.html">Xem tất cả sách &raquo;</a>
+          <h2 class="m-0">Giáo Trình Tiêu Biểu Khoa CNTT</h2>
+          <a href="books.html" class="btn-custom btn-custom-outline"
+            >Xem tất cả sách &raquo;</a
+          >
         </div>
 
-        <div class="books row g-4">
-          <!-- Cuốn 1 -->
-          <article class="col-12 col-sm-6 col-md-3">
-            <div class="border rounded h-100 p-2">
-              <img
-                src="./images/book1_web.jpg"
-                alt="Lập trình Web"
-                class="img-fluid rounded mb-2"
-              />
-              <div>
-                <small class="text-muted">Mã: UTC001</small>
-                <h5 class="mt-1">Lập Trình Web Với HTML5, CSS3 & JavaScript</h5>
-                <p class="small text-secondary mb-2">Khoa CNTT - UTC</p>
-                <div class="d-flex justify-content-between">
-                  <span class="badge bg-primary">Lập trình Web</span>
-                  <span class="badge bg-success">Còn 12 cuốn</span>
+        <div class="row g-4">
+          <!-- Sách 1 -->
+          <div class="col-sm-6 col-md-3">
+            <div class="book-card">
+              <div class="card-thumb">
+                <img src="./images/book1_web.jpg" alt="Lập trình Web" />
+              </div>
+              <div class="card-content">
+                <div class="book-code">Mã: UTC001</div>
+                <div class="book-title">
+                  Lập Trình Web Với HTML5, CSS3 & JavaScript
+                </div>
+                <div class="book-author">
+                  <i class="bi bi-person"></i> Khoa CNTT - UTC
+                </div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-primary">Lập trình Web</span>
+                  <span class="badge-custom badge-success">Còn 12 cuốn</span>
                 </div>
               </div>
             </div>
-          </article>
+          </div>
 
-          <!-- Cuốn 2 -->
-          <article class="col-12 col-sm-6 col-md-3">
-            <div class="border rounded h-100 p-2">
-              <img
-                src="./images/book2_dsa.jpg"
-                alt="Cấu trúc dữ liệu và giải thuật"
-                class="img-fluid rounded mb-2"
-              />
-              <div>
-                <small class="text-muted">Mã: UTC002</small>
-                <h5 class="mt-1">Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++</h5>
-                <p class="small text-secondary mb-2">NXB Giao Thông Vận Tải</p>
-                <div class="d-flex justify-content-between">
-                  <span class="badge bg-primary">Thuật toán</span>
-                  <span class="badge bg-success">Còn 8 cuốn</span>
+          <!-- Sách 2 -->
+          <div class="col-sm-6 col-md-3">
+            <div class="book-card">
+              <div class="card-thumb">
+                <img src="./images/book2_dsa.jpg" alt="DSA C/C++" />
+              </div>
+              <div class="card-content">
+                <div class="book-code">Mã: UTC002</div>
+                <div class="book-title">
+                  Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++
+                </div>
+                <div class="book-author">
+                  <i class="bi bi-person"></i> NXB Giao Thông Vận Tải
+                </div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-primary">Thuật toán</span>
+                  <span class="badge-custom badge-success">Còn 8 cuốn</span>
                 </div>
               </div>
             </div>
-          </article>
+          </div>
 
-          <!-- Cuốn 3 -->
-          <article class="col-12 col-sm-6 col-md-3">
-            <div class="border rounded h-100 p-2">
-              <img
-                src="./images/book4_ielts18.png"
-                alt="Cambridge IELTS 18"
-                class="img-fluid rounded mb-2"
-              />
-              <div>
-                <small class="text-muted">Mã: UTC004</small>
-                <h5 class="mt-1">Cambridge IELTS 18 Academic With Answers</h5>
-                <p class="small text-secondary mb-2">
-                  Cambridge University Press
-                </p>
-                <div class="d-flex justify-content-between">
-                  <span class="badge bg-danger">IELTS</span>
-                  <span class="badge bg-success">Còn 15 cuốn</span>
+          <!-- Sách 3 -->
+          <div class="col-sm-6 col-md-3">
+            <div class="book-card">
+              <div class="card-thumb">
+                <img
+                  src="./images/book4_ielts18.png"
+                  alt="Cambridge IELTS 18"
+                />
+              </div>
+              <div class="card-content">
+                <div class="book-code">Mã: UTC004</div>
+                <div class="book-title">
+                  Cambridge IELTS 18 Academic With Answers
+                </div>
+                <div class="book-author">
+                  <i class="bi bi-person"></i> Cambridge University Press
+                </div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-danger">IELTS</span>
+                  <span class="badge-custom badge-success">Còn 15 cuốn</span>
                 </div>
               </div>
             </div>
-          </article>
+          </div>
 
-          <!-- Cuốn 4 -->
-          <article class="col-12 col-sm-6 col-md-3">
-            <div class="border rounded h-100 p-2">
-              <img
-                src="./images/book3_cs.jpg"
-                alt="C# .NET Core"
-                class="img-fluid rounded mb-2"
-              />
-              <div>
-                <small class="text-muted">Mã: UTC003</small>
-                <h5 class="mt-1">Lập Trình C# Và Nền Tảng .NET Core</h5>
-                <p class="small text-secondary mb-2">Khoa CNTT - UTC</p>
-                <div class="d-flex justify-content-between">
-                  <span class="badge bg-primary">C# .NET</span>
-                  <span class="badge bg-success">Còn 10 cuốn</span>
+          <!-- Sách 4 -->
+          <div class="col-sm-6 col-md-3">
+            <div class="book-card">
+              <div class="card-thumb">
+                <img src="./images/book3_cs.jpg" alt="C# .NET Core" />
+              </div>
+              <div class="card-content">
+                <div class="book-code">Mã: UTC003</div>
+                <div class="book-title">Lập Trình C# Và Nền Tảng .NET Core</div>
+                <div class="book-author">
+                  <i class="bi bi-person"></i> Khoa CNTT - UTC
+                </div>
+                <div class="card-bottom">
+                  <span class="badge-custom badge-primary">C# .NET</span>
+                  <span class="badge-custom badge-success">Còn 10 cuốn</span>
                 </div>
               </div>
             </div>
-          </article>
+          </div>
         </div>
       </section>
-      <!-- 5. QUY TRÌNH MƯỢN TRẢ GIÁO TRÌNH (Theo Wireframe thiết kế) -->
-      <section class="process-section p-4 bg-light rounded-3 border mb-4">
-        <h3 class="text-center mb-4 text-primary fw-bold">
-          <i class="bi bi-card-checklist me-2"></i>Quy Trình Mượn Trả Giáo Trình
-          - Sinh Viên UTC
-        </h3>
+
+      <!-- 5. QUY TRÌNH MƯỢN TRẢ GIÁO TRÌNH -->
+      <section class="process-box mb-4">
+        <h4>QUY TRÌNH MƯỢN TRẢ GIÁO TRÌNH - DÀNH CHO SINH VIÊN UTC</h4>
         <div class="row g-4 text-center">
           <!-- Bước 1 -->
-          <div class="col-12 col-md-4">
-            <div class="p-3 bg-white rounded-3 shadow-sm h-100 border">
-              <div class="display-5 text-primary mb-2">
+          <div class="col-md-4">
+            <div class="step-item">
+              <div class="step-icon text-primary">
                 <i class="bi bi-search"></i>
               </div>
-              <h5 class="fw-bold">1. Tra Cứu Giáo Trình</h5>
-              <p class="text-muted small mb-0">
-                Tìm kiếm tài liệu học Lập trình hoặc đề thi IELTS trực tiếp trên
-                website thư viện.
+              <h5>1. Tra cứu giáo trình</h5>
+              <p>
+                Tìm kiếm tài liệu học lập trình hoặc đề thi IELTS trực tiếp trên
+                website.
               </p>
             </div>
           </div>
 
           <!-- Bước 2 -->
-          <div class="col-12 col-md-4">
-            <div class="p-3 bg-white rounded-3 shadow-sm h-100 border">
-              <div class="display-5 text-success mb-2">
-                <i class="bi bi-person-badge"></i>
+          <div class="col-md-4">
+            <div class="step-item">
+              <div class="step-icon text-success">
+                <i class="bi bi-card-checklist"></i>
               </div>
-              <h5 class="fw-bold">2. Xuất Trình Thẻ Bạn Đọc</h5>
-              <p class="text-muted small mb-0">
-                Xuất trình thẻ sinh viên UTC hoặc mã thẻ LMS tại quầy thư viện
-                để lập phiếu mượn.
+              <h5>2. Xuất trình thẻ bạn đọc</h5>
+              <p>
+                Sinh viên xuất trình thẻ sinh viên hoặc thẻ bạn đọc tại quầy thư
+                viện.
               </p>
             </div>
           </div>
 
           <!-- Bước 3 -->
-          <div class="col-12 col-md-4">
-            <div class="p-3 bg-white rounded-3 shadow-sm h-100 border">
-              <div class="display-5 text-warning mb-2">
+          <div class="col-md-4">
+            <div class="step-item">
+              <div class="step-icon text-warning">
                 <i class="bi bi-calendar-check"></i>
               </div>
-              <h5 class="fw-bold">3. Trả Sách Đúng Hạn</h5>
-              <p class="text-muted small mb-0">
-                Thời hạn mượn là 14 ngày. Sinh viên có thể gia hạn trực tuyến
-                thêm 07 ngày qua website.
+              <h5>3. Trả sách đúng hạn</h5>
+              <p>
+                Thời hạn mượn tiêu chuẩn là 14 ngày. Sinh viên có thể gia hạn
+                trực tuyến thêm 07 ngày.
               </p>
             </div>
           </div>
@@ -261,66 +271,44 @@
       </section>
     </main>
 
-    <!-- 5. CHÂN TRANG  -->
-    <footer class="bg-dark text-white pt-5 pb-3">
+    <!-- Chân trang -->
+    <footer>
       <div class="container">
-        <div class="footer-top row g-4 mb-4">
-          <!-- Cột 1: Thông tin trường -->
-          <div class="col-12 col-md-4">
-            <div class="brand d-flex align-items-center gap-2 mb-2">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="d-flex align-items-center gap-2 mb-2">
               <img
                 src="./images/logo_utc.png"
                 alt="Logo UTC"
-                style="height: 35px"
+                style="
+                  height: 38px;
+                  background: white;
+                  border-radius: 50%;
+                  padding: 2px;
+                "
                 onerror="this.style.display = 'none'"
               />
               <h5 class="m-0 text-white">Thư Viện ĐH GTVT</h5>
             </div>
-            <p class="small text-white-50">
+            <p class="small text-light-50">
               Trường Đại học Giao thông Vận tải (UTC)<br />
               Địa chỉ: Số 3 phố Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội.
             </p>
           </div>
-
-          <!-- Cột 2: Menu liên kết -->
-          <div class="col-12 col-md-4">
-            <h5 class="text-white mb-3">Liên Kết Nhanh</h5>
-            <ul class="list-unstyled small">
+          <div class="col-md-4">
+            <h5>Liên Kết Nhanh</h5>
+            <ul>
+              <li><a href="index.html">&raquo; Trang chủ</a></li>
               <li>
-                <a href="index.html" class="text-white-50 text-decoration-none"
-                  >&raquo; Trang chủ</a
-                >
+                <a href="books.html">&raquo; Danh mục sách CNTT & IELTS</a>
               </li>
-              <li>
-                <a href="books.html" class="text-white-50 text-decoration-none"
-                  >&raquo; Danh mục sách CNTT & IELTS</a
-                >
-              </li>
-              <li>
-                <a href="borrow.html" class="text-white-50 text-decoration-none"
-                  >&raquo; Mượn - Trả sách</a
-                >
-              </li>
-              <li>
-                <a
-                  href="readers.html"
-                  class="text-white-50 text-decoration-none"
-                  >&raquo; Quản lý độc giả UTC</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="text-white-50 text-decoration-none"
-                  >&raquo; Nội quy & Liên hệ</a
-                >
-              </li>
+              <li><a href="borrow.html">&raquo; Mượn - Trả sách</a></li>
+              <li><a href="readers.html">&raquo; Quản lý độc giả UTC</a></li>
+              <li><a href="contact.html">&raquo; Nội quy & Liên hệ</a></li>
             </ul>
           </div>
-
-          <!-- Cột 3: Thông tin nhóm thực hiện -->
-          <div class="col-12 col-md-4">
-            <h5 class="text-white mb-3">Nhóm Sinh Viên Thực Hiện</h5>
+          <div class="col-md-4">
+            <h5>Nhóm Sinh Viên Thực Hiện</h5>
             <p class="small mb-1">Môn học: <strong>Thiết Kế Web</strong></p>
             <p class="small mb-1">
               Trường: <strong>Đại học Giao thông Vận tải (UTC)</strong>
@@ -329,19 +317,17 @@
             <p class="small mb-1">
               Nhóm trưởng: <strong>Trương Mạnh Đạt</strong>
             </p>
-            <p class="small mb-1">
+            <p class="small">
               Thành viên:
               <strong
                 >Nguyễn Phương Hải, Trần Xuân Đô, Nguyễn Quốc Khánh, Đinh Văn
                 Phan Dũng</strong
               >
+              (Khoa CNTT - UTC)
             </p>
           </div>
         </div>
-
-        <hr class="border-secondary" />
-
-        <div class="footer-bottom text-center small text-white-50">
+        <div class="footer-bottom">
           <p class="m-0">
             &copy; 2026 Thư Viện Trường Đại Học Giao Thông Vận Tải (UTC). Bài
             Tập Lớn Thiết Kế Web - Nhóm Sinh Viên Lớp CNTT3.
