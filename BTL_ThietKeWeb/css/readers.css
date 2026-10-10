@@ -1,0 +1,80 @@
+.tieu-de-trang{
+    color: var(--utc-blue);
+    border-bottom: 3px solid var(--utc-gold);
+    display: inline-block;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+.mo-ta-trang{
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.khung-bang{
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.bang-docgia thead th{
+    background-color: var(--utc-blue);
+    color: white;
+    font-weight: 700;
+    white-space: nowrap;
+    border: 1px solid #0b549f;
+}
+
+.bang-docgia .ma-the {
+    color: var(--utc-blue);
+    font-weight: 700;
+}
+
+.bang-docgia .badge-custom.nhan-sinh-vien {
+    background-color: #f1f5f9;
+    color: #64748b;
+    border: 1px solid #64748b;
+}
+
+.bang-docgia .badge-custom.nhan-giang-vien {
+    border: 1px solid var(--utc-blue);
+}
+
+.bang-docgia .badge-custom, .bang-docgia .nut-khoa-the {
+    white-space: nowrap;
+}
+
+.bang-docgia tbody td{
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.bang-docgia tbody tr:hover td {
+    background-color: #edf5ff;
+    box-shadow: none;
+}
+
+.bang-docgia .cot-khoa {
+    white-space: nowrap;
+}
+
+.bang-docgia .nut-khoa-the {
+    padding: 4px 12px;
+    font-size: 14px;
+}
+
+.btn-custom-outline{
+    color: var(--utc-blue);
+    border: 1px solid var(--utc-blue);
+    background-color: white;
+}
+
+.modal-header-utc{
+    background-color: var(--utc-blue);
+    color: white;
+}
+
+.modal-header-utc .btn-close {
+  filter: invert(1);
+}

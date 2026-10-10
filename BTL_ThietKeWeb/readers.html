@@ -16,6 +16,7 @@
     />
     <!-- File CSS tùy chỉnh của nhóm -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/readers.css" />
   </head>
   <body>
     <!-- Thanh điều hướng -->
@@ -68,22 +69,22 @@
       <div class="container">
         <header class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-4">
           <div>
-            <h2 class="text-primary fw-bold d-inline-block border-bottom border-warning border-3 pb-1">
+            <h2 class="tieu-de-trang">
               <span class="bi bi-people me-2"></span>HỒ SƠ THẺ ĐỘC GIẢ SINH VIÊN UTC
             </h2>
-            <p class="text-secondary mb-0">
+            <p class="mo-ta-trang">
               Danh sách tài khoản thư viện sinh viên Khoa Công nghệ thông tin - ĐH Giao thông Vận tải
             </p>
           </div>
-          <button type="button" class="btn btn-primary"
+          <button type="button" class="btn-custom btn-custom-primary"
                   data-bs-toggle="modal" data-bs-target="#modalCapThe">
             <span class="bi bi-person-plus-fill me-1"></span>Cấp Thẻ Độc Giả Mới
           </button>
         </header>
-        <section class="bg-white rounded-3 shadow-sm overflow-hidden">
+        <section class="khung-bang">
           <div class="table-responsive">
-            <table class="table table-hover align-middle mb-0">
-              <thead class="text-center" style="--bs-table-bg: #0d62bd; --bs-table-color: #fff">
+            <table class="table align-middle mb-0 bang-docgia">
+              <thead class="text-center">
                 <tr>
                   <th scope="col">STT</th>
                   <th scope="col">Mã SV / Thẻ</th>
@@ -100,20 +101,20 @@
                   <!-- Hàng 1 -->
                 <tr id="docgia-251230841">
                   <td class="text-center font-monospace">1</td>
-                  <td class="text-center font-monospace text-primary fw-bold">251230841</td>
+                  <td class="text-center font-monospace ma-the">251230841</td>
                   <td><b>Trương Mạnh Đạt</b></td>
                   <td class="text-center">
-                    <span class="badge rounded-pill text-bg-secondary">Sinh viên</span>
+                    <span class="badge-custom nhan-sinh-vien">Sinh viên</span>
                   </td>
                   <td>K66-CNTT3</td>
                   <td>dat251230841@lms.utc.edu.vn</td>
                   <td class="text-center font-monospace">0981234567</td>
                   <td class="text-center trang-thai-the">
-                    <span class="badge rounded-pill text-bg-success">Hoạt động</span>
+                    <span class="badge-custom badge-success">Hoạt động</span>
                   </td>
                   <td class="text-center">
                     <button type="button" title="Khóa thẻ độc giả này"
-                            class="btn btn-warning btn-sm nut-khoa-the"
+                            class="btn-custom btn-custom-warning nut-khoa-the"
                             onclick="doiTrangThaiThe('251230841', 'Trương Mạnh Đạt')">
                       Khóa thẻ
                     </button>
@@ -123,20 +124,20 @@
                 <!-- Hàng 2 -->
                 <tr id="docgia-251210853">
                   <td class="text-center font-monospace">2</td>
-                  <td class="text-center font-monospace text-primary fw-bold">251210853</td>
+                  <td class="text-center font-monospace ma-the">251210853</td>
                   <td><b>Nguyễn Phương Hải</b></td>
                   <td class="text-center">
-                    <span class="badge rounded-pill text-bg-secondary">Sinh viên</span>
+                    <span class="badge-custom nhan-sinh-vien">Sinh viên</span>
                   </td>
                   <td>K66-CNTT3</td>
                   <td>hai251210853@lms.utc.edu.vn</td>
                   <td class="text-center font-monospace">0972345678</td>
                   <td class="text-center trang-thai-the">
-                    <span class="badge rounded-pill text-bg-success">Hoạt động</span>
+                    <span class="badge-custom badge-success">Hoạt động</span>
                   </td>
                   <td class="text-center">
                     <button type="button" title="Khóa thẻ độc giả này"
-                            class="btn btn-warning btn-sm nut-khoa-the"
+                            class="btn-custom btn-custom-warning nut-khoa-the"
                             onclick="doiTrangThaiThe('251210853', 'Nguyễn Phương Hải')">
                       Khóa thẻ
                     </button>
@@ -146,20 +147,20 @@
                 <!-- Hàng 3 -->
                 <tr id="docgia-251230887">
                   <td class="text-center font-monospace">3</td>
-                  <td class="text-center font-monospace text-primary fw-bold">251230887</td>
+                  <td class="text-center font-monospace ma-the">251230887</td>
                   <td><b>Nguyễn Quốc Khánh</b></td>
                   <td class="text-center">
-                    <span class="badge rounded-pill text-bg-secondary">Sinh viên</span>
+                    <span class="badge-custom nhan-sinh-vien">Sinh viên</span>
                   </td>
                   <td>K66-CNTT3</td>
                   <td>khanh251230887@lms.utc.edu.vn</td>
                   <td class="text-center font-monospace">0963456789</td>
                   <td class="text-center trang-thai-the">
-                    <span class="badge rounded-pill text-bg-success">Hoạt động</span>
+                    <span class="badge-custom badge-success">Hoạt động</span>
                   </td>
                   <td class="text-center">
                     <button type="button" title="Khóa thẻ độc giả này"
-                            class="btn btn-warning btn-sm nut-khoa-the"
+                            class="btn-custom btn-custom-warning nut-khoa-the"
                             onclick="doiTrangThaiThe('251230887', 'Nguyễn Quốc Khánh')">
                       Khóa thẻ
                     </button>
@@ -169,20 +170,20 @@
                 <!-- Hàng 4 -->
                 <tr id="docgia-251230843">
                   <td class="text-center font-monospace">4</td>
-                  <td class="text-center font-monospace text-primary fw-bold">251230843</td>
+                  <td class="text-center font-monospace ma-the">251230843</td>
                   <td><b>Trần Xuân Đô</b></td>
                   <td class="text-center">
-                    <span class="badge rounded-pill text-bg-secondary">Sinh viên</span>
+                    <span class="badge-custom nhan-sinh-vien">Sinh viên</span>
                   </td>
                   <td>K66-CNTT3</td>
                   <td>do251230843@lms.utc.edu.vn</td>
                   <td class="text-center font-monospace">0914567890</td>
                   <td class="text-center trang-thai-the">
-                    <span class="badge rounded-pill text-bg-success">Hoạt động</span>
+                    <span class="badge-custom badge-success">Hoạt động</span>
                   </td>
                   <td class="text-center">
                     <button type="button" title="Khóa thẻ độc giả này"
-                            class="btn btn-warning btn-sm nut-khoa-the"
+                            class="btn-custom btn-custom-warning nut-khoa-the"
                             onclick="doiTrangThaiThe('251230843', 'Trần Xuân Đô')">
                       Khóa thẻ
                     </button>
@@ -192,20 +193,20 @@
                 <!-- Hàng 5: thẻ đã khóa -->
                 <tr id="docgia-251230826">
                   <td class="text-center font-monospace">5</td>
-                  <td class="text-center font-monospace text-primary fw-bold">251230826</td>
+                  <td class="text-center font-monospace ma-the">251230826</td>
                   <td><b>Đinh Văn Phan Dũng</b></td>
                   <td class="text-center">
-                    <span class="badge rounded-pill text-bg-secondary">Sinh viên</span>
+                    <span class="badge-custom nhan-sinh-vien">Sinh viên</span>
                   </td>
                   <td>K66-CNTT3</td>
                   <td>dung251230826@lms.utc.edu.vn</td>
                   <td class="text-center font-monospace">0935678901</td>
                   <td class="text-center trang-thai-the">
-                    <span class="badge rounded-pill text-bg-light border text-secondary">Đã khóa</span>
+                    <span class="badge-custom badge-danger">Đã khóa</span>
                   </td>
                   <td class="text-center">
                     <button type="button" title="Mở khóa thẻ độc giả này"
-                            class="btn btn-primary btn-sm nut-khoa-the"
+                            class="btn-custom btn-custom-primary nut-khoa-the"
                             onclick="doiTrangThaiThe('251230826', 'Đinh Văn Phan Dũng')">
                       Mở khóa
                     </button>
@@ -215,20 +216,20 @@
                 <!-- Hàng 6: giảng viên -->
                 <tr id="docgia-GV001">
                   <td class="text-center font-monospace">6</td>
-                  <td class="text-center font-monospace text-primary fw-bold">GV001</td>
+                  <td class="text-center font-monospace ma-the">GV001</td>
                   <td><b>ThS. Hoàng Văn Cường</b></td>
                   <td class="text-center">
-                    <span class="badge rounded-pill text-bg-info">Giảng viên</span>
+                    <span class="badge-custom badge-primary nhan-giang-vien">Giảng viên</span>
                   </td>
-                  <td>Khoa CNTT - UTC</td>
+                  <td class="cot-khoa">Khoa CNTT - UTC</td>
                   <td>giangvien@utc.edu.vn</td>
                   <td class="text-center font-monospace">0912345678</td>
                   <td class="text-center trang-thai-the">
-                    <span class="badge rounded-pill text-bg-success">Hoạt động</span>
+                    <span class="badge-custom badge-success">Hoạt động</span>
                   </td>
                   <td class="text-center">
                     <button type="button" title="Khóa thẻ độc giả này"
-                            class="btn btn-warning btn-sm nut-khoa-the"
+                            class="btn-custom btn-custom-warning nut-khoa-the"
                             onclick="doiTrangThaiThe('GV001', 'ThS. Hoàng Văn Cường')">
                       Khóa thẻ
                     </button>
@@ -245,11 +246,11 @@
           <div class="modal-content">
             <form onsubmit="return kiemTraDangKyDocGia();">
 
-              <div class="modal-header bg-primary text-white">
+              <div class="modal-header modal-header-utc">
                 <h5 class="modal-title">
                   <span class="bi bi-person-badge me-2"></span>Cấp Thẻ Độc Giả Sinh Viên UTC
                 </h5>
-                <button type="button" class="btn-close btn-close-white"
+                <button type="button" class="btn-close"
                         data-bs-dismiss="modal" aria-label="Đóng"></button>
               </div>
 
@@ -294,8 +295,8 @@
               </div>
 
               <div class="modal-footer">
-                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Hủy bỏ</button>
-                <button type="submit" class="btn btn-primary">Tạo Thẻ Độc Giả</button>
+                <button type="button" class="btn-custom btn-custom-outline" data-bs-dismiss="modal">Hủy bỏ</button>
+                <button type="submit" class="btn-custom btn-custom-primary">Tạo Thẻ Độc Giả</button>
               </div>
 
             </form>
