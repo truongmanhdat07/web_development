@@ -57,7 +57,7 @@
   outline: 2px solid var(--utc-gold);
 }
 
-/* Thẻ sách (chỉ chỉnh phần riêng của trang này) */
+/* Thẻ sách */
 .the-sach .card-thumb img {
   display: block;
   width: 100%;
