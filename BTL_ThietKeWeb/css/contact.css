@@ -1,0 +1,239 @@
+/* Tieu de trang */
+main .page-title {
+    text-align: left;
+    padding: 30px 0;
+}
+
+main .page-title h1 {
+    color: var(--utc-blue);
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+main .page-title h1 i {
+    color: var(--utc-blue);
+}
+
+main .page-title p {
+    color: #49586a;
+    margin-bottom: 0;
+}
+
+/* Cot noi dung */
+main .content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+main .left-column,
+main .right-column {
+    min-width: 0;
+}
+
+/* Khung noi dung */
+main .card {
+    background-color: #ffffff;
+    border: 1px solid #e5e9ef;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 28px;
+}
+
+/* Tieu de tung khung */
+main .card h2 {
+    color: var(--utc-blue);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 16px;
+}
+
+main .card h2 i {
+    color: var(--utc-blue);
+    margin-right: 6px;
+}
+
+/* Bang lich phuc vu */
+main .schedule {
+    width: 100%;
+    border-collapse: collapse;
+    color: #111111;
+}
+
+main .schedule th,
+main .schedule td {
+    background-color: #ffffff;
+    border: 1px solid #d6e0ec;
+    padding: 11px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+main .schedule th {
+    width: 25%;
+    color: #111111;
+    font-weight: 700;
+}
+
+main .schedule td {
+    overflow-wrap: anywhere;
+    color: #111111;
+}
+
+main .schedule .holiday {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+/* Noi quy */
+main .rules .rule {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 12px;
+    border-bottom: 1px solid #dce1e7;
+    color: #111111;
+}
+
+main .rules .rule:last-child {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+main .rules .rule p {
+    flex: 1;
+    margin: 0;
+}
+
+main .rules .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    min-width: 28px;
+    padding-top: 3px;
+    font-size: 1.1rem;
+}
+
+main .rules .icon.check {
+    color: #198754;
+}
+
+main .rules .icon.warning {
+    color: #dc3545;
+}
+
+main .rules .icon.lock {
+    color: #6c757d;
+}
+
+/* Mo ta bieu mau */
+main .suggestion .description {
+    color: #49586a;
+    margin-bottom: 22px;
+}
+
+/* Cac truong bieu mau */
+main #formGopY .form-group {
+    margin-bottom: 22px;
+}
+
+main #formGopY label {
+    display: block;
+    color: #111111;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+main #formGopY input,
+main #formGopY select,
+main #formGopY textarea {
+    display: block;
+    width: 100%;
+    padding: 9px 14px;
+    border: 1px solid #d9dee5;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #111111;
+    font: inherit;
+}
+
+main #formGopY input,
+main #formGopY select {
+    min-height: 45px;
+}
+
+main #formGopY textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+main #formGopY input::placeholder,
+main #formGopY textarea::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+main #formGopY input:focus,
+main #formGopY select:focus,
+main #formGopY textarea:focus {
+    outline: 2px solid var(--utc-blue);
+    outline-offset: 1px;
+}
+
+main #formGopY small {
+    display: block;
+    margin-top: 6px;
+    color: #49586a;
+    font-size: 0.85rem;
+}
+
+main #formGopY button[type="submit"] {
+    width: 100%;
+    justify-content: center;
+}
+
+main #thongbao {
+    margin-top: 16px;
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Man hinh nho */
+@media (max-width: 991.98px) {
+    main .content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    main .page-title {
+        padding: 24px 0;
+    }
+
+    main .page-title h1 {
+        font-size: 1.45rem;
+    }
+
+    main .card {
+        padding: 18px;
+    }
+
+    main .card h2 {
+        font-size: 1.1rem;
+    }
+
+    main .schedule th,
+    main .schedule td {
+        padding: 8px;
+    }
+
+    main .schedule th {
+        width: 35%;
+    }
+}
