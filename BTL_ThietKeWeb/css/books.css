@@ -1,41 +1,80 @@
-/* Sửa lỗi navbar bị khung tìm kiếm đè lên */
-.navbar-custom {
-  z-index: 1030;
+/* Mô tả dưới tiêu đề */
+.page-desc {
+  margin: 4px 0 0;
+  color: var(--utc-blue-dark);
 }
 
-/* Tiêu đề trang */
-main h2.text-primary {
-  color: var(--utc-blue) !important;
-  font-size: 1.6rem;
+/* Bộ lọc tìm kiếm */
+.filter-card {
+  background-color: #ffffff;
+  border: 1px solid var(--utc-blue);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
 }
 
-/* Ô tìm kiếm và ô chọn thể loại */
-#oTimKiem:focus,
-#chonTheLoai:focus {
-  border-color: var(--utc-blue);
-  box-shadow: 0 0 0 0.25rem rgba(13, 98, 185, 0.2);
+/* Ô tìm kiếm */
+.search-box-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border: 1px solid var(--utc-blue);
+  border-radius: 6px;
+  padding: 0 12px;
 }
 
-/* Thẻ sách */
-.the-sach .card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+.search-box-wrap i {
+  color: var(--utc-blue);
 }
 
-.the-sach .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0.75rem 1.5rem rgba(9, 55, 105, 0.18) !important;
+.search-box-wrap .search-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  padding: 10px 0;
+  font-size: 1rem;
 }
 
-.the-sach .card-img-top {
+.search-box-wrap:focus-within {
+  border-color: var(--utc-blue-dark);
+  outline: 2px solid var(--utc-gold);
+}
+
+.filter-card .select-box {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid var(--utc-blue);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+.filter-card .select-box:focus {
+  border-color: var(--utc-blue-dark);
+  outline: 2px solid var(--utc-gold);
+}
+
+/* Thẻ sách (chỉ chỉnh phần riêng của trang này) */
+.the-sach .card-thumb img {
+  display: block;
+  width: 100%;
   height: 260px;
   object-fit: cover;
 }
 
-/* Tên sách tối đa 2 dòng */
-.the-sach .card-body h5 {
-  font-size: 1.05rem;
-  line-height: 1.4;
+.the-sach .badge-theloai {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 8px;
+}
+
+/* Tên sách tối đa 2 dòng để các thẻ đều nhau */
+.the-sach .book-title {
   min-height: calc(2 * 1.4em);
+  line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
@@ -43,65 +82,80 @@ main h2.text-primary {
   overflow: hidden;
 }
 
-/* Nút mượn sách */
-.the-sach .btn-outline-primary {
-  --bs-btn-color: var(--utc-blue);
-  --bs-btn-border-color: var(--utc-blue);
-  --bs-btn-hover-bg: var(--utc-blue);
-  --bs-btn-hover-border-color: var(--utc-blue);
-  --bs-btn-active-bg: var(--utc-blue-dark);
-  --bs-btn-active-border-color: var(--utc-blue-dark);
+.the-sach .book-meta {
+  margin: 6px 0 12px;
+  font-size: 0.85rem;
+  color: var(--utc-blue-dark);
 }
 
-/* Nút thêm giáo trình */
-main .btn-primary,
-#modalThemSach .btn-primary {
-  --bs-btn-bg: var(--utc-blue);
-  --bs-btn-border-color: var(--utc-blue);
-  --bs-btn-hover-bg: var(--utc-blue-dark);
-  --bs-btn-hover-border-color: var(--utc-blue-dark);
-  --bs-btn-active-bg: var(--utc-blue-dark);
-  --bs-btn-active-border-color: var(--utc-blue-dark);
+.the-sach .card-bottom .btn-muon {
+  padding: 4px 10px;
+  font-size: 0.85rem;
 }
 
-/* Hộp thoại thêm giáo trình */
+/*  Hộp thoại thêm giáo trình */
 #modalThemSach .modal-content {
-  border: 0;
-  border-radius: 1rem;
+  border: 1px solid var(--utc-blue);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-#modalThemSach .modal-title {
-  color: var(--utc-blue);
+#modalThemSach .modal-header-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background-color: var(--utc-blue);
+  color: #ffffff;
 }
 
-#modalThemSach .form-control:focus,
-#modalThemSach .form-select:focus {
-  border-color: var(--utc-blue);
-  box-shadow: 0 0 0 0.25rem rgba(13, 98, 185, 0.2);
+#modalThemSach .modal-header-custom h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#modalThemSach .modal-body-custom {
+  padding: 20px;
+}
+
+#modalThemSach .field-group {
+  margin-bottom: 16px;
+}
+
+#modalThemSach .field-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--utc-blue-dark);
+}
+
+#modalThemSach .form-field {
+  display: block;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid var(--utc-blue);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+#modalThemSach .form-field:focus {
+  border-color: var(--utc-blue-dark);
+  outline: 2px solid var(--utc-gold);
+}
+
+#modalThemSach .modal-footer-custom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 14px 20px;
+  background-color: var(--utc-bg-light);
 }
 
 /* Điện thoại */
 @media (max-width: 576px) {
-  main h2.text-primary {
-    font-size: 1.3rem;
-  }
-
-  .the-sach .card-img-top {
+  .the-sach .card-thumb img {
     height: 220px;
-  }
-
-  main .btn-primary.px-4 {
-    width: 100%;
-  }
-}
-
-/* Tắt hiệu ứng nếu người dùng chọn giảm chuyển động */
-@media (prefers-reduced-motion: reduce) {
-  .the-sach .card {
-    transition: none;
-  }
-
-  .the-sach .card:hover {
-    transform: none;
   }
 }
