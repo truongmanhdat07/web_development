@@ -1,0 +1,43 @@
+/* Banner */
+.home-banner {
+  background: linear-gradient(
+    135deg,
+    var(--utc-blue) 0%,
+    var(--utc-blue-dark) 100%
+  );
+  color: #ffffff;
+  padding: 45px 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.home-banner h1 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.home-banner p {
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin: 0 auto 24px auto;
+  color: #e0edfb;
+}
+
+.home-banner .banner-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-custom-outline-light {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.btn-custom-outline-light:hover {
+  background-color: #f5eeeeda;
+  color: var(--utc-blue);
+}
