@@ -73,6 +73,7 @@
 
 /* Tên sách tối đa 2 dòng để các thẻ đều nhau */
 .the-sach .book-title {
+  font-weight: 700;
   min-height: calc(2 * 1.4em);
   line-height: 1.4;
   display: -webkit-box;
@@ -159,3 +160,25 @@
     height: 220px;
   }
 }
+
+/* Khoảng cách quanh tiêu đề trang */
+main .page-header {
+  margin: 24px 0;
+}
+ 
+main .page-header .btn-custom {
+  flex-shrink: 0;
+}
+ 
+/* Nút "Hủy" trong hộp thoại */
+#modalThemSach .btn-custom-outline {
+  background-color: #ffffff;
+  color: var(--utc-blue);
+  border-color: var(--utc-blue);
+}
+ 
+#modalThemSach .btn-custom-outline:hover {
+  background-color: var(--utc-bg-light);
+  color: var(--utc-blue-dark);
+}
+ 
