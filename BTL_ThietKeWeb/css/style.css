@@ -271,6 +271,14 @@ footer ul li a:hover {
   margin-bottom: 12px;
 }
 
+.book-card {
+  transition: transform 0.25s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+}
+
 /* Nhãn Dán */
 .book-card .card-bottom {
   margin-top: auto;
