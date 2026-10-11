@@ -66,3 +66,42 @@
   gap: 6px;
 }
 
+/* Quy Trình Mượn-Trả Sách */
+.process-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 28px 20px;
+}
+
+.process-box h4 {
+  color: var(--utc-blue);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.step-item {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 20px 16px;
+  height: 100%;
+  text-align: center;
+}
+
+.step-item .step-icon {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+}
+
+.step-item h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.step-item p {
+  font-size: 0.86rem;
+  color: #64748b;
+  margin: 0;
+}
