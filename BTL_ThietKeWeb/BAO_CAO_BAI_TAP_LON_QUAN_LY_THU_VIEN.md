@@ -20,10 +20,10 @@
 | STT | Họ và tên sinh viên                    | Mã sinh viên  | Email                           | Trang phụ trách               | Nhiệm vụ chính trong dự án |
 | :-: | :------------------------------------- | :-----------: | :------------------------------ | :---------------------------- | :------------------------- |
 |  1  | **Trương Mạnh Đạt**<br>_(Nhóm trưởng)_ | **251230841** | `dat251230841@lms.utc.edu.vn`   | `index.html`<br>(Trang chủ)   | - Điều phối dự án, quản lý Git repository.<br>- Thiết kế giao diện trang chủ `index.html`.<br>- Xây dựng hệ thống CSS dùng chung (`style.css`): Biến màu UTC, chuẩn hóa Header & Footer cho toàn bộ 5 trang, thiết lập style nền tảng cho nhóm. |
-|  2  | **Nguyễn Phương Hải**                  | **251210853** | `hai251210853@lms.utc.edu.vn`   | `books.html`<br>(Kho sách)    | .                          |
-|  3  | **Nguyễn Quốc Khánh**                  | **251230887** | `khanh251230887@lms.utc.edu.vn` | `borrow.html`<br>(Mượn - Trả) | .                          |
-|  4  | **Trần Xuân Đô**                       | **251230843** | `do251230843@lms.utc.edu.vn`    | `readers.html`<br>(Độc giả)   | .                          |
-|  5  | **Đinh Văn Phan Dũng**                 | **251230826** | `dung251230826@lms.utc.edu.vn`  | `contact.html`<br>(Nội quy)   | .                          |
+|  2  | **Nguyễn Phương Hải**                  | **251210853** | `hai251210853@lms.utc.edu.vn`   | `books.html`<br>(Kho sách)    | - Thiết kế giao diện kho sách `books.html`.<br>- Xây dựng CSS riêng `books.css` chuẩn quy ước.<br>- Hiện thực chức năng JavaScript: Tìm kiếm sách theo từ khóa và lọc sách theo chuyên ngành. |
+|  3  | **Nguyễn Quốc Khánh**                  | **251230887** | `khanh251230887@lms.utc.edu.vn` | `borrow.html`<br>(Mượn - Trả) | - Thiết kế giao diện quản lý mượn - trả sách `borrow.html`.<br>- Xây dựng CSS riêng `borrow.css`.<br>- Hiện thực chức năng JavaScript: Kiểm tra tính hợp lệ dữ liệu lập phiếu mượn. |
+|  4  | **Trần Xuân Đô**                       | **251230843** | `do251230843@lms.utc.edu.vn`    | `readers.html`<br>(Độc giả)   | - Thiết kế giao diện hồ sơ độc giả `readers.html`.<br>- Xây dựng CSS riêng `readers.css`.<br>- Hiện thực chức năng JavaScript: Tìm kiếm độc giả theo mã thẻ và thao tác Khóa / Mở khóa thẻ. |
+|  5  | **Đinh Văn Phan Dũng**                 | **251230826** | `dung251230826@lms.utc.edu.vn`  | `contact.html`<br>(Nội quy)   | - Thiết kế giao diện nội quy và liên hệ `contact.html`.<br>- Xây dựng CSS riêng `contact.css`.<br>- Hiện thực chức năng JavaScript: Kiểm tra dữ liệu biểu mẫu góp ý và đề xuất sách. |
 
 ---
 
@@ -186,13 +186,18 @@ BTL_ThietKeWeb
 │   └── book8_cambridge_guide.jpg
 │
 ├── css/
-│   └── style.css                 # File CSS tùy chỉnh giao diện (kết hợp Bootstrap 5)
+│   ├── style.css             # CSS nền tảng dùng chung (Header, Footer, Nút, Badge)
+│   ├── index.css             # CSS riêng Trang chủ (Đạt)
+│   ├── books.css             # CSS riêng Kho sách (Hải)
+│   ├── borrow.css            # CSS riêng Mượn - Trả (Khánh)
+│   ├── readers.css           # CSS riêng Độc giả (Đô)
+│   └── contact.css           # CSS riêng Nội quy & Đề xuất (Dũng)
 │
 ├── js/
 │   └── script.js                 # File JavaScript cơ bản
 │
-├── README.md                     # Tài liệu hướng dẫn sử dụng và phân công nhóm
-└── BAO_CAO_BAI_TAP_LON_QUAN_LY_THU_VIEN.md # Bản báo cáo hoàn chỉnh bài tập lớn
+|
+└── BAO_CAO_BAI_TAP_LON_QUAN_LY_THU_VIEN.md     # Bản báo cáo hoàn chỉnh bài tập lớn
 ```
 
 ### 2. Giải thích giao diện và phương pháp hiện thực (HTML, CSS, JS)
