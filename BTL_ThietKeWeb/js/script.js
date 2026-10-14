@@ -113,6 +113,8 @@ function kiemTraMuonSach() {
 document.addEventListener("DOMContentLoaded", function () {
   let borrowForm = document.getElementById("borrowForm");
 
+  if (!borrowForm) return;
+
   borrowForm.addEventListener("submit", function (event) {
     event.preventDefault();
     kiemTraMuonSach();
