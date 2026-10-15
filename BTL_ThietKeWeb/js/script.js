@@ -1,24 +1,35 @@
 // xu ly form gop y
+
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("formGopY");
-  const thongbao = document.getElementById("thongbao");
+    const form = document.getElementById("formGopY");
 
-  if (!form || !thongbao) return;
+    if (!form) return;
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
 
-    thongbao.textContent = "Gửi góp ý thành công!";
-    thongbao.style.color = "green";
+        const hoten = form.querySelector("#hoten")?.value.trim() || "";
+        const email = form.querySelector("#email")?.value.trim() || "";
+        const chude = form.querySelector("#chude")?.value.trim() || "";
+        const noidung = form.querySelector("textarea")?.value.trim() || "";
 
-    form.reset();
-  });
+        alert(
+            "Gửi đề xuất đến Thư viện UTC thành công!\n" +
+            "- Họ tên: " + hoten + "\n" +
+            "- Email: " + email + "\n" +
+            "- Chủ đề đề xuất: " + chude + "\n" +
+            "- Nội dung đề xuất: " + noidung
+        );
+
+        form.reset();
+    });
 });
+
 
 // ===== CHỨC NĂNG LẬP PHIẾU MƯỢN SÁCH =====
 function kiemTraMuonSach() {
