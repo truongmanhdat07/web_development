@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.getElementById("email").value.trim();
         const chude = document.getElementById("chude").value;
         const noidung = document.getElementById("noidung").value.trim();
+        const thongbao = document.getElementById("thongbao");
+
+        if (!/^[a-zA-Z0-9._%+-]+@lms\.utc\.edu\.vn$/i.test(email)) {
+            alert("Vui lòng sử dụng email có đuôi @lms.utc.edu.vn!");
+            document.getElementById("email").focus();
+            return;
+        }
 
         alert(
             "Gửi đề xuất đến Thư viện UTC thành công!\n\n" +
@@ -25,8 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
             "Chủ đề đề xuất: " + chude + "\n" +
             "Nội dung chi tiết: " + noidung
         );
-
-        const thongbao = document.getElementById("thongbao");
 
         if (thongbao) {
             thongbao.textContent = "Gửi đề xuất thành công!";
