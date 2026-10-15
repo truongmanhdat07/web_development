@@ -205,3 +205,93 @@ function kiemTraDangKyDocGia() {
   alert("Dữ liệu hợp lệ");
   return false;
 }
+
+// TRANG DANH MỤC SÁCH 
+
+// Bỏ dấu và đổi chữ thường
+function boDauTiengViet(chuoi) {
+  return chuoi
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d");
+}
+
+// Hiện sách khớp từ khóa và thể loại, ẩn sách còn lại
+function locDanhSachSach() {
+  const tuKhoa = boDauTiengViet(
+    document.getElementById("oTimKiem").value.trim()
+  );
+  const theLoai = document.getElementById("chonTheLoai").value;
+  const cacTheSach = document.querySelectorAll(".the-sach");
+
+  for (const the of cacTheSach) {
+    const tenSach = the.querySelector(".book-title").textContent;
+    const tacGia = the.querySelector(".book-author").textContent;
+
+    const khopTuKhoa = boDauTiengViet(tenSach + " " + tacGia).includes(tuKhoa);
+    const khopTheLoai = theLoai === "" || the.dataset.theloai === theLoai;
+
+    the.hidden = !(khopTuKhoa && khopTheLoai);
+  }
+}
+
+function timKiemSach() {
+  locDanhSachSach();
+}
+
+function locTheLoai() {
+  locDanhSachSach();
+}
+
+// Kiểm tra form thêm giáo trình
+function kiemTraThemSach() {
+  const maSachEl = document.getElementById("maSach");
+  const maSach = maSachEl.value.trim().toUpperCase();
+  const tenSach = document.getElementById("tenSach").value.trim();
+  const tacGia = document.getElementById("tacGia").value.trim();
+  const soLuong = document.getElementById("soLuong").value;
+
+  if (tenSach === "" || tacGia === "") {
+    alert("Vui lòng nhập tên giáo trình và tác giả / nhà xuất bản!");
+    return false;
+  }
+
+  // Kiểm tra trùng mã sách
+  const cacMaSach = document.querySelectorAll(".the-sach .book-meta strong");
+  for (const ma of cacMaSach) {
+    if (ma.textContent.trim().toUpperCase() === maSach) {
+      alert("Mã sách " + maSach + " đã tồn tại!");
+      maSachEl.focus();
+      return false;
+    }
+  }
+
+  alert(
+    "Thêm giáo trình thành công!\n" +
+    "- Mã sách: " + maSach +
+    "\n- Tên giáo trình: " + tenSach +
+    "\n- Số lượng: " + soLuong
+  );
+
+  // Đóng hộp thoại
+  const modal = bootstrap.Modal.getInstance(
+    document.getElementById("modalThemSach")
+  );
+  if (modal) {
+    modal.hide();
+  }
+
+  return false;
+}
+
+// Xóa dữ liệu đã nhập khi đóng hộp thoại
+document.addEventListener("DOMContentLoaded", function () {
+  const modalThemSach = document.getElementById("modalThemSach");
+
+  if (!modalThemSach) return;
+
+  modalThemSach.addEventListener("hidden.bs.modal", function () {
+    modalThemSach.querySelector("form").reset();
+  });
+});
