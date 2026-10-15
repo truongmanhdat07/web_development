@@ -35,7 +35,9 @@ function kiemTraMuonSach() {
   let ngayHenTra = ngayHenTraEl.value;
 
   if (maDocGia === "") {
-    alert("Vui lòng nhập Mã sinh viên UTC (9 chữ số) hoặc Mã giảng viên (GV001)!");
+    alert(
+      "Vui lòng nhập Mã sinh viên UTC (9 chữ số) hoặc Mã giảng viên (GV001)!",
+    );
     maDocGiaEl.focus();
     return false;
   }
@@ -46,8 +48,8 @@ function kiemTraMuonSach() {
   if (!isSinhVien && !isGiangVien) {
     alert(
       "Mã độc giả không hợp lệ!\n" +
-      "- Sinh viên: 9 chữ số (Ví dụ: 251230841)\n" +
-      "- Giảng viên: GV001"
+        "- Sinh viên: 9 chữ số (Ví dụ: 251230841)\n" +
+        "- Giảng viên: GV001",
     );
 
     maDocGiaEl.focus();
@@ -66,34 +68,19 @@ function kiemTraMuonSach() {
     return false;
   }
 
-  if (ngayMuon === "" || ngayHenTra === "") {
-    alert("Vui lòng chọn đầy đủ ngày mượn và ngày hẹn trả sách!");
-    return false;
-  }
-
-  let dMuon = new Date(ngayMuon);
-  let dTra = new Date(ngayHenTra);
-
-  if (dTra <= dMuon) {
-    alert("Ngày hẹn trả phải sau ngày mượn ít nhất 1 ngày!");
-    ngayHenTraEl.focus();
-    return false;
-  }
-
-  let soNgayMuon =
-    Math.round((dTra - dMuon) / (1000 * 60 * 60 * 24));
-
-  if (soNgayMuon > 30) {
-    alert("Thời gian mượn tối đa là 30 ngày!");
-    return false;
-  }
+  let soNgayMuon = 14;
 
   alert(
     "Lập phiếu mượn thành công!\n" +
-    "- Mã độc giả: " + maDocGia +
-    "\n- Họ tên: " + hoTen +
-    "\n- Giáo trình: " + sachMuon +
-    "\n- Thời hạn mượn: " + soNgayMuon + " ngày"
+      "- Mã độc giả: " +
+      maDocGia +
+      "\n- Họ tên: " +
+      hoTen +
+      "\n- Giáo trình: " +
+      sachMuon +
+      "\n- Thời hạn mượn: " +
+      soNgayMuon +
+      " ngày",
   );
 
   let modalElement = document.getElementById("borrowModal");
@@ -108,12 +95,36 @@ function kiemTraMuonSach() {
   return false;
 }
 
-
 // ===== GẮN SỰ KIỆN CHO FORM MƯỢN SÁCH =====
 document.addEventListener("DOMContentLoaded", function () {
   let borrowForm = document.getElementById("borrowForm");
 
-  if (!borrowForm) return;
+  let ngayMuonEl = document.getElementById("borrowDate");
+  let ngayHenTraEl = document.getElementById("dueDate");
+  let borrowModal = document.getElementById("borrowModal");
+
+  if (!borrowForm || !ngayMuonEl || !ngayHenTraEl) return;
+
+  function datNgayMuonVaHanTra() {
+    let homNay = new Date();
+
+    let hanTra = new Date(homNay);
+    hanTra.setDate(hanTra.getDate() + 14);
+
+    let ngayMuon = homNay.toISOString().split("T")[0];
+    let ngayTra = hanTra.toISOString().split("T")[0];
+
+    ngayMuonEl.value = ngayMuon;
+    ngayHenTraEl.value = ngayTra;
+  }
+
+  datNgayMuonVaHanTra();
+
+  if (borrowModal) {
+    borrowModal.addEventListener("show.bs.modal", function () {
+      datNgayMuonVaHanTra();
+    });
+  }
 
   borrowForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -135,10 +146,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let xacNhan = confirm(
         "Bạn có chắc chắn muốn xác nhận trả sách cho phiếu '" +
-        maPhieu +
-        "' của bạn đọc '" +
-        tenDocGia +
-        "'?"
+          maPhieu +
+          "' của bạn đọc '" +
+          tenDocGia +
+          "'?",
       );
 
       if (xacNhan) {
@@ -157,10 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cotXuLy.className = "done";
         cotXuLy.innerHTML = "✓ Hoàn tất";
 
-        alert(
-          "Đã xác nhận trả sách thành công cho phiếu: " +
-          maPhieu
-        );
+        alert("Đã xác nhận trả sách thành công cho phiếu: " + maPhieu);
       }
     });
   }
@@ -206,7 +214,7 @@ function kiemTraDangKyDocGia() {
   return false;
 }
 
-// TRANG DANH MỤC SÁCH 
+// TRANG DANH MỤC SÁCH
 
 // Bỏ dấu và đổi chữ thường
 function boDauTiengViet(chuoi) {
@@ -220,7 +228,7 @@ function boDauTiengViet(chuoi) {
 // Hiện sách khớp từ khóa và thể loại, ẩn sách còn lại
 function locDanhSachSach() {
   const tuKhoa = boDauTiengViet(
-    document.getElementById("oTimKiem").value.trim()
+    document.getElementById("oTimKiem").value.trim(),
   );
   const theLoai = document.getElementById("chonTheLoai").value;
   const cacTheSach = document.querySelectorAll(".the-sach");
@@ -269,14 +277,17 @@ function kiemTraThemSach() {
 
   alert(
     "Thêm giáo trình thành công!\n" +
-    "- Mã sách: " + maSach +
-    "\n- Tên giáo trình: " + tenSach +
-    "\n- Số lượng: " + soLuong
+      "- Mã sách: " +
+      maSach +
+      "\n- Tên giáo trình: " +
+      tenSach +
+      "\n- Số lượng: " +
+      soLuong,
   );
 
   // Đóng hộp thoại
   const modal = bootstrap.Modal.getInstance(
-    document.getElementById("modalThemSach")
+    document.getElementById("modalThemSach"),
   );
   if (modal) {
     modal.hide();
