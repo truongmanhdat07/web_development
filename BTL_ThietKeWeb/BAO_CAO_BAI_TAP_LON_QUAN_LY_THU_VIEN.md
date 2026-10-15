@@ -9,7 +9,7 @@
 **TRƯỜNG:** ĐẠI HỌC GIAO THÔNG VẬN TẢI (UTC)  
 **KHOA:** CÔNG NGHỆ THÔNG TIN  
 **LỚP:** CÔNG NGHỆ THÔNG TIN 3 (CNTT3)  
-**GIẢNG VIÊN HƯỚNG DẪN:** ThS. Lại Mạnh Dũng (MÃ: GV001)  
+**GIẢNG VIÊN HƯỚNG DẪN:** ThS. Lại Mạnh Dũng  
 **HỌC PHẦN:** THIẾT KẾ WEB  
 **HỌC KỲ / NĂM HỌC:** HỌC KỲ I - NĂM 2  
 **ĐỀ TÀI SỐ:** 01 - QUẢN LÝ THƯ VIỆN  
@@ -213,7 +213,12 @@ BTL_ThietKeWeb
 
 #### b. Mã nguồn CSS3 & Bootstrap 5:
 
-....
+- **Kiến trúc CSS phân tầng:**
+  - **File `css/style.css`:** Đóng vai trò nền tảng dùng chung cho toàn bộ website. Thiết lập bảng màu nhận diện thương hiệu UTC, định dạng thanh điều hướng cố định ở đầu trang, chân trang đồng bộ và các thành phần giao diện dùng chung như nút bấm, nhãn trạng thái và thẻ sách.
+  - **Các file CSS riêng theo trang:** Mỗi thành viên tự xây dựng một file CSS độc lập phục vụ bố cục chuyên biệt của trang mình phụ trách, tránh xung đột thuộc tính và giúp mã nguồn rõ ràng.
+- **Quy ước kỹ thuật và Responsive:**
+  - **Độ ưu tiên phẳng:** Thiết lập bộ chọn CSS mạch lạc, tuyệt đối không lạm dụng từ khóa `!important` nhằm đảm bảo khả năng mở rộng và bảo trì mã nguồn.
+  - **Thiết kế thích ứng:** Kết hợp hệ thống lưới Bootstrap 5 cùng Flexbox giúp giao diện tự động co giãn tối ưu trên mọi độ phân giải màn hình từ máy tính đến điện thoại di động.
 
 #### c. Mã nguồn JavaScript (`js/script.js`):
 
