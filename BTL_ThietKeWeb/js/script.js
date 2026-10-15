@@ -13,18 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const hoten = form.querySelector("#hoten")?.value.trim() || "";
-        const email = form.querySelector("#email")?.value.trim() || "";
-        const chude = form.querySelector("#chude")?.value.trim() || "";
-        const noidung = form.querySelector("textarea")?.value.trim() || "";
+        const hoten = document.getElementById("hoten").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const chude = document.getElementById("chude").value;
+        const noidung = document.getElementById("noidung").value.trim();
 
         alert(
-            "Gửi đề xuất đến Thư viện UTC thành công!\n" +
-            "- Họ tên: " + hoten + "\n" +
-            "- Email: " + email + "\n" +
-            "- Chủ đề đề xuất: " + chude + "\n" +
-            "- Nội dung đề xuất: " + noidung
+            "Gửi đề xuất đến Thư viện UTC thành công!\n\n" +
+            "Họ và tên: " + hoten + "\n" +
+            "Email sinh viên: " + email + "\n" +
+            "Chủ đề đề xuất: " + chude + "\n" +
+            "Nội dung chi tiết: " + noidung
         );
+
+        const thongbao = document.getElementById("thongbao");
+
+        if (thongbao) {
+            thongbao.textContent = "Gửi đề xuất thành công!";
+        }
 
         form.reset();
     });

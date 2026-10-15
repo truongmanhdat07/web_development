@@ -193,19 +193,19 @@
               </div>
 
               <div class="form-group">
-                <label for="email">Email sinh viên UTC (*)</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Ví dụ: sinhvien@lms.utc.edu.vn"
-                  required
-                />
-                <small
-                  >Dùng email sinh viên @lms.utc.edu.vn để nhận phản hồi từ thư
-                  viện.</small
-                >
-              </div>
+    <label for="email">Email sinh viên UTC (*)</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Ví dụ: sinhvien@lms.utc.edu.vn"
+        pattern="[a-zA-Z0-9._%+-]+@lms\.utc\.edu\.vn"
+        title="Vui lòng nhập email có đuôi @lms.utc.edu.vn"
+        required
+    />
+    <small>Dùng email sinh viên @lms.utc.edu.vn để nhận phản hồi từ thư viện.</small>
+</div>
+
 
               <div class="form-group">
                 <label for="chude">Chủ đề đề xuất</label>
