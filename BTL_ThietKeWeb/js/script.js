@@ -13,18 +13,29 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const hoten = form.querySelector("#hoten")?.value.trim() || "";
-        const email = form.querySelector("#email")?.value.trim() || "";
-        const chude = form.querySelector("#chude")?.value.trim() || "";
-        const noidung = form.querySelector("textarea")?.value.trim() || "";
+        const hoten = document.getElementById("hoten").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const chude = document.getElementById("chude").value;
+        const noidung = document.getElementById("noidung").value.trim();
+        const thongbao = document.getElementById("thongbao");
+
+        if (!/^[a-zA-Z0-9._%+-]+@lms\.utc\.edu\.vn$/i.test(email)) {
+            alert("Vui lòng sử dụng email có đuôi @lms.utc.edu.vn!");
+            document.getElementById("email").focus();
+            return;
+        }
 
         alert(
-            "Gửi đề xuất đến Thư viện UTC thành công!\n" +
-            "- Họ tên: " + hoten + "\n" +
-            "- Email: " + email + "\n" +
-            "- Chủ đề đề xuất: " + chude + "\n" +
-            "- Nội dung đề xuất: " + noidung
+            "Gửi đề xuất đến Thư viện UTC thành công!\n\n" +
+            "Họ và tên: " + hoten + "\n" +
+            "Email sinh viên: " + email + "\n" +
+            "Chủ đề đề xuất: " + chude + "\n" +
+            "Nội dung chi tiết: " + noidung
         );
+
+        if (thongbao) {
+            thongbao.textContent = "Gửi đề xuất thành công!";
+        }
 
         form.reset();
     });
