@@ -1,9 +1,7 @@
 .tieu-de-trang{
     color: var(--utc-blue);
-    border-bottom: 3px solid var(--utc-gold);
     display: inline-block;
     font-weight: 700;
-    padding-bottom: 4px;
 }
 
 .mo-ta-trang{

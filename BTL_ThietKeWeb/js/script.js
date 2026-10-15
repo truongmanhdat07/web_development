@@ -184,47 +184,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-/* ===== Trang độc giả ===== */
-function doiTrangThaiThe(ma, ten) {
-  const hang = document.getElementById("docgia-" + ma);
-  const nhan = hang.querySelector(".trang-thai-the .badge-custom");
-  const nut = hang.querySelector(".nut-khoa-the");
-
-  const dangKhoa = nhan.classList.contains("badge-danger");
-  const hanhDong = dangKhoa ? "mở khóa" : "khóa";
-
-  if (!confirm("Bạn có chắc muốn " + hanhDong + " thẻ của " + ten + "?")) {
-    return;
-  }
-
-  if (dangKhoa) {
-    nhan.classList.replace("badge-danger", "badge-success");
-    nhan.textContent = "Hoạt động";
-    nut.classList.replace("btn-custom-primary", "btn-custom-warning");
-    nut.textContent = "Khóa thẻ";
-    nut.title = "Khóa thẻ độc giả này";
-  } else {
-    nhan.classList.replace("badge-success", "badge-danger");
-    nhan.textContent = "Đã khóa";
-    nut.classList.replace("btn-custom-warning", "btn-custom-primary");
-    nut.textContent = "Mở khóa";
-    nut.title = "Mở khóa thẻ độc giả này";
-  }
-}
-
-function kiemTraDangKyDocGia() {
-  const ids = ["maDocGia", "tenDocGia", "lopKhoa", "emailDocGia", "sdtDocGia"];
-  for (const id of ids) {
-    if (document.getElementById(id).value.trim() === "") {
-      alert("Vui lòng nhập đầy đủ các trường có dấu (*)");
-      return false;
-    }
-  }
-  alert("Dữ liệu hợp lệ");
-  return false;
-}
-
 // TRANG DANH MỤC SÁCH
 
 // Bỏ dấu và đổi chữ thường
@@ -317,3 +276,111 @@ document.addEventListener("DOMContentLoaded", function () {
     modalThemSach.querySelector("form").reset();
   });
 });
+
+/* ===== Trang độc giả ===== */
+function doiTrangThaiThe(ma, ten) {
+  const hang = document.getElementById("docgia-" + ma);
+  const nhan = hang.querySelector(".trang-thai-the .badge-custom");
+  const nut = hang.querySelector(".nut-khoa-the");
+
+  const dangKhoa = nhan.classList.contains("badge-danger");
+  const hanhDong = dangKhoa ? "mở khóa" : "khóa";
+
+  if (!confirm("Bạn có chắc muốn " + hanhDong + " thẻ của " + ten + "?")) {
+    return;
+  }
+
+  if (dangKhoa) {
+    nhan.classList.replace("badge-danger", "badge-success");
+    nhan.textContent = "Hoạt động";
+    nut.classList.replace("btn-custom-primary", "btn-custom-warning");
+    nut.textContent = "Khóa thẻ";
+    nut.title = "Khóa thẻ độc giả này";
+  } else {
+    nhan.classList.replace("badge-success", "badge-danger");
+    nhan.textContent = "Đã khóa";
+    nut.classList.replace("btn-custom-warning", "btn-custom-primary");
+    nut.textContent = "Mở khóa";
+    nut.title = "Mở khóa thẻ độc giả này";
+  }
+}
+
+function kiemTraDangKyDocGia() {
+  // Bước 1: lấy giá trị, kể cả đối tượng
+  let doiTuong = document.getElementById("doiTuong").value;
+  let maDocGia = document.getElementById("maDocGia").value.trim().toUpperCase();
+  let tenDocGia = document.getElementById("tenDocGia").value.trim();
+  let lopKhoa = document.getElementById("lopKhoa").value.trim();
+  let email = document.getElementById("emailDocGia").value.trim();
+  let sdt = document.getElementById("sdtDocGia").value.trim();
+
+  // Bước 2: chọn nhãn + quy tắc theo đối tượng
+  let nhanMa, nhanLop, regexMa, loiMa, regexLop, loiLop, regexEmail, loiEmail;
+
+  if (doiTuong === "Giảng viên") {
+    nhanMa = "Mã giảng viên";
+    nhanLop = "Bộ môn";
+    regexMa = /^GV[0-9]{3}$/;
+    loiMa = "Mã giảng viên phải gồm GV + 3 chữ số (VD: GV001)";
+    regexLop = /^[\p{L}0-9\s.-]{2,50}$/u;
+    loiLop = "Bộ môn chỉ gồm chữ, số, khoảng trắng (VD: Công nghệ thông tin)";
+    regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    loiEmail = "Email không đúng định dạng (VD: ten@utc.edu.vn)";
+  } else if (doiTuong === "Học viên") {
+    nhanMa = "Số CCCD";
+    nhanLop = "Lớp / Bộ môn";
+    regexMa = /^[0-9]{12}$/;
+    loiMa = "Số CCCD phải gồm đúng 12 chữ số (VD: 001203012345)";
+    regexLop = /^[\p{L}0-9\s.-]{2,50}$/u;
+    loiLop = "Lớp chỉ gồm chữ, số, khoảng trắng";
+    regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    loiEmail = "Email không đúng định dạng";
+  } else {
+    nhanMa = "Mã sinh viên";
+    nhanLop = "Lớp";
+    regexMa = /^[0-9]{9}$/;
+    loiMa = "Mã sinh viên phải gồm đúng 9 chữ số (VD: 251230899)";
+    regexLop = /^K[0-9]{2}-[A-Z]+[0-9]*$/i;
+    loiLop = "Lớp phải đúng dạng K66-CNTT3";
+    regexEmail = /^[a-z0-9._-]+@lms\.utc\.edu\.vn$/i;
+    loiEmail = "Email phải có đuôi @lms.utc.edu.vn";
+  }
+
+  // Bước 3: gom lỗi
+  let loi = "";
+
+  if (!regexMa.test(maDocGia)) {
+    loi += "- " + loiMa + "\n";
+  }
+  if (!/^[\p{L}\s]{2,50}$/u.test(tenDocGia)) {
+    loi += "- Họ tên chỉ gồm chữ cái và khoảng trắng (VD: Hoàng Minh Tuấn)\n";
+  }
+  if (!regexLop.test(lopKhoa)) {
+    loi += "- " + loiLop + "\n";
+  }
+  if (!regexEmail.test(email)) {
+    loi += "- " + loiEmail + "\n";
+  }
+  if (!/^(03|05|07|08|09)[0-9]{8}$/.test(sdt)) {
+    loi += "- Số điện thoại phải gồm 10 số, bắt đầu bằng 03/05/07/08/09\n";
+  }
+
+  // Bước 4: có lỗi thì báo hết một lần
+  if (loi !== "") {
+    alert("Thông tin chưa hợp lệ:\n" + loi);
+    return false;
+  }
+
+  // Bước 5: in kết quả, dùng nhãn theo đối tượng
+  alert(
+    "Thêm độc giả thành công!\n" +
+      "- Đối tượng: " + doiTuong + "\n" +
+      "- " + nhanMa + ": " + maDocGia + "\n" +
+      "- Họ tên: " + tenDocGia + "\n" +
+      "- " + nhanLop + ": " + lopKhoa + "\n" +
+      "- Email: " + email + "\n" +
+      "- Số điện thoại: " + sdt,
+  );
+
+  return false;
+}
