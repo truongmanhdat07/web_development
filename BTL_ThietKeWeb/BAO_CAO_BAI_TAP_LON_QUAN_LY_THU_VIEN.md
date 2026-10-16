@@ -235,7 +235,25 @@ BTL_ThietKeWeb
 
 ### 2. Xây dựng các Test Cases (Link, Effect, Data Validation)
 
-## ....
+#### Phần 1: Kiểm thử Liên kết & Giao diện chung (Trương Mạnh Đạt - Trang chủ - index.html)
+
+| Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu nhập | Kết quả mong đợi | Đánh giá |
+| :---: | :--- | :--- | :--- | :--- | :---: |
+| **TC01** | Trương Mạnh Đạt | Kiểm tra thanh điều hướng (Navbar) | Bấm lần lượt 5 liên kết trên Header: Trang chủ, Kho sách, Mượn trả, Độc giả, Liên hệ | Chuyển trang mượt mà, đúng URL, giữ nguyên Header/Footer đồng bộ | **Đạt** |
+| **TC02** | Trương Mạnh Đạt | Kiểm tra tính Responsive | Thu nhỏ trình duyệt về kích thước điện thoại (dưới 768px) | Menu tự động thu gọn thành nút mở rộng, các thẻ thống kê tự xếp thành 1 cột | **Đạt** |
+| **TC03** | Trương Mạnh Đạt | Hiệu ứng Hover thẻ sách tiêu biểu | Rê chuột vào từng thẻ giáo trình trên trang chủ | Thẻ sách nâng nhẹ lên | **Đạt** |
+
+#### Phần 2: Kiểm thử Kho giáo trình (Nguyễn Phương Hải - Kho sách)
+*(Thành viên phụ trách tự thực hiện kiểm thử và cập nhật kết quả)*
+
+#### Phần 3: Kiểm thử Quản lý mượn - trả sách (Nguyễn Quốc Khánh - Mượn - Trả)
+*(Thành viên phụ trách tự thực hiện kiểm thử và cập nhật kết quả)*
+
+#### Phần 4: Kiểm thử Quản lý độc giả (Trần Xuân Đô - Độc giả)
+*(Thành viên phụ trách tự thực hiện kiểm thử và cập nhật kết quả)*
+
+#### Phần 5: Kiểm thử Nội quy & Góp ý (Đinh Văn Phan Dũng - Nội quy & Liên hệ)
+*(Thành viên phụ trách tự thực hiện kiểm thử và cập nhật kết quả)*
 
 # VI. TỰ ĐÁNH GIÁ & KẾT LUẬN
 
