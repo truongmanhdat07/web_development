@@ -1,23 +1,50 @@
 // xu ly form gop y
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("formGopY");
-  const thongbao = document.getElementById("thongbao");
+    const form = document.getElementById("formGopY");
+    const thongbao = document.getElementById("thongbao");
 
-  if (!form || !thongbao) return;
+    if (!form || !thongbao) return;
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
 
-    thongbao.textContent = "Gửi góp ý thành công!";
-    thongbao.style.color = "green";
+        const hotenInput = document.getElementById("hoten");
+        const hoten = hotenInput.value.trim();
+        const emailInput = document.getElementById("email");
+        const email = emailInput.value.trim();
+        const chude = document.getElementById("chude").value;
+        const noidung = document.getElementById("noidung").value.trim();
 
-    form.reset();
-  });
+        if (!/^[\p{L}\s]+$/u.test(hoten)) {
+            alert("Họ và tên chỉ được chứa chữ cái và dấu cách, không được nhập số hoặc ký hiệu!");
+            hotenInput.focus();
+            return;
+        }
+
+        if (!/^[a-zA-Z0-9._%+-]+@lms\.utc\.edu\.vn$/i.test(email)) {
+            alert("Vui lòng sử dụng email có đuôi @lms.utc.edu.vn!");
+            emailInput.focus();
+            return;
+        }
+
+        alert(
+            "Gửi đề xuất đến Thư viện UTC thành công!\n\n" +
+            "Họ và tên: " + hoten + "\n" +
+            "Email sinh viên: " + email + "\n" +
+            "Chủ đề đề xuất: " + chude + "\n" +
+            "Nội dung chi tiết: " + noidung
+        );
+
+        thongbao.textContent = "Gửi góp ý thành công!";
+        thongbao.style.color = "green";
+
+        form.reset();
+    });
 });
 
 // ===== CHỨC NĂNG LẬP PHIẾU MƯỢN SÁCH =====

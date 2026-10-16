@@ -294,13 +294,15 @@ Mã nguồn JavaScript được viết trong file `js/script.js`, sử dụng Ja
 
 | Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu nhập | Kết quả mong đợi | Đánh giá |
 |---|---|---|---|---|---|
-| TC | Đinh Văn Phan Dũng | Kiểm tra giao diện trang Nội quy & Liên hệ | Mở contact.html, kiểm tra tiêu đề, bảng thời gian, nội quy và form góp ý | Các nội dung hiển thị đầy đủ, bố cục rõ ràng | Đạt |
-| TC | Đinh Văn Phan Dũng | Kiểm tra email sai định dạng đuôi | Nhập họ tên, email abc@gmail.com và các trường còn lại hợp lệ, sau đó gửi form | Hệ thống từ chối email không có đuôi @lms.utc.edu.vn | Đạt |
-| TC | Đinh Văn Phan Dũng | Kiểm tra email đúng định dạng đuôi | Nhập email sinhvien@lms.utc.edu.vn và điền đầy đủ các trường bắt buộc | Email vượt qua kiểm tra định dạng | Đạt |
-| TC | Đinh Văn Phan Dũng | Kiểm tra trường bắt buộc | Để trống một trường bắt buộc rồi nhấn gửi | Trình duyệt yêu cầu nhập dữ liệu còn thiếu | Đạt |
-| TC | Đinh Văn Phan Dũng | Kiểm tra chọn chủ đề đề xuất | Chọn một chủ đề trong danh sách và gửi form với dữ liệu hợp lệ | Thông báo hiển thị đúng chủ đề đã chọn | Đạt |
-| TC | Đinh Văn Phan Dũng | Kiểm tra thông báo gửi đề xuất | Nhập đầy đủ thông tin hợp lệ và nhấn nút gửi | Hộp thoại hiển thị họ tên, email, chủ đề và nội dung đã nhập | Đạt |
-
+| TC15 | Đinh Văn Phan Dũng | Kiểm tra giao diện trang Nội quy & Liên hệ | Mở `contact.html`, kiểm tra tiêu đề, bảng thời gian, nội quy và form góp ý | Các nội dung hiển thị đầy đủ, bố cục rõ ràng | Đạt |
+| TC23 | Đinh Văn Phan Dũng | Kiểm tra liên kết thanh điều hướng | Lần lượt nhấn các mục Trang chủ, Sách, Mượn sách, Độc giả và Nội quy & Liên hệ trên thanh điều hướng | Mỗi liên kết mở đúng trang tương ứng, không xuất hiện lỗi liên kết | Đạt |
+| TC21 | Đinh Văn Phan Dũng | Kiểm tra nhập sai họ tên | Nhập họ tên có chứa số hoặc ký hiệu, ví dụ `Dung123` hoặc `Dung@`, điền các trường còn lại hợp lệ rồi gửi form | Hệ thống từ chối họ tên không hợp lệ và yêu cầu nhập lại chỉ bằng chữ cái, dấu cách | Đạt |
+| TC22 | Đinh Văn Phan Dũng | Kiểm tra nhập đúng họ tên | Nhập họ tên chỉ gồm chữ cái và dấu cách, ví dụ `Nguyen Van Dung`, điền các trường còn lại hợp lệ rồi gửi form | Hệ thống chấp nhận họ tên hợp lệ và tiếp tục xử lý form | Đạt |
+| TC16 | Đinh Văn Phan Dũng | Kiểm tra email sai định dạng đuôi | Nhập họ tên, email `abc@gmail.com` và các trường còn lại hợp lệ, sau đó gửi form | Hệ thống từ chối email không có đuôi `@lms.utc.edu.vn` | Đạt |
+| TC17 | Đinh Văn Phan Dũng | Kiểm tra email đúng định dạng đuôi | Nhập email `sinhvien@lms.utc.edu.vn` và điền đầy đủ các trường bắt buộc | Email vượt qua kiểm tra định dạng | Đạt |
+| TC18 | Đinh Văn Phan Dũng | Kiểm tra trường bắt buộc | Để trống một trường bắt buộc rồi nhấn gửi | Trình duyệt yêu cầu nhập dữ liệu còn thiếu | Đạt |
+| TC19 | Đinh Văn Phan Dũng | Kiểm tra chọn chủ đề đề xuất | Chọn một chủ đề trong danh sách và gửi form với dữ liệu hợp lệ | Thông báo hiển thị đúng chủ đề đã chọn | Đạt |
+| TC20 | Đinh Văn Phan Dũng | Kiểm tra thông báo gửi đề xuất | Nhập đầy đủ thông tin hợp lệ và nhấn nút gửi | Hộp thoại hiển thị họ tên, email, chủ đề và nội dung đã nhập | Đạt |
 
 # VI. TỰ ĐÁNH GIÁ & KẾT LUẬN
 
