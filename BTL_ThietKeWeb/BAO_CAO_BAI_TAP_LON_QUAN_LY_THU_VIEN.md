@@ -289,7 +289,7 @@ Mã nguồn JavaScript được viết trong file `js/script.js`, sử dụng Ja
 #### Phần 4: Kiểm thử Quản lý độc giả (Trần Xuân Đô - Độc giả)
 
 | Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu nhập | Kết quả mong đợi | Đánh giá |
-| :---: | :--- | :--- | :--- | :--- | :--- | :---: |
+| :---: | :--- | :--- | :--- | :--- | :---: |
 | **TC32** | Trần Xuân Đô | Kiểm tra liên kết thanh điều hướng | Mở trang Quản lý độc giả, bấm lần lượt Trang chủ, Danh mục sách, Mượn - Trả sách, Nội quy & Liên hệ | Chuyển đúng sang trang tương ứng, mục "Quản lý độc giả" có nền vàng nổi bật khi ở trang này | **Đạt** |
 | **TC33** | Trần Xuân Đô | Kiểm tra hiển thị danh sách độc giả | Mở trang Quản lý độc giả | Bảng hiển thị 6 độc giả; thẻ đang khóa có nhãn "Đã khóa" màu đỏ, thẻ hoạt động có nhãn xanh | **Đạt** |
 | **TC34** | Trần Xuân Đô | Kiểm tra hiệu ứng rê chuột vào hàng | Rê chuột qua từng hàng trong bảng | Hàng được rê chuột đổi sang nền xanh nhạt | **Đạt** |
