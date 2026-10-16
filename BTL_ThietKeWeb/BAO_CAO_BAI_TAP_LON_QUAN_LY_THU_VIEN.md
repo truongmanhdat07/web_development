@@ -256,72 +256,72 @@ Mã nguồn JavaScript được viết trong file `js/script.js`, sử dụng Ja
 
 | Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu test | Kết quả mong đợi | Đánh giá |
 | :---: | :--- | :--- | :--- | :--- | :---: |
-| **TC** | Nguyễn Phương Hải | Kiểm tra liên kết menu điều hướng | Mở trang Danh mục sách, bấm lần lượt các mục trên menu | Chuyển đúng sang trang tương ứng, mục Danh mục sách có nền vàng nổi bật | **Đạt** |
-| **TC** | Nguyễn Phương Hải | Kiểm tra nút Mượn sách | Bấm nút Mượn sách ở giáo trình UTC001 | Chuyển hướng thành công sang trang Mượn - Trả sách | **Đạt** |
-| **TC** | Nguyễn Phương Hải | Kiểm tra giao diện khi thu nhỏ màn hình | Thu nhỏ chiều rộng trình duyệt xuống 400px, bấm nút menu 3 gạch | Mỗi hàng hiển thị 1 thẻ sách, menu thu gọn và mở ra khi bấm nút | **Đạt** |
-| **TC** | Nguyễn Phương Hải | Kiểm tra hiệu ứng khi bấm vào ô tìm kiếm | Bấm chuột vào ô tìm kiếm giáo trình | Viền ô chuyển xanh đậm và có khung viền vàng bao quanh | **Đạt** |
-| **TC** | Nguyễn Phương Hải | Kiểm tra tìm kiếm theo tên sách không dấu | Nhập vào ô tìm kiếm từ khóa: `cau truc` | Chỉ còn hiển thị đúng sách Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++ | **Đạt** |
-| **TC** | Nguyễn Phương Hải | Kiểm tra tìm kiếm không có kết quả | Nhập vào ô tìm kiếm: `xyz123` | Không hiển thị thẻ sách nào, khi xóa từ khóa thì hiện lại đủ 8 cuốn | **Đạt** |
-| **TC** | Nguyễn Phương Hải | Kiểm tra lọc sách theo thể loại | Chọn thể loại IELTS trong danh sách thả xuống | Chỉ còn hiển thị đúng 2 cuốn sách Cambridge IELTS | **Đạt** |
-| **TC** | Nguyễn Phương Hải | Kiểm tra năm xuất bản lớn hơn 2026 | Bấm Thêm Giáo Trình Mới, nhập năm xuất bản: 2027, bấm Thêm giáo trình | Trình duyệt hiển thị thông báo giá trị phải nhỏ hơn hoặc bằng 2026 | **Đạt** |
-| **TC** | Nguyễn Phương Hải | Kiểm tra mã sách đã tồn tại | Nhập Mã sách: `UTC001`, nhập đủ các trường còn lại, bấm Thêm giáo trình | Hiển thị thông báo "Mã sách UTC001 đã tồn tại!", con trỏ quay lại ô mã sách | **Đạt** |
-| **TC** | Nguyễn Phương Hải | Kiểm tra thêm giáo trình hợp lệ | Nhập Mã sách: `UTC009`, tên sách, tác giả, năm 2024, số lượng 5, bấm Thêm giáo trình | Hiển thị thông báo thêm thành công, hộp thoại đóng và form được làm mới | **Đạt** |
+| **TC08** | Nguyễn Phương Hải | Kiểm tra liên kết menu điều hướng | Mở trang Danh mục sách, bấm lần lượt các mục trên menu | Chuyển đúng sang trang tương ứng, mục Danh mục sách có nền vàng nổi bật | **Đạt** |
+| **TC09** | Nguyễn Phương Hải | Kiểm tra nút Mượn sách | Bấm nút Mượn sách ở giáo trình UTC001 | Chuyển hướng thành công sang trang Mượn - Trả sách | **Đạt** |
+| **TC10** | Nguyễn Phương Hải | Kiểm tra giao diện khi thu nhỏ màn hình | Thu nhỏ chiều rộng trình duyệt xuống 400px, bấm nút menu 3 gạch | Mỗi hàng hiển thị 1 thẻ sách, menu thu gọn và mở ra khi bấm nút | **Đạt** |
+| **TC11** | Nguyễn Phương Hải | Kiểm tra hiệu ứng khi bấm vào ô tìm kiếm | Bấm chuột vào ô tìm kiếm giáo trình | Viền ô chuyển xanh đậm và có khung viền vàng bao quanh | **Đạt** |
+| **TC12** | Nguyễn Phương Hải | Kiểm tra tìm kiếm theo tên sách không dấu | Nhập vào ô tìm kiếm từ khóa: `cau truc` | Chỉ còn hiển thị đúng sách Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++ | **Đạt** |
+| **TC13** | Nguyễn Phương Hải | Kiểm tra tìm kiếm không có kết quả | Nhập vào ô tìm kiếm: `xyz123` | Không hiển thị thẻ sách nào, khi xóa từ khóa thì hiện lại đủ 8 cuốn | **Đạt** |
+| **TC14** | Nguyễn Phương Hải | Kiểm tra lọc sách theo thể loại | Chọn thể loại IELTS trong danh sách thả xuống | Chỉ còn hiển thị đúng 2 cuốn sách Cambridge IELTS | **Đạt** |
+| **TC15** | Nguyễn Phương Hải | Kiểm tra năm xuất bản lớn hơn 2026 | Bấm Thêm Giáo Trình Mới, nhập năm xuất bản: 2027, bấm Thêm giáo trình | Trình duyệt hiển thị thông báo giá trị phải nhỏ hơn hoặc bằng 2026 | **Đạt** |
+| **TC16** | Nguyễn Phương Hải | Kiểm tra mã sách đã tồn tại | Nhập Mã sách: `UTC001`, nhập đủ các trường còn lại, bấm Thêm giáo trình | Hiển thị thông báo "Mã sách UTC001 đã tồn tại!", con trỏ quay lại ô mã sách | **Đạt** |
+| **TC17** | Nguyễn Phương Hải | Kiểm tra thêm giáo trình hợp lệ | Nhập Mã sách: `UTC009`, tên sách, tác giả, năm 2024, số lượng 5, bấm Thêm giáo trình | Hiển thị thông báo thêm thành công, hộp thoại đóng và form được làm mới | **Đạt** |
 
 #### Phần 3: Kiểm thử Quản lý mượn - trả sách (Nguyễn Quốc Khánh - Mượn - Trả)
 
 | Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu nhập | Kết quả mong đợi | Đánh giá |
 | :---: | :--- | :--- | :--- | :--- | :---: |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra mở form lập phiếu mượn | Bấm nút "Lập Phiếu Mượn Mới" | Modal "Lập Phiếu Mượn Giáo Trình UTC" hiển thị đầy đủ các trường nhập liệu | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra lập phiếu với mã sinh viên hợp lệ | Nhập Mã SV: 251230841, Họ tên: Nguyễn Văn A, chọn một giáo trình, bấm "Xác Nhận Lập Phiếu" | Hệ thống chấp nhận mã gồm đúng 9 chữ số và hiển thị thông báo lập phiếu thành công | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra trường Mã sinh viên để trống | Để trống Mã sinh viên, nhập đầy đủ các trường còn lại, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo yêu cầu nhập Mã sinh viên UTC hoặc Mã giảng viên, không lập phiếu | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra mã sinh viên sai định dạng | Nhập Mã SV: 12345, nhập đầy đủ các trường còn lại, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo "Mã độc giả không hợp lệ", con trỏ quay lại ô mã sinh viên | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra mã giảng viên hợp lệ | Nhập Mã GV: GV001, Họ tên: Nguyễn Văn B, chọn một giáo trình, bấm "Xác Nhận Lập Phiếu" | Hệ thống chấp nhận mã giảng viên và lập phiếu thành công | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra trường Họ và tên để trống | Nhập mã hợp lệ, để trống Họ và tên, chọn sách, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo yêu cầu nhập họ và tên người mượn, không lập phiếu | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra tên người mượn sai định dạng | Nhập họ và tên: @@!!, nhập đầy đủ các trường còn lại, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo "Họ và tên không hợp lệ! Chỉ được chứa chữ cái và khoảng trắng.", con trỏ quay lại ô họ và tên | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra chưa chọn tài liệu mượn | Nhập mã hợp lệ và họ tên, giữ lựa chọn mặc định ở ô Chọn tài liệu, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo yêu cầu chọn giáo trình/tài liệu cần mượn | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra Ngày mượn tự động | Mở modal "Lập Phiếu Mượn Mới" và quan sát ô Ngày mượn | Ngày mượn tự động bằng ngày hiện tại của hệ thống | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra Hạn trả tự động 14 ngày | Mở modal "Lập Phiếu Mượn Mới" và so sánh Ngày mượn với Hạn trả | Hạn trả tự động bằng Ngày mượn + 14 ngày | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra không cho sửa Ngày mượn và Hạn trả | Mở modal và thử nhập/chỉnh sửa trực tiếp hai ô ngày | Người dùng không thể thay đổi Ngày mượn và Hạn trả | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra xử lý sau khi lập phiếu thành công | Nhập dữ liệu hợp lệ và bấm "Xác Nhận Lập Phiếu" | Hiện thông báo thành công, modal đóng, các trường nhập được reset | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra chức năng Trả sách | Tại phiếu đang mượn, bấm "Trả sách", chọn OK ở hộp xác nhận | Trạng thái đổi thành "Đã trả", cột xử lý đổi thành "✓ Hoàn tất" | **Đạt** |
-| **TC** | Nguyễn Quốc Khánh | Kiểm tra chức năng Thu hồi sách quá hạn | Tại phiếu có trạng thái Quá hạn, bấm "Thu hồi", chọn OK | Bỏ trạng thái/màu quá hạn, trạng thái đổi thành "Đã trả", cột xử lý thành "✓ Hoàn tất" | **Đạt** |
+| **TC18** | Nguyễn Quốc Khánh | Kiểm tra mở form lập phiếu mượn | Bấm nút "Lập Phiếu Mượn Mới" | Modal "Lập Phiếu Mượn Giáo Trình UTC" hiển thị đầy đủ các trường nhập liệu | **Đạt** |
+| **TC19** | Nguyễn Quốc Khánh | Kiểm tra lập phiếu với mã sinh viên hợp lệ | Nhập Mã SV: 251230841, Họ tên: Nguyễn Văn A, chọn một giáo trình, bấm "Xác Nhận Lập Phiếu" | Hệ thống chấp nhận mã gồm đúng 9 chữ số và hiển thị thông báo lập phiếu thành công | **Đạt** |
+| **TC20** | Nguyễn Quốc Khánh | Kiểm tra trường Mã sinh viên để trống | Để trống Mã sinh viên, nhập đầy đủ các trường còn lại, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo yêu cầu nhập Mã sinh viên UTC hoặc Mã giảng viên, không lập phiếu | **Đạt** |
+| **TC21** | Nguyễn Quốc Khánh | Kiểm tra mã sinh viên sai định dạng | Nhập Mã SV: 12345, nhập đầy đủ các trường còn lại, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo "Mã độc giả không hợp lệ", con trỏ quay lại ô mã sinh viên | **Đạt** |
+| **TC22** | Nguyễn Quốc Khánh | Kiểm tra mã giảng viên hợp lệ | Nhập Mã GV: GV001, Họ tên: Nguyễn Văn B, chọn một giáo trình, bấm "Xác Nhận Lập Phiếu" | Hệ thống chấp nhận mã giảng viên và lập phiếu thành công | **Đạt** |
+| **TC23** | Nguyễn Quốc Khánh | Kiểm tra trường Họ và tên để trống | Nhập mã hợp lệ, để trống Họ và tên, chọn sách, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo yêu cầu nhập họ và tên người mượn, không lập phiếu | **Đạt** |
+| **TC24** | Nguyễn Quốc Khánh | Kiểm tra tên người mượn sai định dạng | Nhập họ và tên: @@!!, nhập đầy đủ các trường còn lại, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo "Họ và tên không hợp lệ! Chỉ được chứa chữ cái và khoảng trắng.", con trỏ quay lại ô họ và tên | **Đạt** |
+| **TC25** | Nguyễn Quốc Khánh | Kiểm tra chưa chọn tài liệu mượn | Nhập mã hợp lệ và họ tên, giữ lựa chọn mặc định ở ô Chọn tài liệu, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo yêu cầu chọn giáo trình/tài liệu cần mượn | **Đạt** |
+| **TC26** | Nguyễn Quốc Khánh | Kiểm tra Ngày mượn tự động | Mở modal "Lập Phiếu Mượn Mới" và quan sát ô Ngày mượn | Ngày mượn tự động bằng ngày hiện tại của hệ thống | **Đạt** |
+| **TC27** | Nguyễn Quốc Khánh | Kiểm tra Hạn trả tự động 14 ngày | Mở modal "Lập Phiếu Mượn Mới" và so sánh Ngày mượn với Hạn trả | Hạn trả tự động bằng Ngày mượn + 14 ngày | **Đạt** |
+| **TC28** | Nguyễn Quốc Khánh | Kiểm tra không cho sửa Ngày mượn và Hạn trả | Mở modal và thử nhập/chỉnh sửa trực tiếp hai ô ngày | Người dùng không thể thay đổi Ngày mượn và Hạn trả | **Đạt** |
+| **TC29** | Nguyễn Quốc Khánh | Kiểm tra xử lý sau khi lập phiếu thành công | Nhập dữ liệu hợp lệ và bấm "Xác Nhận Lập Phiếu" | Hiện thông báo thành công, modal đóng, các trường nhập được reset | **Đạt** |
+| **TC30** | Nguyễn Quốc Khánh | Kiểm tra chức năng Trả sách | Tại phiếu đang mượn, bấm "Trả sách", chọn OK ở hộp xác nhận | Trạng thái đổi thành "Đã trả", cột xử lý đổi thành "✓ Hoàn tất" | **Đạt** |
+| **TC31** | Nguyễn Quốc Khánh | Kiểm tra chức năng Thu hồi sách quá hạn | Tại phiếu có trạng thái Quá hạn, bấm "Thu hồi", chọn OK | Bỏ trạng thái/màu quá hạn, trạng thái đổi thành "Đã trả", cột xử lý thành "✓ Hoàn tất" | **Đạt** |
 
 #### Phần 4: Kiểm thử Quản lý độc giả (Trần Xuân Đô - Độc giả)
-| Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu nhập | Kết quả mong đợi | Đánh giá |
-| :---: | :--- | :--- | :--- | :--- | :---: |
-| **TC** | Trần Xuân Đô | Kiểm tra liên kết thanh điều hướng | Mở trang Quản lý độc giả, bấm lần lượt Trang chủ, Danh mục sách, Mượn - Trả sách, Nội quy & Liên hệ | Chuyển đúng sang trang tương ứng, mục "Quản lý độc giả" có nền vàng nổi bật khi ở trang này | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra hiển thị danh sách độc giả | Mở trang Quản lý độc giả | Bảng hiển thị 6 độc giả; thẻ đang khóa có nhãn "Đã khóa" màu đỏ, thẻ hoạt động có nhãn xanh | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra hiệu ứng rê chuột vào hàng | Rê chuột qua từng hàng trong bảng | Hàng được rê chuột đổi sang nền xanh nhạt | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra giao diện khi thu nhỏ màn hình | Thu nhỏ trình duyệt xuống dưới 768px, bấm nút menu 3 gạch | Menu thu gọn và mở ra khi bấm; bảng có thanh cuộn ngang, không bị vỡ bố cục | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra mở form cấp thẻ | Bấm nút "Cấp Thẻ Độc Giả Mới" | Modal hiển thị đầy đủ các trường nhập liệu | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra cấp thẻ sinh viên hợp lệ | Nhập Mã SV: 251230899, Họ tên: Hoàng Minh Tuấn, Lớp: K67-CNTT3, Email: tuan251230899@lms.utc.edu.vn, SĐT: 0988123456, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Thêm độc giả thành công!", modal đóng, các trường được reset | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra cấp thẻ giảng viên hợp lệ | Chọn đối tượng Giảng viên / Cán bộ, nhập Mã GV: GV002, Họ tên: Nguyễn Văn Bình, Bộ môn: Công nghệ thông tin, Email: binh@utc.edu.vn, SĐT: 0912345679, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo thêm độc giả thành công, modal đóng | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra để trống các trường | Để trống tất cả các ô, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Thông tin chưa hợp lệ:" liệt kê lỗi từng ô, không tạo thẻ | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra mã sinh viên sai định dạng | Nhập Mã SV: 12345, nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Mã sinh viên phải gồm đúng 9 chữ số", không tạo thẻ | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra họ tên sai định dạng | Nhập Họ tên: Tuan123, nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Họ tên chỉ gồm chữ cái và khoảng trắng", không tạo thẻ | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra khóa nằm ngoài giới hạn | Nhập Lớp: K68-CNTT3, nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Khóa phải từ K62 đến K67", không tạo thẻ | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra email sai đuôi | Nhập Email: abc@gmail.com, nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Email phải có đuôi @lms.utc.edu.vn", không tạo thẻ | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra số điện thoại sai đầu số | Nhập SĐT: 0288123456, nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Số điện thoại phải gồm 10 số, bắt đầu bằng 03/05/07/08/09", không tạo thẻ | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra báo nhiều lỗi cùng lúc | Nhập sai đồng thời Mã SV: 1, Email: x@y.z, SĐT: 1, bấm "Tạo Thẻ Độc Giả" | Một hộp thoại duy nhất liệt kê cả 3 lỗi, modal vẫn mở | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra mã sinh viên đã tồn tại | Nhập Mã SV: 251230841 (đã có trong bảng), nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Mã sinh viên 251230841 đã tồn tại!", không tạo thẻ | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra nhãn đổi theo đối tượng | Mở modal, chọn đối tượng Giảng viên / Cán bộ | Nhãn ô mã đổi thành "Mã giảng viên", ô lớp đổi thành "Bộ môn" | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra chức năng Khóa thẻ | Bấm "Khóa thẻ" ở độc giả Trần Xuân Đô, chọn OK ở hộp xác nhận | Trạng thái đổi thành "Đã khóa", nút đổi thành "Mở khóa" | **Đạt** |
-| **TC** | Trần Xuân Đô | Kiểm tra chức năng Mở khóa thẻ | Bấm "Mở khóa" ở độc giả Đinh Văn Phan Dũng (đang Đã khóa), chọn OK ở hộp xác nhận | Trạng thái đổi thành "Hoạt động", nút đổi thành "Khóa thẻ" | **Đạt** |
 
+| Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu nhập | Kết quả mong đợi | Đánh giá |
+| :---: | :--- | :--- | :--- | :--- | :--- | :---: |
+| **TC32** | Trần Xuân Đô | Kiểm tra liên kết thanh điều hướng | Mở trang Quản lý độc giả, bấm lần lượt Trang chủ, Danh mục sách, Mượn - Trả sách, Nội quy & Liên hệ | Chuyển đúng sang trang tương ứng, mục "Quản lý độc giả" có nền vàng nổi bật khi ở trang này | **Đạt** |
+| **TC33** | Trần Xuân Đô | Kiểm tra hiển thị danh sách độc giả | Mở trang Quản lý độc giả | Bảng hiển thị 6 độc giả; thẻ đang khóa có nhãn "Đã khóa" màu đỏ, thẻ hoạt động có nhãn xanh | **Đạt** |
+| **TC34** | Trần Xuân Đô | Kiểm tra hiệu ứng rê chuột vào hàng | Rê chuột qua từng hàng trong bảng | Hàng được rê chuột đổi sang nền xanh nhạt | **Đạt** |
+| **TC35** | Trần Xuân Đô | Kiểm tra giao diện khi thu nhỏ màn hình | Thu nhỏ trình duyệt xuống dưới 768px, bấm nút menu 3 gạch | Menu thu gọn và mở ra khi bấm; bảng có thanh cuộn ngang, không bị vỡ bố cục | **Đạt** |
+| **TC36** | Trần Xuân Đô | Kiểm tra mở form cấp thẻ | Bấm nút "Cấp Thẻ Độc Giả Mới" | Modal hiển thị đầy đủ các trường nhập liệu | **Đạt** |
+| **TC37** | Trần Xuân Đô | Kiểm tra cấp thẻ sinh viên hợp lệ | Nhập Mã SV: 251230899, Họ tên: Hoàng Minh Tuấn, Lớp: K67-CNTT3, Email: tuan251230899@lms.utc.edu.vn, SĐT: 0988123456, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Thêm độc giả thành công!", modal đóng, các trường được reset | **Đạt** |
+| **TC38** | Trần Xuân Đô | Kiểm tra cấp thẻ giảng viên hợp lệ | Chọn đối tượng Giảng viên / Cán bộ, nhập Mã GV: GV002, Họ tên: Nguyễn Văn Bình, Bộ môn: Công nghệ thông tin, Email: binh@utc.edu.vn, SĐT: 0912345679, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo thêm độc giả thành công, modal đóng | **Đạt** |
+| **TC39** | Trần Xuân Đô | Kiểm tra để trống các trường | Để trống tất cả các ô, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Thông tin chưa hợp lệ:" liệt kê lỗi từng ô, không tạo thẻ | **Đạt** |
+| **TC40** | Trần Xuân Đô | Kiểm tra mã sinh viên sai định dạng | Nhập Mã SV: 12345, nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Mã sinh viên phải gồm đúng 9 chữ số", không tạo thẻ | **Đạt** |
+| **TC41** | Trần Xuân Đô | Kiểm tra họ tên sai định dạng | Nhập Họ tên: Tuan123, nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Họ tên chỉ gồm chữ cái và khoảng trắng", không tạo thẻ | **Đạt** |
+| **TC42** | Trần Xuân Đô | Kiểm tra khóa nằm ngoài giới hạn | Nhập Lớp: K68-CNTT3, nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Khóa phải từ K62 đến K67", không tạo thẻ | **Đạt** |
+| **TC43** | Trần Xuân Đô | Kiểm tra email sai đuôi | Nhập Email: abc@gmail.com, nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Email phải có đuôi @lms.utc.edu.vn", không tạo thẻ | **Đạt** |
+| **TC44** | Trần Xuân Đô | Kiểm tra số điện thoại sai đầu số | Nhập SĐT: 0288123456, nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Số điện thoại phải gồm 10 số, bắt đầu bằng 03/05/07/08/09", không tạo thẻ | **Đạt** |
+| **TC45** | Trần Xuân Đô | Kiểm tra báo nhiều lỗi cùng lúc | Nhập sai đồng thời Mã SV: 1, Email: x@y.z, SĐT: 1, bấm "Tạo Thẻ Độc Giả" | Một hộp thoại duy nhất liệt kê cả 3 lỗi, modal vẫn mở | **Đạt** |
+| **TC46** | Trần Xuân Đô | Kiểm tra mã sinh viên đã tồn tại | Nhập Mã SV: 251230841 (đã có trong bảng), nhập đầy đủ các trường còn lại, bấm "Tạo Thẻ Độc Giả" | Hiện thông báo "Mã sinh viên 251230841 đã tồn tại!", không tạo thẻ | **Đạt** |
+| **TC47** | Trần Xuân Đô | Kiểm tra nhãn đổi theo đối tượng | Mở modal, chọn đối tượng Giảng viên / Cán bộ | Nhãn ô mã đổi thành "Mã giảng viên", ô lớp đổi thành "Bộ môn" | **Đạt** |
+| **TC48** | Trần Xuân Đô | Kiểm tra chức năng Khóa thẻ | Bấm "Khóa thẻ" ở độc giả Trần Xuân Đô, chọn OK ở hộp xác nhận | Trạng thái đổi thành "Đã khóa", nút đổi thành "Mở khóa" | **Đạt** |
+| **TC49** | Trần Xuân Đô | Kiểm tra chức năng Mở khóa thẻ | Bấm "Mở khóa" ở độc giả Đinh Văn Phan Dũng (đang Đã khóa), chọn OK ở hộp xác nhận | Trạng thái đổi thành "Hoạt động", nút đổi thành "Khóa thẻ" | **Đạt** |
 
 #### Phần 5: Kiểm thử Nội quy & Góp ý (Đinh Văn Phan Dũng - Nội quy & Liên hệ)
 
 | Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu nhập | Kết quả mong đợi | Đánh giá |
-|---|---|---|---|---|---|
-| TC15 | Đinh Văn Phan Dũng | Kiểm tra giao diện trang Nội quy & Liên hệ | Mở `contact.html`, kiểm tra tiêu đề, bảng thời gian, nội quy và form góp ý | Các nội dung hiển thị đầy đủ, bố cục rõ ràng | Đạt |
-| TC23 | Đinh Văn Phan Dũng | Kiểm tra liên kết thanh điều hướng | Lần lượt nhấn các mục Trang chủ, Sách, Mượn sách, Độc giả và Nội quy & Liên hệ trên thanh điều hướng | Mỗi liên kết mở đúng trang tương ứng, không xuất hiện lỗi liên kết | Đạt |
-| TC21 | Đinh Văn Phan Dũng | Kiểm tra nhập sai họ tên | Nhập họ tên có chứa số hoặc ký hiệu, ví dụ `Dung123` hoặc `Dung@`, điền các trường còn lại hợp lệ rồi gửi form | Hệ thống từ chối họ tên không hợp lệ và yêu cầu nhập lại chỉ bằng chữ cái, dấu cách | Đạt |
-| TC22 | Đinh Văn Phan Dũng | Kiểm tra nhập đúng họ tên | Nhập họ tên chỉ gồm chữ cái và dấu cách, ví dụ `Nguyen Van Dung`, điền các trường còn lại hợp lệ rồi gửi form | Hệ thống chấp nhận họ tên hợp lệ và tiếp tục xử lý form | Đạt |
-| TC16 | Đinh Văn Phan Dũng | Kiểm tra email sai định dạng đuôi | Nhập họ tên, email `abc@gmail.com` và các trường còn lại hợp lệ, sau đó gửi form | Hệ thống từ chối email không có đuôi `@lms.utc.edu.vn` | Đạt |
-| TC17 | Đinh Văn Phan Dũng | Kiểm tra email đúng định dạng đuôi | Nhập email `sinhvien@lms.utc.edu.vn` và điền đầy đủ các trường bắt buộc | Email vượt qua kiểm tra định dạng | Đạt |
-| TC18 | Đinh Văn Phan Dũng | Kiểm tra trường bắt buộc | Để trống một trường bắt buộc rồi nhấn gửi | Trình duyệt yêu cầu nhập dữ liệu còn thiếu | Đạt |
-| TC19 | Đinh Văn Phan Dũng | Kiểm tra chọn chủ đề đề xuất | Chọn một chủ đề trong danh sách và gửi form với dữ liệu hợp lệ | Thông báo hiển thị đúng chủ đề đã chọn | Đạt |
-| TC20 | Đinh Văn Phan Dũng | Kiểm tra thông báo gửi đề xuất | Nhập đầy đủ thông tin hợp lệ và nhấn nút gửi | Hộp thoại hiển thị họ tên, email, chủ đề và nội dung đã nhập | Đạt |
+| :---: | :--- | :--- | :--- | :--- | :---: |
+| **TC50** | Đinh Văn Phan Dũng | Kiểm tra giao diện trang Nội quy & Liên hệ | Mở `contact.html`, kiểm tra tiêu đề, bảng thời gian, nội quy và form góp ý | Các nội dung hiển thị đầy đủ, bố cục rõ ràng | **Đạt** |
+| **TC51** | Đinh Văn Phan Dũng | Kiểm tra liên kết thanh điều hướng | Lần lượt nhấn các mục Trang chủ, Sách, Mượn sách, Độc giả và Nội quy & Liên hệ trên thanh điều hướng | Mỗi liên kết mở đúng trang tương ứng, không xuất hiện lỗi liên kết | **Đạt** |
+| **TC52** | Đinh Văn Phan Dũng | Kiểm tra nhập sai họ tên | Nhập họ tên có chứa số hoặc ký hiệu, ví dụ `Dung123` hoặc `Dung@`, điền các trường còn lại hợp lệ rồi gửi form | Hệ thống từ chối họ tên không hợp lệ và yêu cầu nhập lại chỉ bằng chữ cái, dấu cách | **Đạt** |
+| **TC53** | Đinh Văn Phan Dũng | Kiểm tra nhập đúng họ tên | Nhập họ tên chỉ gồm chữ cái và dấu cách, ví dụ `Nguyen Van Dung`, điền các trường còn lại hợp lệ rồi gửi form | Hệ thống chấp nhận họ tên hợp lệ và tiếp tục xử lý form | **Đạt** |
+| **TC54** | Đinh Văn Phan Dũng | Kiểm tra email sai định dạng đuôi | Nhập họ tên, email `abc@gmail.com` và các trường còn lại hợp lệ, sau đó gửi form | Hệ thống từ chối email không có đuôi `@lms.utc.edu.vn` | **Đạt** |
+| **TC55** | Đinh Văn Phan Dũng | Kiểm tra email đúng định dạng đuôi | Nhập email `sinhvien@lms.utc.edu.vn` và điền đầy đủ các trường bắt buộc | Email vượt qua kiểm tra định dạng | **Đạt** |
+| **TC56** | Đinh Văn Phan Dũng | Kiểm tra trường bắt buộc | Để trống một trường bắt buộc rồi nhấn gửi | Trình duyệt yêu cầu nhập dữ liệu còn thiếu | **Đạt** |
+| **TC57** | Đinh Văn Phan Dũng | Kiểm tra chọn chủ đề đề xuất | Chọn một chủ đề trong danh sách và gửi form với dữ liệu hợp lệ | Thông báo hiển thị đúng chủ đề đã chọn | **Đạt** |
+| **TC58** | Đinh Văn Phan Dũng | Kiểm tra thông báo gửi đề xuất | Nhập đầy đủ thông tin hợp lệ và nhấn nút gửi | Hộp thoại hiển thị họ tên, email, chủ đề và nội dung đã nhập | **Đạt** |
 
 # VI. TỰ ĐÁNH GIÁ & KẾT LUẬN
 
