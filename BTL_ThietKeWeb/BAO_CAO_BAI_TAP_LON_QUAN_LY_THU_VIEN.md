@@ -258,7 +258,7 @@ Mã nguồn JavaScript được viết trong file `js/script.js`, sử dụng Ja
 *(Thành viên phụ trách tự thực hiện kiểm thử và cập nhật kết quả)*
 
 
-### Phần 5: Kiểm thử Nội quy & Góp ý (Đinh Văn Phan Dũng - contact.html)
+### Phần 5: Kiểm thử Nội quy & Góp ý (Đinh Văn Phan Dũng - Nội quy & Liên hệ)
 
 | Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu nhập | Kết quả mong đợi | Đánh giá |
 |---|---|---|---|---|---|
