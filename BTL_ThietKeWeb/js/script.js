@@ -208,47 +208,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-/* ===== Trang độc giả ===== */
-function doiTrangThaiThe(ma, ten) {
-  const hang = document.getElementById("docgia-" + ma);
-  const nhan = hang.querySelector(".trang-thai-the .badge-custom");
-  const nut = hang.querySelector(".nut-khoa-the");
-
-  const dangKhoa = nhan.classList.contains("badge-danger");
-  const hanhDong = dangKhoa ? "mở khóa" : "khóa";
-
-  if (!confirm("Bạn có chắc muốn " + hanhDong + " thẻ của " + ten + "?")) {
-    return;
-  }
-
-  if (dangKhoa) {
-    nhan.classList.replace("badge-danger", "badge-success");
-    nhan.textContent = "Hoạt động";
-    nut.classList.replace("btn-custom-primary", "btn-custom-warning");
-    nut.textContent = "Khóa thẻ";
-    nut.title = "Khóa thẻ độc giả này";
-  } else {
-    nhan.classList.replace("badge-success", "badge-danger");
-    nhan.textContent = "Đã khóa";
-    nut.classList.replace("btn-custom-warning", "btn-custom-primary");
-    nut.textContent = "Mở khóa";
-    nut.title = "Mở khóa thẻ độc giả này";
-  }
-}
-
-function kiemTraDangKyDocGia() {
-  const ids = ["maDocGia", "tenDocGia", "lopKhoa", "emailDocGia", "sdtDocGia"];
-  for (const id of ids) {
-    if (document.getElementById(id).value.trim() === "") {
-      alert("Vui lòng nhập đầy đủ các trường có dấu (*)");
-      return false;
-    }
-  }
-  alert("Dữ liệu hợp lệ");
-  return false;
-}
-
 // TRANG DANH MỤC SÁCH
 
 // Bỏ dấu và đổi chữ thường
@@ -341,13 +300,11 @@ document.addEventListener("DOMContentLoaded", function () {
     modalThemSach.querySelector("form").reset();
   });
 });
-<<<<<<< HEAD
-
 /* ===== Trang độc giả ===== */
 function doiTrangThaiThe(ma, ten) {
   const hang = document.getElementById("docgia-" + ma);
   const nhan = hang.querySelector(".trang-thai-the .badge-custom");
-  const nut = hang.querySelector(".nut-khoa-the");
+  const nut = hang.querySelector(".lock-card-btn");
 
   const dangKhoa = nhan.classList.contains("badge-danger");
   const hanhDong = dangKhoa ? "mở khóa" : "khóa";
@@ -486,5 +443,3 @@ document.addEventListener("DOMContentLoaded", function () {
     capNhatNhanTheoDoiTuong();
   });
 });
-=======
->>>>>>> c25f3caf95c9c07b4f71547a522b603691cbf025

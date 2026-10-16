@@ -1,22 +1,25 @@
-.tieu-de-trang{
+/* Tiêu đề trang */
+.readers-page-title{
     color: var(--utc-blue);
     display: inline-block;
     font-weight: 700;
 }
 
-.mo-ta-trang{
+.page-description{
     color: #64748b;
     margin-bottom: 0;
 }
 
-.khung-bang{
+/* Khung bao quanh bảng độc giả */
+.table-wrapper{
     background-color: white;
     border: 1px solid #e2e8f0;
     border-radius: 15px;
     overflow: hidden;
 }
 
-.bang-docgia thead th{
+/* Tiêu đề cột */
+.readers-table thead th{
     background-color: var(--utc-blue);
     color: white;
     font-weight: 700;
@@ -24,44 +27,53 @@
     border: 1px solid #0b549f;
 }
 
-.bang-docgia .ma-the {
+/* Mã thẻ độc giả */
+.readers-table .card-id {
     color: var(--utc-blue);
     font-weight: 700;
 }
 
-.bang-docgia .badge-custom.nhan-sinh-vien {
+/* Nhãn "Sinh viên" */
+.readers-table .badge-custom.badge-student {
     background-color: #f1f5f9;
     color: #64748b;
     border: 1px solid #64748b;
 }
 
-.bang-docgia .badge-custom.nhan-giang-vien {
+/* Nhãn "Giảng viên" */
+.readers-table .badge-custom.badge-lecturer {
     border: 1px solid var(--utc-blue);
 }
 
-.bang-docgia .badge-custom, .bang-docgia .nut-khoa-the {
+/* Nhãn và nút khóa thẻ */
+.readers-table .badge-custom, .readers-table .lock-card-btn {
     white-space: nowrap;
 }
 
-.bang-docgia tbody td{
+/* Các ô dữ liệu trong bảng */
+.readers-table tbody td{
     border: 1px solid #e2e8f0;
     text-align: center;
 }
 
-.bang-docgia tbody tr:hover td {
+/* Hiệu ứng khi rê chuột vào một hàng */
+.readers-table tbody tr:hover td {
     background-color: #edf5ff;
     box-shadow: none;
 }
 
-.bang-docgia .cot-khoa {
+/* Cột chứa nút khóa */
+.readers-table .lock-column {
     white-space: nowrap;
 }
 
-.bang-docgia .nut-khoa-the {
+/* Nút khóa thẻ */
+.readers-table .lock-card-btn {
     padding: 4px 12px;
     font-size: 14px;
 }
 
+/* Nút viền xanh */
 .btn-custom-outline{
     color: var(--utc-blue);
     border: 1px solid var(--utc-blue);
