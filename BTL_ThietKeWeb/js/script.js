@@ -1,9 +1,9 @@
 // xu ly form gop y
-
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formGopY");
+    const thongbao = document.getElementById("thongbao");
 
-    if (!form) return;
+    if (!form || !thongbao) return;
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -13,15 +13,22 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const hoten = document.getElementById("hoten").value.trim();
-        const email = document.getElementById("email").value.trim();
+        const hotenInput = document.getElementById("hoten");
+        const hoten = hotenInput.value.trim();
+        const emailInput = document.getElementById("email");
+        const email = emailInput.value.trim();
         const chude = document.getElementById("chude").value;
         const noidung = document.getElementById("noidung").value.trim();
-        const thongbao = document.getElementById("thongbao");
+
+        if (!/^[\p{L}\s]+$/u.test(hoten)) {
+            alert("Họ và tên chỉ được chứa chữ cái và dấu cách, không được nhập số hoặc ký hiệu!");
+            hotenInput.focus();
+            return;
+        }
 
         if (!/^[a-zA-Z0-9._%+-]+@lms\.utc\.edu\.vn$/i.test(email)) {
             alert("Vui lòng sử dụng email có đuôi @lms.utc.edu.vn!");
-            document.getElementById("email").focus();
+            emailInput.focus();
             return;
         }
 
@@ -33,14 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
             "Nội dung chi tiết: " + noidung
         );
 
-        if (thongbao) {
-            thongbao.textContent = "Gửi đề xuất thành công!";
-        }
+        thongbao.textContent = "Gửi góp ý thành công!";
+        thongbao.style.color = "green";
 
         form.reset();
     });
 });
-
 
 // ===== CHỨC NĂNG LẬP PHIẾU MƯỢN SÁCH =====
 function kiemTraMuonSach() {
@@ -78,8 +83,16 @@ function kiemTraMuonSach() {
     return false;
   }
 
+  let hoTenPattern = /^[A-Za-zÀ-ỹ\s]+$/;
+
   if (hoTen === "") {
     alert("Vui lòng nhập họ và tên người mượn!");
+    hoTenEl.focus();
+    return false;
+  }
+
+  if (!hoTenPattern.test(hoTen)) {
+    alert("Họ và tên không hợp lệ! Chỉ được chứa chữ cái và khoảng trắng.");
     hoTenEl.focus();
     return false;
   }
@@ -195,6 +208,47 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+/* ===== Trang độc giả ===== */
+function doiTrangThaiThe(ma, ten) {
+  const hang = document.getElementById("docgia-" + ma);
+  const nhan = hang.querySelector(".trang-thai-the .badge-custom");
+  const nut = hang.querySelector(".nut-khoa-the");
+
+  const dangKhoa = nhan.classList.contains("badge-danger");
+  const hanhDong = dangKhoa ? "mở khóa" : "khóa";
+
+  if (!confirm("Bạn có chắc muốn " + hanhDong + " thẻ của " + ten + "?")) {
+    return;
+  }
+
+  if (dangKhoa) {
+    nhan.classList.replace("badge-danger", "badge-success");
+    nhan.textContent = "Hoạt động";
+    nut.classList.replace("btn-custom-primary", "btn-custom-warning");
+    nut.textContent = "Khóa thẻ";
+    nut.title = "Khóa thẻ độc giả này";
+  } else {
+    nhan.classList.replace("badge-success", "badge-danger");
+    nhan.textContent = "Đã khóa";
+    nut.classList.replace("btn-custom-warning", "btn-custom-primary");
+    nut.textContent = "Mở khóa";
+    nut.title = "Mở khóa thẻ độc giả này";
+  }
+}
+
+function kiemTraDangKyDocGia() {
+  const ids = ["maDocGia", "tenDocGia", "lopKhoa", "emailDocGia", "sdtDocGia"];
+  for (const id of ids) {
+    if (document.getElementById(id).value.trim() === "") {
+      alert("Vui lòng nhập đầy đủ các trường có dấu (*)");
+      return false;
+    }
+  }
+  alert("Dữ liệu hợp lệ");
+  return false;
+}
+
 // TRANG DANH MỤC SÁCH
 
 // Bỏ dấu và đổi chữ thường
@@ -287,6 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modalThemSach.querySelector("form").reset();
   });
 });
+<<<<<<< HEAD
 
 /* ===== Trang độc giả ===== */
 function doiTrangThaiThe(ma, ten) {
@@ -431,3 +486,5 @@ document.addEventListener("DOMContentLoaded", function () {
     capNhatNhanTheoDoiTuong();
   });
 });
+=======
+>>>>>>> c25f3caf95c9c07b4f71547a522b603691cbf025
