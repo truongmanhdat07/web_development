@@ -240,19 +240,51 @@ Mã nguồn JavaScript được viết trong file `js/script.js`, sử dụng Ja
 
 ### 2. Xây dựng các Test Cases (Link, Effect, Data Validation)
 
-#### Phần 1: Kiểm thử Liên kết & Giao diện chung (Trương Mạnh Đạt - Trang chủ - index.html)
+#### Phần 1: Kiểm thử Liên kết & Giao diện chung (Trương Mạnh Đạt - Trang chủ)
 
 | Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu nhập | Kết quả mong đợi | Đánh giá |
 | :---: | :--- | :--- | :--- | :--- | :---: |
 | **TC01** | Trương Mạnh Đạt | Kiểm tra thanh điều hướng (Navbar) | Bấm lần lượt 5 liên kết trên Header: Trang chủ, Kho sách, Mượn trả, Độc giả, Liên hệ | Chuyển trang mượt mà, đúng URL, giữ nguyên Header/Footer đồng bộ | **Đạt** |
-| **TC02** | Trương Mạnh Đạt | Kiểm tra tính Responsive | Thu nhỏ trình duyệt về kích thước điện thoại (dưới 768px) | Menu tự động thu gọn thành nút mở rộng, các thẻ thống kê tự xếp thành 1 cột | **Đạt** |
-| **TC03** | Trương Mạnh Đạt | Hiệu ứng Hover thẻ sách tiêu biểu | Rê chuột vào từng thẻ giáo trình trên trang chủ | Thẻ sách nâng nhẹ lên | **Đạt** |
+| **TC02** | Trương Mạnh Đạt | Kiểm tra liên kết Logo trường UTC | Cuộn trang xuống dưới rồi bấm vào Logo UTC ở Header | Tự động tải lại và đưa người dùng về đỉnh Trang chủ | **Đạt** |
+| **TC03** | Trương Mạnh Đạt | Kiểm tra các nút tác vụ trên Banner chính | Bấm nút "Khám Phá Kho Sách" trên Banner | Điều hướng người dùng chuyển thẳng sang trang Kho sách | **Đạt** |
+| **TC04** | Trương Mạnh Đạt | Kiểm tra nút "Mượn sách" tại Sách tiêu biểu | Bấm nút "Mượn sách" dưới mỗi cuốn giáo trình trên trang chủ | Chuyển hướng người dùng sang trang lập phiếu mượn | **Đạt** |
+| **TC05** | Trương Mạnh Đạt | Hiệu ứng Hover thẻ giáo trình và thẻ thống kê | Rê chuột vào các thẻ sách và 4 khối thẻ thống kê thư viện | Thẻ nâng nhẹ lên trên và đổ bóng viền xanh nhận diện UTC mượt mà | **Đạt** |
+| **TC06** | Trương Mạnh Đạt | Kiểm tra thanh Navbar cố định khi cuộn | Cuộn trang từ trên xuống dưới màn hình | Thanh Header/Navbar luôn dính cố định ở mép trên màn hình, không che nội dung | **Đạt** |
+| **TC07** | Trương Mạnh Đạt | Kiểm tra tính tương thích Responsive | Thu nhỏ trình duyệt về kích thước điện thoại dưới 768px | Menu tự động thu gọn thành nút hamburger, các khối thẻ tự động xếp thành 1 cột | **Đạt** |
 
 #### Phần 2: Kiểm thử Kho giáo trình (Nguyễn Phương Hải - Kho sách)
-*(Thành viên phụ trách tự thực hiện kiểm thử và cập nhật kết quả)*
+
+| Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu test | Kết quả mong đợi | Đánh giá |
+| :---: | :--- | :--- | :--- | :--- | :---: |
+| **TC** | Nguyễn Phương Hải | Kiểm tra liên kết menu điều hướng | Mở trang Danh mục sách, bấm lần lượt các mục trên menu | Chuyển đúng sang trang tương ứng, mục Danh mục sách có nền vàng nổi bật | **Đạt** |
+| **TC** | Nguyễn Phương Hải | Kiểm tra nút Mượn sách | Bấm nút Mượn sách ở giáo trình UTC001 | Chuyển hướng thành công sang trang Mượn - Trả sách | **Đạt** |
+| **TC** | Nguyễn Phương Hải | Kiểm tra giao diện khi thu nhỏ màn hình | Thu nhỏ chiều rộng trình duyệt xuống 400px, bấm nút menu 3 gạch | Mỗi hàng hiển thị 1 thẻ sách, menu thu gọn và mở ra khi bấm nút | **Đạt** |
+| **TC** | Nguyễn Phương Hải | Kiểm tra hiệu ứng khi bấm vào ô tìm kiếm | Bấm chuột vào ô tìm kiếm giáo trình | Viền ô chuyển xanh đậm và có khung viền vàng bao quanh | **Đạt** |
+| **TC** | Nguyễn Phương Hải | Kiểm tra tìm kiếm theo tên sách không dấu | Nhập vào ô tìm kiếm từ khóa: `cau truc` | Chỉ còn hiển thị đúng sách Cấu Trúc Dữ Liệu Và Giải Thuật Bằng C/C++ | **Đạt** |
+| **TC** | Nguyễn Phương Hải | Kiểm tra tìm kiếm không có kết quả | Nhập vào ô tìm kiếm: `xyz123` | Không hiển thị thẻ sách nào, khi xóa từ khóa thì hiện lại đủ 8 cuốn | **Đạt** |
+| **TC** | Nguyễn Phương Hải | Kiểm tra lọc sách theo thể loại | Chọn thể loại IELTS trong danh sách thả xuống | Chỉ còn hiển thị đúng 2 cuốn sách Cambridge IELTS | **Đạt** |
+| **TC** | Nguyễn Phương Hải | Kiểm tra năm xuất bản lớn hơn 2026 | Bấm Thêm Giáo Trình Mới, nhập năm xuất bản: 2027, bấm Thêm giáo trình | Trình duyệt hiển thị thông báo giá trị phải nhỏ hơn hoặc bằng 2026 | **Đạt** |
+| **TC** | Nguyễn Phương Hải | Kiểm tra mã sách đã tồn tại | Nhập Mã sách: `UTC001`, nhập đủ các trường còn lại, bấm Thêm giáo trình | Hiển thị thông báo "Mã sách UTC001 đã tồn tại!", con trỏ quay lại ô mã sách | **Đạt** |
+| **TC** | Nguyễn Phương Hải | Kiểm tra thêm giáo trình hợp lệ | Nhập Mã sách: `UTC009`, tên sách, tác giả, năm 2024, số lượng 5, bấm Thêm giáo trình | Hiển thị thông báo thêm thành công, hộp thoại đóng và form được làm mới | **Đạt** |
 
 #### Phần 3: Kiểm thử Quản lý mượn - trả sách (Nguyễn Quốc Khánh - Mượn - Trả)
-*(Thành viên phụ trách tự thực hiện kiểm thử và cập nhật kết quả)*
+
+| Mã TC | Phụ trách | Mục tiêu kiểm thử | Các bước thực hiện & Dữ liệu nhập | Kết quả mong đợi | Đánh giá |
+| :---: | :--- | :--- | :--- | :--- | :---: |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra mở form lập phiếu mượn | Bấm nút "Lập Phiếu Mượn Mới" | Modal "Lập Phiếu Mượn Giáo Trình UTC" hiển thị đầy đủ các trường nhập liệu | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra lập phiếu với mã sinh viên hợp lệ | Nhập Mã SV: 251230841, Họ tên: Nguyễn Văn A, chọn một giáo trình, bấm "Xác Nhận Lập Phiếu" | Hệ thống chấp nhận mã gồm đúng 9 chữ số và hiển thị thông báo lập phiếu thành công | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra trường Mã sinh viên để trống | Để trống Mã sinh viên, nhập đầy đủ các trường còn lại, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo yêu cầu nhập Mã sinh viên UTC hoặc Mã giảng viên, không lập phiếu | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra mã sinh viên sai định dạng | Nhập Mã SV: 12345, nhập đầy đủ các trường còn lại, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo "Mã độc giả không hợp lệ", con trỏ quay lại ô mã sinh viên | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra mã giảng viên hợp lệ | Nhập Mã GV: GV001, Họ tên: Nguyễn Văn B, chọn một giáo trình, bấm "Xác Nhận Lập Phiếu" | Hệ thống chấp nhận mã giảng viên và lập phiếu thành công | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra trường Họ và tên để trống | Nhập mã hợp lệ, để trống Họ và tên, chọn sách, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo yêu cầu nhập họ và tên người mượn, không lập phiếu | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra tên người mượn sai định dạng | Nhập họ và tên: @@!!, nhập đầy đủ các trường còn lại, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo "Họ và tên không hợp lệ! Chỉ được chứa chữ cái và khoảng trắng.", con trỏ quay lại ô họ và tên | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra chưa chọn tài liệu mượn | Nhập mã hợp lệ và họ tên, giữ lựa chọn mặc định ở ô Chọn tài liệu, bấm "Xác Nhận Lập Phiếu" | Hiển thị thông báo yêu cầu chọn giáo trình/tài liệu cần mượn | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra Ngày mượn tự động | Mở modal "Lập Phiếu Mượn Mới" và quan sát ô Ngày mượn | Ngày mượn tự động bằng ngày hiện tại của hệ thống | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra Hạn trả tự động 14 ngày | Mở modal "Lập Phiếu Mượn Mới" và so sánh Ngày mượn với Hạn trả | Hạn trả tự động bằng Ngày mượn + 14 ngày | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra không cho sửa Ngày mượn và Hạn trả | Mở modal và thử nhập/chỉnh sửa trực tiếp hai ô ngày | Người dùng không thể thay đổi Ngày mượn và Hạn trả | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra xử lý sau khi lập phiếu thành công | Nhập dữ liệu hợp lệ và bấm "Xác Nhận Lập Phiếu" | Hiện thông báo thành công, modal đóng, các trường nhập được reset | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra chức năng Trả sách | Tại phiếu đang mượn, bấm "Trả sách", chọn OK ở hộp xác nhận | Trạng thái đổi thành "Đã trả", cột xử lý đổi thành "✓ Hoàn tất" | **Đạt** |
+| **TC** | Nguyễn Quốc Khánh | Kiểm tra chức năng Thu hồi sách quá hạn | Tại phiếu có trạng thái Quá hạn, bấm "Thu hồi", chọn OK | Bỏ trạng thái/màu quá hạn, trạng thái đổi thành "Đã trả", cột xử lý thành "✓ Hoàn tất" | **Đạt** |
 
 #### Phần 4: Kiểm thử Quản lý độc giả (Trần Xuân Đô - Độc giả)
 *(Thành viên phụ trách tự thực hiện kiểm thử và cập nhật kết quả)*
