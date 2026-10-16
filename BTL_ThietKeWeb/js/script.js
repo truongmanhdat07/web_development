@@ -317,6 +317,8 @@ function doiTrangThaiThe(ma, ten) {
 }
 
 function kiemTraDangKyDocGia() {
+  const KHOA_MAX = 67;
+  const KHOA_MIN = 62; 
   // Bước 1: lấy giá trị, kể cả đối tượng
   let doiTuong = document.getElementById("doiTuong").value;
   let maDocGia = document.getElementById("maDocGia").value.trim().toUpperCase();
@@ -351,14 +353,21 @@ function kiemTraDangKyDocGia() {
   // Bước 3: gom lỗi
   let loi = "";
 
-  if (!regexMa.test(maDocGia)) {
+   if (!regexMa.test(maDocGia)) {
     loi += "- " + loiMa + "\n";
+  } else if (document.getElementById("docgia-" + maDocGia)) {
+    loi += "- " + nhanMa + " " + maDocGia + " đã tồn tại!\n";
   }
   if (!/^[\p{L}\s]{2,50}$/u.test(tenDocGia)) {
     loi += "- Họ tên chỉ gồm chữ cái và khoảng trắng (VD: Hoàng Minh Tuấn)\n";
   }
   if (!regexLop.test(lopKhoa)) {
     loi += "- " + loiLop + "\n";
+  } else if (doiTuong === "Sinh viên") {
+    let khoa = Number(lopKhoa.substring(1, 3));
+    if (khoa < KHOA_MIN || khoa > KHOA_MAX) {
+      loi += "- Khóa phải từ K" + KHOA_MIN + " đến K" + KHOA_MAX + "\n";
+    }
   }
   if (!regexEmail.test(email)) {
     loi += "- " + loiEmail + "\n";
@@ -384,5 +393,41 @@ function kiemTraDangKyDocGia() {
       "- Số điện thoại: " + sdt,
   );
 
+  let modal = bootstrap.Modal.getInstance(document.getElementById("modalCapThe"));
+  if (modal) {
+    modal.hide();
+  }
+  document.getElementById("maDocGia").form.reset();
+
   return false;
 }
+
+function capNhatNhanTheoDoiTuong() {
+  const laGiangVien = document.getElementById("doiTuong").value === "Giảng viên";
+
+  document.querySelector('label[for="maDocGia"]').textContent =
+    laGiangVien ? "Mã giảng viên (*)" : "Mã sinh viên UTC (*)";
+  document.getElementById("maDocGia").placeholder =
+    laGiangVien ? "Ví dụ: GV001" : "Ví dụ: 251230899";
+
+  document.querySelector('label[for="lopKhoa"]').textContent =
+    laGiangVien ? "Bộ môn (*)" : "Lớp / Bộ môn (*)";
+  document.getElementById("lopKhoa").placeholder =
+    laGiangVien ? "Ví dụ: Công nghệ thông tin" : "Ví dụ: K67-CNTT3";
+
+  document.getElementById("emailDocGia").placeholder =
+    laGiangVien ? "Ví dụ: ten@utc.edu.vn" : "Ví dụ: tuan251230899@lms.utc.edu.vn";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const oDoiTuong = document.getElementById("doiTuong");
+  const modalCapThe = document.getElementById("modalCapThe");
+  if (!oDoiTuong || !modalCapThe) return;
+
+  oDoiTuong.addEventListener("change", capNhatNhanTheoDoiTuong);
+
+  modalCapThe.addEventListener("hidden.bs.modal", function () {
+    modalCapThe.querySelector("form").reset();
+    capNhatNhanTheoDoiTuong();
+  });
+});
