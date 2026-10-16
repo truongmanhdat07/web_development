@@ -220,9 +220,14 @@ BTL_ThietKeWeb
   - **Độ ưu tiên phẳng:** Thiết lập bộ chọn CSS mạch lạc, tuyệt đối không lạm dụng từ khóa `!important` nhằm đảm bảo khả năng mở rộng và bảo trì mã nguồn.
   - **Thiết kế thích ứng:** Kết hợp hệ thống lưới Bootstrap 5 cùng Flexbox giúp giao diện tự động co giãn tối ưu trên mọi độ phân giải màn hình từ máy tính đến điện thoại di động.
 
-#### c. Mã nguồn JavaScript (`js/script.js`):
+#### c. Mã nguồn JavaScript:
 
-....
+Mã nguồn JavaScript được viết trong file `js/script.js`, sử dụng JavaScript thuần để thao tác DOM, xử lý sự kiện và kiểm tra dữ liệu biểu mẫu:
+
+- **Chức năng Kho sách:** Chuẩn hóa chuỗi tiếng Việt không dấu để tìm kiếm giáo trình theo thời gian thực, lọc sách theo danh mục chuyên ngành và kiểm tra chống trùng lặp mã sách khi thêm mới.
+- **Chức năng Mượn - Trả sách:** Kiểm tra định dạng mã sinh viên hoặc giảng viên UTC, kiểm tra ràng buộc ngày mượn và hạn trả, đồng thời cập nhật trạng thái phiếu mượn sang đã trả trực tiếp trên bảng.
+- **Chức năng Quản lý độc giả:** Chuyển đổi trạng thái thẻ giữa hoạt động và đã khóa thông qua việc cập nhật màu sắc nhãn hiển thị cùng nội dung nút bấm, kiểm tra tính đầy đủ của thông tin cấp thẻ mới.
+- **Chức năng Nội quy & Liên hệ:** Lắng nghe sự kiện gửi biểu mẫu góp ý, ngăn chặn tải lại trang mặc định, kiểm tra dữ liệu và phản hồi thông báo gửi thành công trực quan cho sinh viên.
 
 ---
 
