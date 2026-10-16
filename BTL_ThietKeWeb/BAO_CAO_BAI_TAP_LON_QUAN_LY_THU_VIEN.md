@@ -328,35 +328,49 @@ Mã nguồn JavaScript được viết trong file `js/script.js`, sử dụng Ja
 ### 1. Đánh giá nhóm
 
 - **Ưu điểm:**
-  ....
-- **Tự chấm điểm nhóm:**
+  - **Nhận diện thương hiệu chuẩn UTC:** Thiết kế bám sát bảng màu đặc trưng của Trường Đại học Giao thông Vận tải với tông màu xanh dương và vàng cam chủ đạo, phong cách phẳng tối giản, không lạm dụng hiệu ứng rườm rà.
+  - **Kiến trúc mã nguồn chuẩn mực, phân tầng rõ ràng:** Phân tách mạch lạc giữa CSS dùng chung và CSS riêng từng trang nghiệp vụ; tệp JavaScript được gộp nhất quán, chú thích rõ ràng theo từng phân hệ.
+  - **Đáp ứng tốt trên mọi thiết bị:** Tận dụng tối đa hệ thống lưới kết hợp Media Queries, hiển thị mượt mà từ màn hình điện thoại di động, máy tính bảng đến máy tính để bàn.
+  - **Xử lý tương tác JavaScript nghiệp vụ thực tế:** Tích hợp đầy đủ các tính năng tìm kiếm sách thời gian thực, lọc danh mục đa tiêu chí, tự động điền và khóa ngày mượn hoặc hạn trả, cập nhật trực tiếp trạng thái trả sách hoặc khóa thẻ trên giao diện bảng, kiểm tra dữ liệu đầu vào bằng biểu thức chính quy nghiêm ngặt.
+  - **Hệ thống kịch bản kiểm thử toàn diện:** Xây dựng đầy đủ 58 kịch bản kiểm thử trải đều trên cả 5 trang chức năng với quy trình thực hiện, dữ liệu thử nghiệm và kết quả mong đợi chi tiết.
+
+- **Hạn chế:**
+  - Do thời lượng môn học và yêu cầu đồ án tập trung vào Front-end, hệ thống chưa tích hợp cơ sở dữ liệu quan hệ Backend để lưu trữ dữ liệu vĩnh viễn khi tải lại trang.
+  - Cần phát triển thêm tính năng tài khoản cá nhân phân quyền và gửi email thông báo nhắc hạn trả sách tự động.
+
+- **Tự chấm điểm nhóm:** **9.5 / 10**
 
 ### 2. Bảng điểm tự đánh giá cá nhân
 
 _Công thức tính điểm trung bình môn học:_
 $$\text{TB} = \frac{d1 + \frac{d2 + d3}{2}}{2}$$
 
+* $d1.4 = \frac{d1.1 + d1.2 + d1.3}{3}$ (Điểm trung bình thành thạo công nghệ)
+* $d2.3 = \frac{d2.1 + d2.2}{2}$ (Điểm trung bình báo cáo)
+* $d3.4 = \frac{d3.1 + d3.2 + d3.3}{3}$ (Điểm trung bình kỹ năng)
+
 #### Bảng điểm tự đánh giá
 
-| Họ tên sinh viên       | Mã sinh<br>viên |  Trang<br>phụ trách  | d1.1 | d1.2 | d1.3 |   d1.4   | d2.1 | d2.2 |   d2.3   | d3.1 | d3.2 | d3.3 |   d3.4   | **Điểm<br>TB** |
-| :--------------------- | :-------------: | :------------------: | :--: | :--: | :--: | :------: | :--: | :--: | :------: | :--: | :--: | :--: | :------: | :------------: |
-| **Trương Mạnh Đạt**    |  **251230841**  |  `index`<br>`.html`  | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
-| **Nguyễn Phương Hải**  |  **251210853**  |  `books`<br>`.html`  | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
-| **Nguyễn Quốc Khánh**  |  **251230887**  | `borrow`<br>`.html`  | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
-| **Trần Xuân Đô**       |  **251230843**  | `readers`<br>`.html` | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
-| **Đinh Văn Phan Dũng** |  **251230826**  | `contact`<br>`.html` | ...  | ...  | ...  | **....** | ...  | ...  | **....** | ...  | ...  | ...  | **....** |    **....**    |
+| Họ tên sinh viên | Mã sinh<br>viên | Trang<br>phụ trách | d1.1<br>(HTML) | d1.2<br>(CSS) | d1.3<br>(JS) | **d1.4**<br>(TB d1) | d2.1<br>(Format) | d2.2<br>(Nội dung) | **d2.3**<br>(TB d2) | d3.1<br>(Tự học) | d3.2<br>(Nhóm) | d3.3<br>(T.Anh) | **d3.4**<br>(TB d3) | **Điểm<br>TB** |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Trương Mạnh Đạt** | **251230841** | `index.html` | 9.8 | 9.8 | 9.8 | **9.8** | 9.8 | 9.8 | **9.8** | 10.0 | 9.8 | 9.6 | **9.8** | **9.8** |
+| **Nguyễn Phương Hải** | **251210853** | `books.html` | 9.6 | 9.6 | 9.6 | **9.6** | 9.6 | 9.6 | **9.6** | 9.8 | 9.6 | 9.4 | **9.6** | **9.6** |
+| **Nguyễn Quốc Khánh** | **251230887** | `borrow.html` | 9.6 | 9.6 | 9.6 | **9.6** | 9.6 | 9.6 | **9.6** | 9.6 | 9.8 | 9.4 | **9.6** | **9.6** |
+| **Trần Xuân Đô** | **251230843** | `readers.html` | 9.5 | 9.5 | 9.5 | **9.5** | 9.5 | 9.5 | **9.5** | 9.3 | 9.0 | 9.0 | **9.1** | **9.4** |
+| **Đinh Văn Phan Dũng** | **251230826** | `contact.html` | 9.5 | 9.5 | 9.2 | **9.4** | 9.5 | 9.5 | **9.5** | 9.5 | 9.2 | 9.2 | **9.3** | **9.4** |
 
 ### 3. Bảng điểm nhóm đánh giá cho từng cá nhân
 
-| Họ tên sinh viên       | Mã sinh viên | Nhiệm vụ hoàn thành                                                   | Đánh giá của tập thể nhóm                   | Điểm Nhóm Thống Nhất |
-| :--------------------- | :----------: | :-------------------------------------------------------------------- | :------------------------------------------ | :------------------: |
-| **Trương Mạnh Đạt**    |  251230841   | Trưởng nhóm, thiết kế trang chủ, tích hợp logo UTC và quản lý tiến độ | Tinh thần trách nhiệm cao, dẫn dắt nhóm tốt |       **...**        |
-| **Nguyễn Phương Hải**  |  251210853   | Hoàn thành trang Sách CNTT & IELTS, viết hàm tìm kiếm/lọc JS          | Code cẩn thận, giao diện đẹp, đúng tiến độ  |       **...**        |
-| **Nguyễn Quốc Khánh**  |  251230887   | Hoàn thành trang Mượn - Trả sách, kiểm tra logic mượn                 | Nhiệt tình, hoàn thành tốt bảng phiếu mượn  |       **...**        |
-| **Trần Xuân Đô**       |  251230843   | Hoàn thành trang Độc giả, kiểm tra email LMS và SĐT                   | Chăm chỉ, phối hợp ăn ý với nhóm trưởng     |       **...**        |
-| **Đinh Văn Phan Dũng** |  251230826   | Hoàn thành trang Nội quy UTC                                          | Hoàn thành tốt nhiệm vụ                     |       **...**        |
+| Họ tên sinh viên | Mã sinh viên | Nhiệm vụ hoàn thành & Đóng góp chính | Đánh giá của tập thể nhóm | Điểm Nhóm Thống Nhất |
+| :--- | :---: | :--- | :--- | :---: |
+| **Trương Mạnh Đạt** | 251230841 | - **Trưởng nhóm**, lập kế hoạch, phân chia công việc và kiểm soát tiến độ chung.<br>- Xây dựng kiến trúc mã nguồn cốt lõi: khung chuẩn Bootstrap, file màu & style dùng chung (`style.css`), chuẩn hóa toàn bộ `script.js`.<br>- Thiết kế hoàn chỉnh trang chủ `index.html` (Hero banner UTC, thống kê, tin tức, slide sách nổi bật).<br>- Tổng hợp, biên soạn toàn bộ Báo cáo BTL (Use-case, Sitemap, Wireframe) và 7 kịch bản kiểm thử (`TC01` - `TC07`). | Tinh thần trách nhiệm rất cao, kỹ năng kỹ thuật và quản trị đồ án xuất sắc, chủ động hỗ trợ sửa lỗi mã nguồn cho các thành viên, dẫn dắt nhóm hoàn thành xuất sắc bài tập lớn. | **9.8** |
+| **Nguyễn Phương Hải** | 251210853 | - Phụ trách toàn bộ phân hệ Kho sách (`books.html`, `books.css`).<br>- Thiết kế lưới danh mục sách CNTT & IELTS chuẩn thẩm mỹ UTC.<br>- Lập trình tính năng tìm kiếm thời gian thực, bộ lọc danh mục và modal xem chi tiết sách.<br>- Xây dựng 10 kịch bản kiểm thử chuyên sâu (`TC08` - `TC17`). | Nắm vững kỹ thuật Front-end, code cẩn thận, giao diện đẹp mắt, tinh thần tự giác cao, hoàn thành nhiệm vụ đúng hạn. | **9.6** |
+| **Nguyễn Quốc Khánh** | 251230887 | - Phụ trách toàn bộ phân hệ Mượn - Trả sách (`borrow.html`, `borrow.css`).<br>- Xây dựng bảng quản lý phiếu mượn và modal tạo phiếu mượn sách mới.<br>- Xử lý logic tự động tính và khóa ngày mượn/hạn trả, cập nhật trạng thái "Đã trả" trực tiếp trên bảng.<br>- Xây dựng 14 kịch bản kiểm thử nghiệp vụ (`TC18` - `TC31`). | Tác phong làm việc rất nhiệt tình, chủ động trao đổi nghiệp vụ với nhóm trưởng, phối hợp nhóm ăn ý, hoàn thành tốt phân hệ nghiệp vụ cốt lõi. | **9.6** |
+| **Trần Xuân Đô** | 251230843 | - Phụ trách phân hệ Quản lý độc giả (`readers.html`, `readers.css`).<br>- Thiết kế danh sách bạn đọc, modal cấp thẻ mới cho Sinh viên & Giảng viên.<br>- Lập trình kiểm tra hợp lệ dữ liệu (Mã SV 9 số, Email LMS UTC, SĐT 10 số), logic khóa/mở khóa thẻ độc giả.<br>- Đóng góp 18 kịch bản kiểm thử (`TC32` - `TC49`). | Hoàn thành đầy đủ các chức năng được giao; tuy nhiên thời gian đầu phối hợp nhóm còn hơi chậm, cần nhóm trưởng nhắc nhở tiến độ và hỗ trợ sửa định dạng; kỹ năng tiếng Anh và tra cứu tài liệu chuyên ngành còn hạn chế. | **9.4** |
+| **Đinh Văn Phan Dũng** | 251230826 | - Phụ trách phân hệ Nội quy & Liên hệ (`contact.html`, `contact.css`).<br>- Thiết kế bảng thời gian phục vụ, nội quy thư viện và biểu mẫu tiếp nhận góp ý/đề xuất sách.<br>- Viết kiểm tra định dạng dữ liệu cho họ tên, email LMS và gửi góp ý.<br>- Xây dựng 9 kịch bản kiểm thử (`TC50` - `TC58`). | Hoàn thành tốt giao diện trang nội quy; tuy nhiên mức độ phức tạp kỹ thuật và khối lượng JavaScript nhẹ hơn các trang quản lý nghiệp vụ; khả năng tương tác, phối hợp nhóm và sử dụng tiếng Anh kỹ thuật cần cải thiện thêm. | **9.4** |
 
 ---
 
 _Hà Nội, Năm 2026_  
 **Xác nhận của Nhóm trưởng:** Trương Mạnh Đạt
+
