@@ -138,6 +138,14 @@ footer ul li a:hover {
   color: #94a3b8;
 }
 
+.footer-logo {
+  height: 38px;
+  width: 38px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+}
+
 /* Nút Bấm Dùng Chung */
 .btn-custom {
   display: inline-flex;
