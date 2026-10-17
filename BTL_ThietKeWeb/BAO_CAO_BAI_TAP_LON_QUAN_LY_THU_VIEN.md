@@ -356,8 +356,8 @@ $$\text{TB} = \frac{d1 + \frac{d2 + d3}{2}}{2}$$
 | **Trương Mạnh Đạt** | **251230841** | `index.html` | 9.8 | 9.8 | 9.8 | **9.8** | 9.8 | 9.8 | **9.8** | 10.0 | 9.8 | 9.6 | **9.8** | **9.8** |
 | **Nguyễn Phương Hải** | **251210853** | `books.html` | 9.6 | 9.6 | 9.6 | **9.6** | 9.6 | 9.6 | **9.6** | 9.8 | 9.6 | 9.4 | **9.6** | **9.6** |
 | **Nguyễn Quốc Khánh** | **251230887** | `borrow.html` | 9.6 | 9.6 | 9.6 | **9.6** | 9.6 | 9.6 | **9.6** | 9.6 | 9.8 | 9.4 | **9.6** | **9.6** |
-| **Trần Xuân Đô** | **251230843** | `readers.html` | 9.5 | 9.5 | 9.5 | **9.5** | 9.5 | 9.5 | **9.5** | 9.3 | 9.0 | 9.0 | **9.1** | **9.4** |
-| **Đinh Văn Phan Dũng** | **251230826** | `contact.html` | 9.5 | 9.5 | 9.2 | **9.4** | 9.5 | 9.5 | **9.5** | 9.5 | 9.2 | 9.2 | **9.3** | **9.4** |
+| **Trần Xuân Đô** | **251230843** | `readers.html` | 9.6 | 9.6 | 9.6 | **9.6** | 9.5 | 9.5 | **9.5** | 9.4 | 9.2 | 9.3 | **9.3** | **9.5** |
+| **Đinh Văn Phan Dũng** | **251230826** | `contact.html` | 9.4 | 9.4 | 9.1 | **9.3** | 9.5 | 9.5 | **9.5** | 9.3 | 9.0 | 9.0 | **9.1** | **9.3** |
 
 ### 3. Bảng điểm nhóm đánh giá cho từng cá nhân
 
@@ -366,8 +366,8 @@ $$\text{TB} = \frac{d1 + \frac{d2 + d3}{2}}{2}$$
 | **Trương Mạnh Đạt** | 251230841 | - **Trưởng nhóm**, lập kế hoạch, phân chia công việc và kiểm soát tiến độ chung.<br>- Xây dựng kiến trúc mã nguồn cốt lõi: khung chuẩn Bootstrap, file màu & style dùng chung (`style.css`).<br>- Thiết kế hoàn chỉnh trang chủ `index.html`.<br>- Tổng hợp, biên soạn toàn bộ Báo cáo BTL (Use-case, Sitemap, Wireframe). | Tinh thần trách nhiệm cao, kỹ năng kỹ thuật và quản trị đồ án xuất sắc, chủ động hỗ trợ sửa lỗi mã nguồn cho các thành viên, dẫn dắt nhóm hoàn thành xuất sắc bài tập lớn. | **9.8** |
 | **Nguyễn Phương Hải** | 251210853 | - Phụ trách toàn bộ phân hệ Kho sách (`books.html`, `books.css`).<br>- Thiết kế lưới danh mục sách CNTT & IELTS chuẩn thẩm mỹ UTC.<br>- Lập trình tính năng tìm kiếm thời gian thực, bộ lọc danh mục và modal xem chi tiết sách.<br>. | Nắm vững kỹ thuật Front-end, code cẩn thận, giao diện đẹp mắt, tinh thần tự giác cao, hoàn thành nhiệm vụ đúng hạn. | **9.6** |
 | **Nguyễn Quốc Khánh** | 251230887 | - Phụ trách toàn bộ phân hệ Mượn - Trả sách (`borrow.html`, `borrow.css`).<br>- Xây dựng bảng quản lý phiếu mượn và modal tạo phiếu mượn sách mới.<br>- Xử lý logic tự động tính và khóa ngày mượn/hạn trả, cập nhật trạng thái "Đã trả" trực tiếp trên bảng.<br>. | Tác phong làm việc rất nhiệt tình, chủ động trao đổi nghiệp vụ với nhóm trưởng, phối hợp nhóm ăn ý, hoàn thành tốt phân hệ nghiệp vụ cốt lõi. | **9.6** |
-| **Trần Xuân Đô** | 251230843 | - Phụ trách phân hệ Quản lý độc giả (`readers.html`, `readers.css`).<br>- Thiết kế danh sách bạn đọc, modal cấp thẻ mới cho Sinh viên & Giảng viên.<br>- Lập trình kiểm tra hợp lệ dữ liệu, logic khóa/mở khóa thẻ độc giả.<br>. | Hoàn thành đầy đủ các chức năng được giao; kỹ năng tiếng Anh và tra cứu tài liệu chuyên ngành còn hạn chế.Cần chủ động tham gia trao đổi nhiều hơn. | **9.4** |
-| **Đinh Văn Phan Dũng** | 251230826 | - Phụ trách phân hệ Nội quy & Liên hệ (`contact.html`, `contact.css`).<br>- Thiết kế bảng thời gian phục vụ, nội quy thư viện và biểu mẫu tiếp nhận góp ý/đề xuất sách.<br>- Viết kiểm tra định dạng dữ liệu cho họ tên, email LMS và gửi góp ý.<br>. | Hoàn thành tốt giao diện trang nội quy; khả năng tương tác, phối hợp nhóm và sử dụng tiếng Anh kỹ thuật cần cải thiện thêm. | **9.4** |
+| **Trần Xuân Đô** | 251230843 | - Phụ trách phân hệ Quản lý độc giả (`readers.html`, `readers.css`).<br>- Thiết kế danh sách bạn đọc, modal cấp thẻ mới cho Sinh viên & Giảng viên.<br>- Lập trình kiểm tra hợp lệ dữ liệu, logic khóa/mở khóa thẻ độc giả.<br>. | Hoàn thành đầy đủ các chức năng được giao; kỹ năng tiếng Anh và tra cứu tài liệu chuyên ngành còn hạn chế.Cần chủ động tham gia trao đổi nhiều hơn. | **9.5** |
+| **Đinh Văn Phan Dũng** | 251230826 | - Phụ trách phân hệ Nội quy & Liên hệ (`contact.html`, `contact.css`).<br>- Thiết kế bảng thời gian phục vụ, nội quy thư viện và biểu mẫu tiếp nhận góp ý/đề xuất sách.<br>- Viết kiểm tra định dạng dữ liệu cho họ tên, email LMS và gửi góp ý.<br>. | Hoàn thành tốt giao diện trang nội quy; khả năng tương tác, phối hợp nhóm và sử dụng tiếng Anh kỹ thuật cần cải thiện thêm. | **9.3** |
 
 ---
 
