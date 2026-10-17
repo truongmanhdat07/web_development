@@ -228,6 +228,7 @@ footer ul li a:hover {
   height: 100%;
   display: flex;
   flex-direction: column;
+  transition: transform 0.25s ease;
 }
 
 .book-card .card-thumb {
@@ -269,10 +270,6 @@ footer ul li a:hover {
   font-size: 0.85rem;
   color: #64748b;
   margin-bottom: 12px;
-}
-
-.book-card {
-  transition: transform 0.25s ease;
 }
 
 .book-card:hover {

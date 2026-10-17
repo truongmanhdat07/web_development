@@ -73,13 +73,6 @@
     font-size: 14px;
 }
 
-/* Nút viền xanh */
-.btn-custom-outline{
-    color: var(--utc-blue);
-    border: 1px solid var(--utc-blue);
-    background-color: white;
-}
-
 .modal-header-utc{
     background-color: var(--utc-blue);
     color: white;
