@@ -11,7 +11,7 @@
 **LỚP:** CÔNG NGHỆ THÔNG TIN 3 (CNTT3)  
 **GIẢNG VIÊN HƯỚNG DẪN:** ThS. Lại Mạnh Dũng  
 **HỌC PHẦN:** THIẾT KẾ WEB  
-**HỌC KỲ / NĂM HỌC:** HỌC KỲ I - NĂM 2  
+**HỌC KỲ / NĂM HỌC:** HỌC KỲ I - NĂM HỌC 2026-2027  
 **ĐỀ TÀI SỐ:** 01 - QUẢN LÝ THƯ VIỆN  
 **CÔNG NGHỆ ÁP DỤNG:** HTML5, CSS3, JavaScript Cơ Bản, Bootstrap 5
 
