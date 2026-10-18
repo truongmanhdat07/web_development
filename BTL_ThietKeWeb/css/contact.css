@@ -1,4 +1,4 @@
-/* Tieu de trang */
+/* Tiêu đề trang */
 main .page-title {
     text-align: left;
     padding: 30px 0;
@@ -21,7 +21,7 @@ main .page-title p {
     margin-bottom: 0;
 }
 
-/* Cot noi dung */
+/* Cột nội dung */
 main .content {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -34,7 +34,7 @@ main .right-column {
     min-width: 0;
 }
 
-/* Khung noi dung */
+/* Khung nội dung */
 main .card {
     background-color: #ffffff;
     border: 1px solid #e5e9ef;
@@ -43,7 +43,7 @@ main .card {
     margin-bottom: 28px;
 }
 
-/* Tieu de tung khung */
+/* Tiêu đề từng khung */
 main .card h2 {
     color: var(--utc-blue);
     font-size: 1.25rem;
@@ -57,7 +57,7 @@ main .card h2 i {
     margin-right: 6px;
 }
 
-/* Bang lich phuc vu */
+/* Bảng lịch phục vụ */
 main .schedule {
     width: 100%;
     border-collapse: collapse;
@@ -89,7 +89,7 @@ main .schedule .holiday {
     font-weight: 700;
 }
 
-/* Noi quy */
+/* Nội quy */
 main .rules .rule {
     display: flex;
     align-items: flex-start;
@@ -131,13 +131,13 @@ main .rules .icon.lock {
     color: #6c757d;
 }
 
-/* Mo ta bieu mau */
+/* Mô tả biểu mẫu */
 main .suggestion .description {
     color: #49586a;
     margin-bottom: 22px;
 }
 
-/* Cac truong bieu mau */
+/* Các trường biểu mẫu */
 main #formGopY .form-group {
     margin-bottom: 22px;
 }
@@ -203,7 +203,7 @@ main #thongbao {
     overflow-wrap: anywhere;
 }
 
-/* Man hinh nho */
+/* Màn hình nhỏ */
 @media (max-width: 991.98px) {
     main .content {
         grid-template-columns: minmax(0, 1fr);
