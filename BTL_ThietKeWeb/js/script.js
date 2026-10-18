@@ -1,4 +1,4 @@
-// xu ly form gop y
+// Xử lý form góp ý
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formGopY");
     const thongbao = document.getElementById("thongbao");
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ===== CHỨC NĂNG LẬP PHIẾU MƯỢN SÁCH =====
+// Chức năng lập phiếu mượn sách
 function kiemTraMuonSach() {
   let maDocGiaEl = document.getElementById("studentId");
   let hoTenEl = document.getElementById("studentName");
@@ -130,7 +130,7 @@ function kiemTraMuonSach() {
   return false;
 }
 
-// ===== GẮN SỰ KIỆN CHO FORM MƯỢN SÁCH =====
+// Sự kiện form mượn sách
 document.addEventListener("DOMContentLoaded", function () {
   let borrowForm = document.getElementById("borrowForm");
 
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ===== CHỨC NĂNG TRẢ SÁCH / THU HỒI SÁCH =====
+// Chức năng trả sách và thu hồi sách
 
 document.addEventListener("DOMContentLoaded", function () {
   let cacNutTraSach = document.querySelectorAll(".btn-return, .btn-collect");
@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-// TRANG DANH MỤC SÁCH
+// Trang danh mục sách
 
 // Bỏ dấu và đổi chữ thường
 function boDauTiengViet(chuoi) {
@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modalThemSach.querySelector("form").reset();
   });
 });
-/* ===== Trang độc giả ===== */
+/* Trang độc giả */
 function doiTrangThaiThe(ma, ten) {
   const hang = document.getElementById("docgia-" + ma);
   const nhan = hang.querySelector(".trang-thai-the .badge-custom");

@@ -5,7 +5,7 @@
   --utc-bg-light: #f0f4f9; /* Màu nền web   */
 }
 
-/* chung */
+/* Chung */
 * {
   box-sizing: border-box;
 }
@@ -35,7 +35,7 @@ a:hover {
   color: var(--utc-blue-dark);
 }
 
-/* header */
+/* Header */
 .navbar-custom {
   background-color: var(--utc-blue);
   padding: 10px 0;
@@ -93,7 +93,7 @@ a:hover {
   gap: 6px;
 }
 
-/* footer */
+/* Footer */
 footer {
   background-color: var(--utc-blue-dark);
   color: #cbd5e1;
@@ -146,7 +146,7 @@ footer ul li a:hover {
   padding: 2px;
 }
 
-/* Nút Bấm Dùng Chung */
+/* Nút bấm  */
 .btn-custom {
   display: inline-flex;
   align-items: center;
@@ -180,7 +180,7 @@ footer ul li a:hover {
   color: #1a202c;
 }
 
-/* Nhãn Trạng Thái Dùng Chung  */
+/* Nhãn trạng thái   */
 .badge-custom {
   display: inline-block;
   padding: 4px 10px;
@@ -209,7 +209,7 @@ footer ul li a:hover {
   color: #b45309;
 }
 
-/* Sách Tiêu Biểu */
+
 .page-header h2 {
   font-size: 1.45rem;
   font-weight: 700;
@@ -284,7 +284,6 @@ footer ul li a:hover {
   transform: translateY(-6px);
 }
 
-/* Nhãn Dán */
 .book-card .card-bottom {
   margin-top: auto;
   display: flex;

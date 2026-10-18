@@ -82,7 +82,7 @@
   font-weight: 700;
 }
 
-/* Nút trong bảng nhỏ gọn hơn nút chung */
+/* Nút trong bảng */
 .btn-return,
 .btn-collect {
   padding: 6px 14px;
@@ -117,12 +117,12 @@
   margin-right: 6px;
 }
 
-/* Nút đóng màu trắng */
+/* Nút đóng */
 #borrowModal .btn-close {
   filter: invert(1);
 }
 
-/* Nhãn và ô nhập trong form */
+/* Form nhập liệu */
 .field-label {
   display: block;
   margin-bottom: 6px;

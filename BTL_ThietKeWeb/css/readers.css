@@ -10,7 +10,7 @@
     margin-bottom: 0;
 }
 
-/* Khung bao quanh bảng độc giả */
+/* Khung bảng độc giả */
 .table-wrapper{
     background-color: white;
     border: 1px solid #e2e8f0;
@@ -50,13 +50,13 @@
     white-space: nowrap;
 }
 
-/* Các ô dữ liệu trong bảng */
+/* Ô dữ liệu trong bảng */
 .readers-table tbody td{
     border: 1px solid #e2e8f0;
     text-align: center;
 }
 
-/* Hiệu ứng khi rê chuột vào một hàng */
+/* Hiệu ứng rê chuột */
 .readers-table tbody tr:hover td {
     background-color: #edf5ff;
     box-shadow: none;

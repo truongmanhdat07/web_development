@@ -71,7 +71,7 @@
   margin-bottom: 8px;
 }
 
-/* Tên sách tối đa 2 dòng để các thẻ đều nhau */
+/* Tên sách */
 .the-sach .book-title {
   font-weight: 700;
   min-height: calc(2 * 1.4em);
@@ -94,7 +94,7 @@
   font-size: 0.85rem;
 }
 
-/*  Hộp thoại thêm giáo trình */
+/* Hộp thoại thêm giáo trình */
 #modalThemSach .modal-content {
   border: 1px solid var(--utc-blue);
   border-radius: 8px;
@@ -154,14 +154,14 @@
   background-color: var(--utc-bg-light);
 }
 
-/* Điện thoại */
+/* Màn hình nhỏ */
 @media (max-width: 576px) {
   .the-sach .card-thumb img {
     height: 220px;
   }
 }
 
-/* Khoảng cách quanh tiêu đề trang */
+/* Tiêu đề trang */
 main .page-header {
   margin: 24px 0;
 }
@@ -170,7 +170,7 @@ main .page-header .btn-custom {
   flex-shrink: 0;
 }
  
-/* Nút "Hủy" trong hộp thoại */
+/* Nút hủy */
 #modalThemSach .btn-custom-outline {
   background-color: #ffffff;
   color: var(--utc-blue);
