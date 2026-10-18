@@ -300,6 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modalThemSach.querySelector("form").reset();
   });
 });
+
 /* Trang độc giả */
 function doiTrangThaiThe(ma, ten) {
   const hang = document.getElementById("docgia-" + ma);
@@ -349,8 +350,8 @@ function kiemTraDangKyDocGia() {
     loiMa = "Mã giảng viên phải gồm GV + 3 chữ số (VD: GV001)";
     regexLop = /^[\p{L}0-9\s.-]{2,50}$/u;
     loiLop = "Bộ môn chỉ gồm chữ, số, khoảng trắng (VD: Công nghệ thông tin)";
-    regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    loiEmail = "Email không đúng định dạng (VD: ten@utc.edu.vn)"; 
+    regexEmail = /^[a-z0-9._-]+@utc\.edu\.vn$/i;
+    loiEmail = "Email giảng viên phải có đuôi @utc.edu.vn"; 
   } else {
     nhanMa = "Mã sinh viên";
     nhanLop = "Lớp";
