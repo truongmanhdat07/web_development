@@ -1,50 +1,59 @@
 // Xử lý form góp ý
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("formGopY");
-    const thongbao = document.getElementById("thongbao");
+  const form = document.getElementById("formGopY");
+  const thongbao = document.getElementById("thongbao");
 
-    if (!form || !thongbao) return;
+  if (!form || !thongbao) return;
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-        }
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
 
-        const hotenInput = document.getElementById("hoten");
-        const hoten = hotenInput.value.trim();
-        const emailInput = document.getElementById("email");
-        const email = emailInput.value.trim();
-        const chude = document.getElementById("chude").value;
-        const noidung = document.getElementById("noidung").value.trim();
+    const hotenInput = document.getElementById("hoten");
+    const hoten = hotenInput.value.trim();
+    const emailInput = document.getElementById("email");
+    const email = emailInput.value.trim();
+    const chude = document.getElementById("chude").value;
+    const noidung = document.getElementById("noidung").value.trim();
 
-        if (!/^[\p{L}\s]+$/u.test(hoten)) {
-            alert("Họ và tên chỉ được chứa chữ cái và dấu cách, không được nhập số hoặc ký hiệu!");
-            hotenInput.focus();
-            return;
-        }
+    if (!/^[\p{L}\s]+$/u.test(hoten)) {
+      alert(
+        "Họ và tên chỉ được chứa chữ cái và dấu cách, không được nhập số hoặc ký hiệu!",
+      );
+      hotenInput.focus();
+      return;
+    }
 
-        if (!/^[a-zA-Z0-9._%+-]+@lms\.utc\.edu\.vn$/i.test(email)) {
-            alert("Vui lòng sử dụng email có đuôi @lms.utc.edu.vn!");
-            emailInput.focus();
-            return;
-        }
+    if (!/^[a-zA-Z0-9._%+-]+@lms\.utc\.edu\.vn$/i.test(email)) {
+      alert("Vui lòng sử dụng email có đuôi @lms.utc.edu.vn!");
+      emailInput.focus();
+      return;
+    }
 
-        alert(
-            "Gửi đề xuất đến Thư viện UTC thành công!\n\n" +
-            "Họ và tên: " + hoten + "\n" +
-            "Email sinh viên: " + email + "\n" +
-            "Chủ đề đề xuất: " + chude + "\n" +
-            "Nội dung chi tiết: " + noidung
-        );
+    alert(
+      "Gửi đề xuất đến Thư viện UTC thành công!\n\n" +
+        "Họ và tên: " +
+        hoten +
+        "\n" +
+        "Email sinh viên: " +
+        email +
+        "\n" +
+        "Chủ đề đề xuất: " +
+        chude +
+        "\n" +
+        "Nội dung chi tiết: " +
+        noidung,
+    );
 
-        thongbao.textContent = "Gửi góp ý thành công!";
-        thongbao.style.color = "green";
+    thongbao.textContent = "Gửi góp ý thành công!";
+    thongbao.style.color = "green";
 
-        form.reset();
-    });
+    form.reset();
+  });
 });
 
 // Chức năng lập phiếu mượn sách
@@ -52,14 +61,10 @@ function kiemTraMuonSach() {
   let maDocGiaEl = document.getElementById("studentId");
   let hoTenEl = document.getElementById("studentName");
   let sachMuonEl = document.getElementById("bookSelect");
-  let ngayMuonEl = document.getElementById("borrowDate");
-  let ngayHenTraEl = document.getElementById("dueDate");
 
   let maDocGia = maDocGiaEl.value.trim().toUpperCase();
   let hoTen = hoTenEl.value.trim();
   let sachMuon = sachMuonEl.value;
-  let ngayMuon = ngayMuonEl.value;
-  let ngayHenTra = ngayHenTraEl.value;
 
   if (maDocGia === "") {
     alert(
@@ -70,20 +75,20 @@ function kiemTraMuonSach() {
   }
 
   let isSinhVien = /^[0-9]{9}$/.test(maDocGia);
-  let isGiangVien = maDocGia === "GV001" || maDocGia.startsWith("GV");
+  let isGiangVien = /^GV[0-9]{3}$/.test(maDocGia);
 
   if (!isSinhVien && !isGiangVien) {
     alert(
       "Mã độc giả không hợp lệ!\n" +
         "- Sinh viên: 9 chữ số (Ví dụ: 251230841)\n" +
-        "- Giảng viên: GV001",
+        "- Giảng viên: GV + 3 chữ số (Ví dụ: GV001)",
     );
 
     maDocGiaEl.focus();
     return false;
   }
 
-  let hoTenPattern = /^[A-Za-zÀ-ỹ\s]+$/;
+  let hoTenPattern = /^[\p{L}\s]+$/u;
 
   if (hoTen === "") {
     alert("Vui lòng nhập họ và tên người mượn!");
@@ -140,17 +145,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!borrowForm || !ngayMuonEl || !ngayHenTraEl) return;
 
+  function dinhDangNgay(date) {
+    let nam = date.getFullYear();
+    let thang = String(date.getMonth() + 1).padStart(2, "0");
+    let ngay = String(date.getDate()).padStart(2, "0");
+
+    return nam + "-" + thang + "-" + ngay;
+  }
+
   function datNgayMuonVaHanTra() {
     let homNay = new Date();
 
     let hanTra = new Date(homNay);
     hanTra.setDate(hanTra.getDate() + 14);
 
-    let ngayMuon = homNay.toISOString().split("T")[0];
-    let ngayTra = hanTra.toISOString().split("T")[0];
-
-    ngayMuonEl.value = ngayMuon;
-    ngayHenTraEl.value = ngayTra;
+    ngayMuonEl.value = dinhDangNgay(homNay);
+    ngayHenTraEl.value = dinhDangNgay(hanTra);
   }
 
   datNgayMuonVaHanTra();
@@ -331,7 +341,7 @@ function doiTrangThaiThe(ma, ten) {
 
 function kiemTraDangKyDocGia() {
   const KHOA_MAX = 67;
-  const KHOA_MIN = 62; 
+  const KHOA_MIN = 62;
   // Bước 1: lấy giá trị, kể cả đối tượng
   let doiTuong = document.getElementById("doiTuong").value;
   let maDocGia = document.getElementById("maDocGia").value.trim().toUpperCase();
@@ -351,7 +361,7 @@ function kiemTraDangKyDocGia() {
     regexLop = /^[\p{L}0-9\s.-]{2,50}$/u;
     loiLop = "Bộ môn chỉ gồm chữ, số, khoảng trắng (VD: Công nghệ thông tin)";
     regexEmail = /^[a-z0-9._-]+@utc\.edu\.vn$/i;
-    loiEmail = "Email giảng viên phải có đuôi @utc.edu.vn"; 
+    loiEmail = "Email giảng viên phải có đuôi @utc.edu.vn";
   } else {
     nhanMa = "Mã sinh viên";
     nhanLop = "Lớp";
@@ -366,7 +376,7 @@ function kiemTraDangKyDocGia() {
   // Bước 3: gom lỗi
   let loi = "";
 
-   if (!regexMa.test(maDocGia)) {
+  if (!regexMa.test(maDocGia)) {
     loi += "- " + loiMa + "\n";
   } else if (document.getElementById("docgia-" + maDocGia)) {
     loi += "- " + nhanMa + " " + maDocGia + " đã tồn tại!\n";
@@ -398,15 +408,32 @@ function kiemTraDangKyDocGia() {
   // Bước 5: in kết quả, dùng nhãn theo đối tượng
   alert(
     "Thêm độc giả thành công!\n" +
-      "- Đối tượng: " + doiTuong + "\n" +
-      "- " + nhanMa + ": " + maDocGia + "\n" +
-      "- Họ tên: " + tenDocGia + "\n" +
-      "- " + nhanLop + ": " + lopKhoa + "\n" +
-      "- Email: " + email + "\n" +
-      "- Số điện thoại: " + sdt,
+      "- Đối tượng: " +
+      doiTuong +
+      "\n" +
+      "- " +
+      nhanMa +
+      ": " +
+      maDocGia +
+      "\n" +
+      "- Họ tên: " +
+      tenDocGia +
+      "\n" +
+      "- " +
+      nhanLop +
+      ": " +
+      lopKhoa +
+      "\n" +
+      "- Email: " +
+      email +
+      "\n" +
+      "- Số điện thoại: " +
+      sdt,
   );
 
-  let modal = bootstrap.Modal.getInstance(document.getElementById("modalCapThe"));
+  let modal = bootstrap.Modal.getInstance(
+    document.getElementById("modalCapThe"),
+  );
   if (modal) {
     modal.hide();
   }
@@ -416,20 +443,26 @@ function kiemTraDangKyDocGia() {
 }
 
 function capNhatNhanTheoDoiTuong() {
-  const laGiangVien = document.getElementById("doiTuong").value === "Giảng viên";
+  const laGiangVien =
+    document.getElementById("doiTuong").value === "Giảng viên";
 
-  document.querySelector('label[for="maDocGia"]').textContent =
-    laGiangVien ? "Mã giảng viên (*)" : "Mã sinh viên UTC (*)";
-  document.getElementById("maDocGia").placeholder =
-    laGiangVien ? "Ví dụ: GV001" : "Ví dụ: 251230899";
+  document.querySelector('label[for="maDocGia"]').textContent = laGiangVien
+    ? "Mã giảng viên (*)"
+    : "Mã sinh viên UTC (*)";
+  document.getElementById("maDocGia").placeholder = laGiangVien
+    ? "Ví dụ: GV001"
+    : "Ví dụ: 251230899";
 
-  document.querySelector('label[for="lopKhoa"]').textContent =
-    laGiangVien ? "Bộ môn (*)" : "Lớp / Bộ môn (*)";
-  document.getElementById("lopKhoa").placeholder =
-    laGiangVien ? "Ví dụ: Công nghệ thông tin" : "Ví dụ: K67-CNTT3";
+  document.querySelector('label[for="lopKhoa"]').textContent = laGiangVien
+    ? "Bộ môn (*)"
+    : "Lớp / Bộ môn (*)";
+  document.getElementById("lopKhoa").placeholder = laGiangVien
+    ? "Ví dụ: Công nghệ thông tin"
+    : "Ví dụ: K67-CNTT3";
 
-  document.getElementById("emailDocGia").placeholder =
-    laGiangVien ? "Ví dụ: ten@utc.edu.vn" : "Ví dụ: tuan251230899@lms.utc.edu.vn";
+  document.getElementById("emailDocGia").placeholder = laGiangVien
+    ? "Ví dụ: ten@utc.edu.vn"
+    : "Ví dụ: tuan251230899@lms.utc.edu.vn";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
