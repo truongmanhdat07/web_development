@@ -31,6 +31,10 @@
 
 Nhấp đúp chuột trực tiếp vào file `index.html` để mở và chạy trên bất kỳ trình duyệt web hiện đại nào (Google Chrome, Microsoft Edge, Firefox, Cốc Cốc).
 
+Hoặc truy cập trực tiếp website đã được triển khai trực tuyến (Live Demo):
+- **Máy chủ Vercel:** [https://thuvien-utc.vercel.app](https://thuvien-utc.vercel.app)
+- **Máy chủ GitHub Pages:** [https://truongmanhdat07.github.io/web_development/BTL_ThietKeWeb/](https://truongmanhdat07.github.io/web_development/BTL_ThietKeWeb/)
+
 ---
 
 ## 📑 BÁO CÁO CHI TIẾT BÀI TẬP LỚN
